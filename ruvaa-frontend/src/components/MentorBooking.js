@@ -1,103 +1,103 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 
-function MentorBooking() {
-  const mentorsList = [
-    { name: "Dr. Meenakshi", philosophy: "Learning through curiosity and practice" },
-    { name: "Mr. Sharma", philosophy: "Focus on problem-solving and creativity" },
-    { name: "Ms. Kapoor", philosophy: "Guidance with patience and empathy" },
-  ];
+/*
+  Mentor Booking Component
+  - Shows mentors
+  - Computes simple compatibility percent based on profile interests
+  - Allows booking sessions
+  - Profile redirects to LinkedIn
+*/
 
-  const [form, setForm] = useState({
-    studentName: "",
-    date: "",
-    mentorName: "",
-  });
+const mentors = [
+  { id:"m1", name:"Dr. Meenakshi", expertise:["AI","Research","Python"], bio:"PhD researcher in AI", linkedin:"https://www.linkedin.com/in/dr-meenakshi", availability:["2025-09-22","2025-09-28"] },
+  { id:"m2", name:"Mr. Sharma", expertise:["Problem solving","Algorithms","DSA"], bio:"Senior Engineer", linkedin:"https://www.linkedin.com/in/mr-sharma", availability:["2025-09-25","2025-10-03"] },
+  { id:"m3", name:"Ms. Kapoor", expertise:["Design","Product","UX"], bio:"Product Designer", linkedin:"https://www.linkedin.com/in/ms-kapoor", availability:["2025-09-23","2025-10-02"] },
+  { id:"m4", name:"Dr. Rao", expertise:["Machine Learning","Python","Data Science"], bio:"AI Scientist", linkedin:"https://www.linkedin.com/in/dr-rao", availability:["2025-09-24","2025-10-05"] },
+  { id:"m5", name:"Ms. Iyer", expertise:["Web Development","React","UI/UX"], bio:"Frontend Developer", linkedin:"https://www.linkedin.com/in/ms-iyer", availability:["2025-09-22","2025-09-30"] },
+  { id:"m6", name:"Mr. Verma", expertise:["Blockchain","Solidity","Smart Contracts"], bio:"Blockchain Developer", linkedin:"https://www.linkedin.com/in/mr-verma", availability:["2025-09-26","2025-10-04"] },
+  { id:"m7", name:"Dr. Nair", expertise:["Robotics","AI","Automation"], bio:"Robotics Researcher", linkedin:"https://www.linkedin.com/in/dr-nair", availability:["2025-09-23","2025-09-29"] },
+  { id:"m8", name:"Ms. Singh", expertise:["Marketing","Strategy","Business"], bio:"Business Consultant", linkedin:"https://www.linkedin.com/in/ms-singh", availability:["2025-09-25","2025-10-01"] },
+  { id:"m9", name:"Mr. Das", expertise:["Cybersecurity","Networking","Python"], bio:"Security Analyst", linkedin:"https://www.linkedin.com/in/mr-das", availability:["2025-09-24","2025-10-03"] },
+  { id:"m10", name:"Ms. Rao", expertise:["AI","Data Science","Machine Learning"], bio:"Data Scientist", linkedin:"https://www.linkedin.com/in/ms-rao", availability:["2025-09-22","2025-09-28"] },
+];
 
+export default function MentorBooking({ profile }) {
+  const [selected, setSelected] = useState("");
+  const [studentName, setStudentName] = useState(profile?.name || "");
+  const [date, setDate] = useState("");
   const [bookings, setBookings] = useState([]);
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const ranked = useMemo(()=> {
+    const interests = (profile?.interests || []).map(i=>i.toLowerCase());
+    return mentors.map(m=>{
+      const match = m.expertise.reduce((acc,ex)=>{
+        if(interests.some(it=> ex.toLowerCase().includes(it.split(" ")[0]))) return acc+1;
+        return acc;
+      },0);
+      const percent = Math.min(100, Math.round((match / Math.max(1, m.expertise.length)) * 100));
+      return {...m, percent};
+    }).sort((a,b)=>b.percent - a.percent);
+  }, [profile]);
 
-  const handleBook = () => {
-    if (!form.studentName || !form.date || !form.mentorName) {
-      return alert("❌ Please fill all fields");
-    }
-
-    const mentor = mentorsList.find(m => m.name === form.mentorName);
-
-    const newBooking = {
-      studentName: form.studentName,
-      date: form.date,
-      mentorName: form.mentorName,
-      philosophy: mentor ? mentor.philosophy : "",
-    };
-
-    setBookings([...bookings, newBooking]);
-    alert(`✅ Mentor session booked with ${form.mentorName} on ${form.date}`);
-    setForm({ studentName: "", date: "", mentorName: "" });
+  const book = () => {
+    if(!selected || !studentName || !date) return alert("Fill student name, mentor, and date");
+    setBookings(b=>[...b, {student:studentName, mentor:selected, date}]);
+    setStudentName(""); setDate(""); setSelected("");
+    alert("Booked — mock booking saved.");
   };
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 flex flex-col items-center justify-start py-10 px-4 md:px-16 lg:px-32">
-      <h1 className="text-5xl font-bold text-gray-800 mb-10 animate-pulse text-center">📅 Book Your Mentor</h1>
-
-      <div className="w-full max-w-4xl bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl p-10 flex flex-col space-y-8">
-        <input
-          name="studentName"
-          placeholder="Your Name"
-          value={form.studentName}
-          onChange={handleChange}
-          className="w-full px-6 py-4 rounded-xl border-2 border-gray-300 focus:border-blue-500 focus:outline-none transition text-lg"
-        />
-
-        <input
-          type="date"
-          name="date"
-          value={form.date}
-          onChange={handleChange}
-          className="w-full px-6 py-4 rounded-xl border-2 border-gray-300 focus:border-blue-500 focus:outline-none transition text-lg"
-        />
-
-        <select
-          name="mentorName"
-          value={form.mentorName}
-          onChange={handleChange}
-          className="w-full px-6 py-4 rounded-xl border-2 border-gray-300 focus:border-blue-500 focus:outline-none transition text-lg"
-        >
-          <option value="">Select Mentor</option>
-          {mentorsList.map((mentor, idx) => (
-            <option key={idx} value={mentor.name}>
-              {mentor.name} — {mentor.philosophy}
-            </option>
-          ))}
-        </select>
-
-        <button
-          onClick={handleBook}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-xl transition transform hover:scale-105 text-xl"
-        >
-          Book Session
-        </button>
-      </div>
-
-      {bookings.length > 0 && (
-        <div className="w-full max-w-5xl mt-12 space-y-6 px-4 md:px-8 lg:px-16">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">📋 Your Bookings</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {bookings.map((b, idx) => (
-              <div key={idx} className="bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-xl transition hover:scale-105">
-                <p className="text-lg"><strong>Student:</strong> {b.studentName}</p>
-                <p className="text-lg"><strong>Date:</strong> {b.date}</p>
-                <p className="text-lg"><strong>Mentor:</strong> {b.mentorName}</p>
-                <p className="text-md text-gray-600"><strong>Philosophy:</strong> {b.philosophy}</p>
+    <div style={{minHeight:"80vh", padding:20}}>
+      <h2 style={{color:"#0077b6", marginBottom:20}}>Mentor Matching</h2>
+      <div style={{display:"grid", gridTemplateColumns:"1fr 360px", gap:20, alignItems:"start"}}>
+        <div>
+          {ranked.map(m=>(
+            <div key={m.id} style={{background:"var(--card)", padding:16, borderRadius:12, marginBottom:16, boxShadow:"0 2px 10px rgba(0,0,0,0.08)"}}>
+              <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+                <div>
+                  <strong style={{fontSize:18}}>{m.name}</strong>
+                  <div style={{color:"var(--muted)", fontSize:14, marginTop:4}}>{m.bio}</div>
+                </div>
+                <div style={{textAlign:"right"}}>
+                  <div style={{width:120, height:8, background:"rgba(0,0,0,0.06)", borderRadius:8}}>
+                    <div style={{width:`${m.percent}%`, height:8, background:"#00b4d8", borderRadius:8}}/>
+                  </div>
+                  <div style={{fontSize:12, color:"var(--muted)"}}>{m.percent}%</div>
+                </div>
               </div>
-            ))}
+              <div style={{marginTop:12, display:"flex", gap:10}}>
+                <button onClick={()=>setSelected(m.name)} style={{padding:8, borderRadius:8, border:"none", background: selected===m.name ? "#0077b6" : "#00b4d8", color:"#fff", cursor:"pointer"}}>
+                  Select
+                </button>
+                <button onClick={()=>window.open(m.linkedin, "_blank")} style={{padding:8, borderRadius:8, border:"1px solid #00b4d8", background:"#fff", color:"#0077b6", cursor:"pointer"}}>
+                  Profile
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{background:"var(--card)", padding:16, borderRadius:12, boxShadow:"0 2px 10px rgba(0,0,0,0.08)"}}>
+          <h4 style={{marginBottom:12}}>Book Session</h4>
+          <input placeholder="Student name" value={studentName} onChange={e=>setStudentName(e.target.value)} style={field}/>
+          <input type="date" value={date} onChange={e=>setDate(e.target.value)} style={field}/>
+          <div style={{marginBottom:12}}>Selected Mentor: <b>{selected || "—"}</b></div>
+          <button onClick={book} style={{...btn, width:"100%"}}>Book</button>
+
+          <div style={{marginTop:16}}>
+            <h5 style={{margin:"8px 0"}}>Your bookings</h5>
+            {bookings.length ? bookings.map((b,i)=>(
+              <div key={i} style={{background:"rgba(0,0,0,0.03)", padding:10, borderRadius:8, marginBottom:8}}>
+                <div><b>{b.mentor}</b> — {b.date}</div>
+                <div style={{fontSize:13, color:"var(--muted)"}}>Student: {b.student}</div>
+              </div>
+            )) : <div style={{color:"var(--muted)"}}>No bookings</div>}
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
 
-export default MentorBooking;
+const field = { padding:10, borderRadius:8, border:"1px solid #d6dbe1", width:"100%", marginBottom:10 };
+const btn = { padding:10, borderRadius:8, border:"none", background:"#00b4d8", color:"#fff", cursor:"pointer" };
