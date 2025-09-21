@@ -1,187 +1,143 @@
 import React, { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 
-function Chat() {
-  const [messages, setMessages] = useState([]);
+export default function Chat({ profile, darkMode }) {
+  const [messages, setMessages] = useState([
+    { from: "bot", text: "Hi! I'm your career assistant. Ask me anything." },
+  ]);
   const [input, setInput] = useState("");
-  const [darkMode, setDarkMode] = useState(false);
-  const chatEndRef = useRef(null);
+  const messagesEndRef = useRef(null);
 
-  const handleSend = () => {
+  const send = () => {
     if (!input.trim()) return;
-    const newMsg = { from: "user", text: input };
-    const botReply = { from: "bot", text: "💡 This is a dummy AI reply (backend needed)." };
-    setMessages([...messages, newMsg, botReply]);
+    const userMsg = { from: "user", text: input };
+    setMessages((m) => [...m, userMsg, { from: "bot", text: "Typing..." }]);
     setInput("");
+
+    setTimeout(() => {
+      setMessages((m) => {
+        const newArr = [...m];
+        newArr[newArr.length - 1] = {
+          from: "bot",
+          text: `You said: "${input}". Here's a suggestion for your career journey.`,
+        };
+        return newArr;
+      });
+    }, 1000);
   };
 
-  // Auto scroll to bottom (optional, can be kept or removed since scrolling is removed)
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  return (
-    <div className={`chat-page ${darkMode ? "dark" : "light"}`}>
-      <div className="chat-header">
-        <h1>🤖 AI Chat</h1>
-        <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? "🌞 Light" : "🌙 Dark"}
-        </button>
-      </div>
+  const bgColor = darkMode ? "#121212" : "#f5f5f5";
+  const cardBg = darkMode ? "#1e1e1e" : "#f0f0f0";
+  const userMsgBg = darkMode ? "#2196f3" : "#00b4d8";
+  const botMsgBg = darkMode ? "#2a2a2a" : "rgba(0,180,216,0.18)";
+  const userTextColor = "#fff";
+  const botTextColor = darkMode ? "#e0e0e0" : "#062b3c";
+  const inputBg = darkMode ? "#2a2a2a" : "#fff";
+  const inputTextColor = darkMode ? "#e0e0e0" : "#000";
+  const inputBorder = darkMode ? "1px solid #444" : "1px solid #d6dbe1";
 
-      <div className="chat-box">
+  return (
+    <div
+      style={{
+        height: "85vh",
+        width: "100%",
+        maxWidth: "1500px",
+        margin: "20px auto",
+        padding: "0 20px",
+        display: "flex",
+        flexDirection: "column",
+        background: bgColor,
+        color: darkMode ? "#fff" : "#000",
+        borderRadius: 12,
+        boxShadow: darkMode
+          ? "0 4px 12px rgba(0,0,0,0.8)"
+          : "0 4px 12px rgba(0,0,0,0.1)",
+        transition: "all 0.3s ease",
+        overflow: "hidden",
+      }}
+    >
+      {/* Messages Area */}
+      <div
+        style={{
+          flex: 1,
+          padding: 16,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-end",
+          gap: 12,
+          overflowY: "auto",
+        }}
+      >
         {messages.map((m, i) => (
-          <div
+          <motion.div
             key={i}
-            className={`chat-message ${m.from === "user" ? "user" : "bot"}`}
+            initial={{ opacity: 0, x: m.from === "user" ? 50 : -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            style={{
+              alignSelf: m.from === "user" ? "flex-end" : "flex-start",
+              maxWidth: "80%",
+              background: m.from === "user" ? userMsgBg : botMsgBg,
+              color: m.from === "user" ? userTextColor : botTextColor,
+              padding: "10px 14px",
+              borderRadius: 12,
+              transition: "all 0.3s ease",
+              wordBreak: "break-word",
+            }}
           >
             {m.text}
-          </div>
+          </motion.div>
         ))}
-        <div ref={chatEndRef}></div>
+        <div ref={messagesEndRef} />
       </div>
 
-      <div className="chat-input-container">
+      {/* Input Section */}
+      <div
+        style={{
+          display: "flex",
+          gap: 8,
+          padding: 12,
+          background: cardBg,
+          borderTopLeftRadius: 12,
+          borderTopRightRadius: 12,
+        }}
+      >
         <input
-          type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Type your message..."
-          onKeyDown={(e) => e.key === "Enter" && handleSend()}
+          placeholder="Type a message..."
+          style={{
+            flex: 1, // input takes most of the width
+            padding: 14,
+            borderRadius: 12,
+            border: inputBorder,
+            background: inputBg,
+            color: inputTextColor,
+            fontSize: 16,
+            transition: "all 0.3s ease",
+          }}
+          onKeyDown={(e) => e.key === "Enter" && send()}
         />
-        <button onClick={handleSend}>Send</button>
+        <button
+          onClick={send}
+          style={{
+            flex: "0 0 auto", // button takes minimal space
+            padding: "12px 18px",
+            borderRadius: 12,
+            border: "none",
+            background: userMsgBg,
+            color: "#fff",
+            fontWeight: "bold",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+          }}
+        >
+          Send
+        </button>
       </div>
-
-      {/* Embedded CSS */}
-      <style>{`
-        .chat-page {
-          display: flex;
-          flex-direction: column;
-          min-height: 100vh;
-          width: 100%;
-          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-          transition: 0.3s;
-        }
-
-        .chat-page.light {
-          background: #f7f7f8;
-          color: #222;
-        }
-
-        .chat-page.dark {
-          background: #1e1e1e;
-          color: #f1f1f1;
-        }
-
-        .chat-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 20px 30px;
-          background: #0077b6;
-          color: white;
-          font-size: 1.5rem;
-        }
-
-        .chat-box {
-          flex: 1;
-          padding: 20px 50px; /* added horizontal padding */
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          /* Removed overflow-y to make it non-scrollable */
-        }
-
-        .chat-message {
-          max-width: 70%;
-          padding: 14px 18px;
-          border-radius: 18px;
-          font-size: 1rem;
-          line-height: 1.4;
-          word-wrap: break-word;
-        }
-
-        .chat-message.user {
-          background: #00b4d8;
-          color: white;
-          align-self: flex-end;
-          border-bottom-right-radius: 4px;
-        }
-
-        .chat-message.bot {
-          background: #e0e0e0;
-          color: #222;
-          align-self: flex-start;
-          border-bottom-left-radius: 4px;
-        }
-
-        .chat-page.dark .chat-message.bot {
-          background: #2b2b2b;
-          color: #f1f1f1;
-        }
-
-        .chat-input-container {
-          display: flex;
-          padding: 15px 30px;
-          gap: 12px;
-          border-top: 1px solid #ccc;
-          background: inherit;
-        }
-
-        .chat-input-container input {
-          flex: 1;
-          padding: 14px 18px;
-          border-radius: 25px;
-          border: 1px solid #ccc;
-          font-size: 1rem;
-          outline: none;
-          transition: 0.3s;
-        }
-
-        .chat-input-container input:focus {
-          border-color: #00b4d8;
-          box-shadow: 0 0 10px rgba(0,180,216,0.3);
-        }
-
-        .chat-input-container button {
-          padding: 14px 20px;
-          background: #00b4d8;
-          color: white;
-          border: none;
-          border-radius: 25px;
-          font-weight: bold;
-          cursor: pointer;
-          transition: 0.3s;
-        }
-
-        .chat-input-container button:hover {
-          background: #0077b6;
-          transform: translateY(-2px) scale(1.02);
-          box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        .theme-toggle {
-          background: rgba(255,255,255,0.2);
-          border: none;
-          padding: 8px 14px;
-          border-radius: 12px;
-          cursor: pointer;
-          font-size: 1rem;
-          transition: 0.3s;
-        }
-
-        .theme-toggle:hover {
-          background: rgba(255,255,255,0.4);
-        }
-
-        @media(max-width:768px){
-          .chat-message { max-width: 85%; font-size: 0.95rem; }
-          .chat-header { font-size: 1.2rem; padding: 15px; }
-          .chat-input-container { padding: 10px 15px; gap: 8px; }
-          .chat-box { padding: 15px 20px; }
-        }
-      `}</style>
     </div>
   );
 }
-
-export default Chat;

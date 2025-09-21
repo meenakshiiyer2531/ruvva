@@ -1,151 +1,66 @@
 import React, { useState } from "react";
 
-function Assessment() {
+export default function Assessment(){
   const questions = [
-    {
-      text: "Do you enjoy solving logical problems?",
-      options: [
-        { text: "Yes", points: 2 },
-        { text: "No", points: 0 },
-      ],
-    },
-    {
-      text: "Do you like creative arts?",
-      options: [
-        { text: "Yes", points: 2 },
-        { text: "No", points: 0 },
-      ],
-    },
-    {
-      text: "Do you enjoy working in teams?",
-      options: [
-        { text: "Yes", points: 2 },
-        { text: "No", points: 0 },
-      ],
-    },
+    {id:1, text:"I enjoy solving puzzles/problems", axis:"Investigative"},
+    {id:2, text:"I like building or fixing things", axis:"Realistic"},
+    {id:3, text:"I enjoy creative arts (drawing, writing)", axis:"Artistic"},
+    {id:4, text:"I like teaching or mentoring others", axis:"Social"},
+    {id:5, text:"I prefer structured office tasks", axis:"Conventional"},
+    {id:6, text:"I like leading teams and organizing", axis:"Enterprising"},
   ];
 
-  const [currentQ, setCurrentQ] = useState(0);
-  const [score, setScore] = useState(0);
+  const [idx, setIdx] = useState(0);
+  const [answers, setAnswers] = useState([]);
   const [completed, setCompleted] = useState(false);
 
-  const handleAnswer = (points) => {
-    setScore(score + points);
-    if (currentQ + 1 < questions.length) {
-      setCurrentQ(currentQ + 1);
-    } else {
-      setCompleted(true);
-    }
+  const answer = (score) => {
+    setAnswers(a=>[...a, {q:questions[idx].id, axis:questions[idx].axis, score}]);
+    if(idx+1<questions.length) setIdx(idx+1);
+    else setCompleted(true);
   };
 
+  const grouped = answers.reduce((acc,cur)=>{
+    acc[cur.axis] = (acc[cur.axis]||0) + cur.score; return acc;
+  }, {});
+
   return (
-    <div className="assessment-page">
+    <div style={{minHeight:"80vh", display:"flex", alignItems:"center", justifyContent:"center", padding:20}}>
       {!completed ? (
-        <div className="quiz-card">
-          <h2>📝 Quick Assessment</h2>
-          <p className="question">{questions[currentQ].text}</p>
-          <div className="options">
-            {questions[currentQ].options.map((opt, i) => (
-              <button key={i} onClick={() => handleAnswer(opt.points)}>
-                {opt.text}
-              </button>
-            ))}
+        <div style={card}>
+          <h2 style={{color:"#0077b6"}}>Quick Skills Assessment</h2>
+          <p style={{fontSize:18}}>{questions[idx].text}</p>
+          <div style={{display:"flex", gap:12, justifyContent:"center", marginTop:12}}>
+            <button style={btn} onClick={()=>answer(2)}>Agree</button>
+            <button style={btnMuted} onClick={()=>answer(1)}>Neutral</button>
+            <button style={btn} onClick={()=>answer(0)}>Disagree</button>
           </div>
-          <p className="progress">
-            Question {currentQ + 1} of {questions.length}
-          </p>
+          <div style={{marginTop:12, color:"var(--muted)"}}>Progress {idx+1}/{questions.length}</div>
         </div>
       ) : (
-        <div className="result-card">
-          <h2>🎉 Assessment Completed!</h2>
-          <p>Your total score is: <b>{score}</b></p>
-          {score >= questions.length * 2 * 0.7 ? (
-            <p>🌟 Great! You have strong interests in logic and creativity.</p>
-          ) : (
-            <p>👍 Keep exploring your interests and skills!</p>
-          )}
-          <button onClick={() => { setCurrentQ(0); setScore(0); setCompleted(false); }}>
-            Restart
-          </button>
+        <div style={card}>
+          <h2 style={{color:"#0077b6"}}>Assessment Results</h2>
+          <p style={{color:"var(--muted)"}}>Here is a quick breakdown (mock scores)</p>
+          <div style={{display:"grid", gap:8, maxWidth:680, marginTop:12}}>
+            {Object.entries(grouped).map(([axis, sc])=> (
+              <div key={axis} style={{display:"flex", alignItems:"center", gap:12}}>
+                <div style={{width:130}}>{axis}</div>
+                <div style={{flex:1, height:12, background:"rgba(0,0,0,0.06)", borderRadius:8}}>
+                  <div style={{width: `${Math.min(100, Math.round((sc/ (2*questions.length))*200 ))}%`, height:12, background:"#00b4d8", borderRadius:8}}/>
+                </div>
+                <div style={{width:42, textAlign:"right"}}>{Math.min(100, Math.round((sc/ (2*questions.length))*100))}%</div>
+              </div>
+            ))}
+          </div>
+          <div style={{marginTop:14}}>
+            <button onClick={()=>{ setIdx(0); setAnswers([]); setCompleted(false); }} style={btn}>Restart</button>
+          </div>
         </div>
       )}
-
-      <style>{`
-        .assessment-page {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          width: 100%;
-          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-          background: linear-gradient(135deg, #e0f7fa, #ffffff);
-        }
-
-        .quiz-card, .result-card {
-          background: #ffffff;
-          padding: 40px 50px;
-          border-radius: 25px;
-          box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-          text-align: center;
-          max-width: 600px;
-          width: 90%;
-          transition: 0.3s;
-        }
-
-        h2 {
-          margin-bottom: 25px;
-          color: #0077b6;
-        }
-
-        .question {
-          font-size: 1.3rem;
-          margin-bottom: 20px;
-        }
-
-        .options {
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-          flex-wrap: wrap;
-        }
-
-        button {
-          padding: 12px 28px;
-          background: #00b4d8;
-          color: white;
-          border: none;
-          border-radius: 20px;
-          font-size: 1rem;
-          cursor: pointer;
-          font-weight: bold;
-          transition: 0.3s;
-        }
-
-        button:hover {
-          background: #0077b6;
-          transform: translateY(-2px) scale(1.05);
-          box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-
-        .progress {
-          margin-top: 15px;
-          font-size: 0.9rem;
-          color: #555;
-        }
-
-        .result-card p {
-          font-size: 1.1rem;
-          margin: 15px 0;
-        }
-
-        @media(max-width:768px){
-          .quiz-card, .result-card { padding: 30px 25px; }
-          .question { font-size: 1.1rem; }
-          button { padding: 10px 20px; font-size: 0.95rem; }
-        }
-      `}</style>
     </div>
   );
 }
 
-export default Assessment;
+const card = { background:"var(--card)", padding:20, borderRadius:14, boxShadow:"0 10px 30px rgba(2,6,23,0.12)", width:"90%", maxWidth:760, textAlign:"center" };
+const btn = { padding:"10px 16px", borderRadius:10, border:"none", background:"#00b4d8", color:"#fff", cursor:"pointer" };
+const btnMuted = { ...btn, background:"transparent", border:"1px solid #d6dbe1", color:"var(--text)" };

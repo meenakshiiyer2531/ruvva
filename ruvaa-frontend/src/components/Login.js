@@ -1,233 +1,85 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-function Login({ onLogin }) {
+export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [darkMode, setDarkMode] = useState(false);
 
-  useEffect(() => {
-    document.body.className = darkMode ? "dark" : "light";
-  }, [darkMode]);
-
-  const handleSubmit = (e) => {
+  const submit = (e) => {
     e.preventDefault();
-    if (username && password) {
-      onLogin({ name: username });
-    } else {
-      alert("Please enter credentials");
-    }
+    if (!username || !password) return alert("Enter credentials — any values work for now.");
+    onLogin({ name: username, id: "u_" + Date.now() });
   };
 
   return (
-    <>
-      <div className="login-wrapper">
-        <div className="login-image">
-          <img src="/login.jpg" alt="Login Illustration" />
+    <div style={container}>
+      {/* Left Image */}
+      <div style={imageWrapper}>
+        <img src="/login.jpg" alt="CareerConnect" style={imageStyle} />
+        <div style={imageOverlay}>
+          <h2 style={overlayTitle}>Welcome to CareerConnect</h2>
+          <p style={overlayText}>Your journey to a brighter future starts here.</p>
         </div>
+      </div>
 
-        <div className="login-card">
-          <h2>Welcome Back!</h2>
-          <p className="subtext">Login to access your Ruvaa profile</p>
+      {/* Right Form */}
+      <div style={formWrapper}>
+        <h1 style={formTitle}>Login</h1>
+        <p style={formSubtitle}>Sign in to begin your career journey</p>
 
-          <form onSubmit={handleSubmit} className="login-form">
-            <div className="input-group">
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                required
-              />
-              <label>Username</label>
-            </div>
+        <form onSubmit={submit} style={formStyle}>
+          <input
+            aria-label="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Your name"
+            style={inputStyle}
+          />
+          <input
+            aria-label="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            type="password"
+            style={inputStyle}
+          />
+          <button type="submit" style={btnStyle}>Login</button>
+        </form>
 
-            <div className="input-group">
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-              <label>Password</label>
-            </div>
-
-            <button type="submit">Login</button>
-          </form>
-
-          <p className="forgot">Forgot Password?</p>
-
+        <div style={tipText}>
+          Tip: this is a front-end mock. Replace auth later.
         </div>
       </div>
 
       <style>{`
-        body.light { background:#f0f2f5; transition:0.5s; }
-        body.dark { background:#121212; transition:0.5s; }
-
-        .login-wrapper {
-          display: flex;
-          max-width: 1200px;
-          width: 95%;
-          height: 650px;
-          margin: 60px auto;
-          border-radius: 25px;
-          overflow: hidden;
-          box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-          background: var(--card-bg);
-          transition: 0.5s;
-        }
-        body.light .login-wrapper { --card-bg: rgba(255,255,255,0.95); }
-        body.dark .login-wrapper { --card-bg: rgba(30,30,30,0.95); }
-
-        .login-image {
-          flex: 1.2;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .login-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .login-card {
-          flex: 1;
-          padding: 60px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background: var(--card-bg);
-          transition:0.5s;
-        }
-
-        .login-card h2 {
-          text-align:center;
-          font-size: 2.2rem;
-          margin-bottom: 8px;
-          color: var(--text-color);
-        }
-        .login-card .subtext {
-          text-align:center;
-          font-size:1rem;
-          margin-bottom:35px;
-          color: #777;
-        }
-
-        .input-group { position: relative; margin-bottom: 28px; }
-        .input-group input {
-          width:100%;
-          padding:16px 12px;
-          border:2px solid #ddd;
-          border-radius:16px;
-          background: var(--input-bg);
-          color: var(--input-color);
-          font-size:1rem;
-          transition:0.3s;
-        }
-        .input-group label {
-          position:absolute;
-          top:50%;
-          left:14px;
-          transform:translateY(-50%);
-          color:#aaa;
-          pointer-events:none;
-          transition:0.3s;
-          font-size:1rem;
-        }
-        .input-group input:focus + label,
-        .input-group input:not(:placeholder-shown) + label {
-          top:-10px;
-          left:12px;
-          font-size:0.8rem;
-          color:#00b4d8;
-          background: var(--card-bg);
-          padding:0 5px;
-        }
-
-        body.light .input-group input { --input-bg:#fff; --input-color:#222; --text-color:#222; }
-        body.dark .input-group input { --input-bg:#2b2b2b; --input-color:#f1f1f1; --text-color:#f1f1f1; }
-
-        button {
-          width:100%;
-          padding:16px;
-          background:#00b4d8;
-          border:none;
-          border-radius:16px;
-          color:white;
-          font-weight:bold;
-          font-size:1.1rem;
-          cursor:pointer;
-          transition:0.4s;
-          margin-top:10px;
-        }
-        button:hover {
-          background:#0077b6;
-          transform: translateY(-2px) scale(1.02);
-          box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-        }
-
-        .forgot {
-          text-align:center;
-          margin-top:18px;
-          font-size:0.9rem;
-          color:#777;
-          cursor:pointer;
-        }
-        .forgot:hover { color:#00b4d8; }
-
-        .theme-toggle {
-          display:flex;
-          align-items:center;
-          justify-content:center;
-          margin-top:25px;
-          gap:12px;
-          font-size:1.1rem;
-        }
-        .switch {
-          position: relative;
-          display: inline-block;
-          width: 55px;
-          height: 28px;
-        }
-        .switch input { opacity:0; width:0; height:0; }
-        .slider {
-          position: absolute;
-          cursor: pointer;
-          top: 0; left: 0; right: 0; bottom: 0;
-          background-color: #ccc;
-          transition: .4s;
-          border-radius: 28px;
-        }
-        .slider:before {
-          position: absolute;
-          content: "";
-          height: 22px;
-          width: 22px;
-          left: 3px;
-          bottom: 3px;
-          background-color: white;
-          transition: .4s;
-          border-radius: 50%;
-        }
-        input:checked + .slider { background-color: #00b4d8; }
-        input:checked + .slider:before { transform: translateX(27px); }
-
-        /* Responsive */
-        @media(max-width:1024px){
-          .login-wrapper { flex-direction: column; height:auto; }
-          .login-image { width:100%; height:350px; }
-          .login-card { padding:50px; }
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { overflow-x: hidden; font-family: sans-serif; }
+        input:focus { outline: 2px solid rgba(0,180,216,0.18); }
         @media(max-width:768px){
-          .login-card { padding:40px; }
-          button { padding:14px; font-size:1rem; }
-        }
-        @media(max-width:480px){
-          .login-card { padding:30px; }
-          button { padding:12px; font-size:0.95rem; }
+          div[style*="flexDirection: row"] {
+            flex-direction: column;
+            height: auto;
+            max-width: 90%;
+            margin: 20px auto;
+          }
+          div[style*="flex: 1"][style*="position: relative"] { display: none; }
+          div[style*="padding: 36px"] { padding: 24px; }
         }
       `}</style>
-    </>
+    </div>
   );
 }
 
-export default Login;
+// Styles
+const container = { display: "flex", flexDirection: "row", width: "100%", maxWidth: 900, minHeight: "70vh", margin: "40px auto", borderRadius: 20, overflow: "hidden", boxShadow: "0 10px 40px rgba(2,6,23,0.2)", background: "white" };
+const imageWrapper = { flex: 1, position: "relative", minWidth: 0 };
+const imageStyle = { width: "100%", height: "100%", objectFit: "cover", display: "block" };
+const imageOverlay = { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "linear-gradient(135deg, rgba(0,180,216,0.7), rgba(0,119,182,0.7))", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", color: "white", textAlign: "center", padding: 20 };
+const overlayTitle = { margin: 0, fontSize: 28 };
+const overlayText = { fontSize: 16, marginTop: 10 };
+const formWrapper = { flex: 1, padding: 36, display: "flex", flexDirection: "column", justifyContent: "center", minWidth: 0, boxSizing: "border-box" };
+const formTitle = { margin: 0, color: "#0077b6" };
+const formSubtitle = { color: "#6c757d" };
+const formStyle = { display: "grid", gap: 12, marginTop: 12 };
+const inputStyle = { padding: "12px 14px", borderRadius: 10, border: "1px solid #d6dbe1", background: "transparent", color: "#212529", fontSize: 15 };
+const btnStyle = { padding: "12px 14px", borderRadius: 12, border: "none", background: "#00b4d8", color: "white", fontWeight: 700, cursor: "pointer", fontSize: 15 };
+const tipText = { marginTop: 10, color: "#6c757d", fontSize: 13 };
