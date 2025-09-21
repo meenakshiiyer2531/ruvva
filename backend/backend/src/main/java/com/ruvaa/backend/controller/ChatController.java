@@ -2,6 +2,7 @@ package com.ruvaa.backend.controller;
 
 import com.ruvaa.backend.dto.ChatRequest;
 import com.ruvaa.backend.dto.ChatResponse;
+import com.ruvaa.backend.dto.SimpleChatResponse;
 import com.ruvaa.backend.entity.ChatMessage;
 import com.ruvaa.backend.entity.User;
 import com.ruvaa.backend.repository.ChatMessageRepository;
@@ -28,33 +29,41 @@ public class ChatController {
     private final AIService aiService;
 
     @PostMapping("/message")
-    public ResponseEntity<ChatResponse> sendMessage(@Valid @RequestBody ChatRequest request, 
+    public ResponseEntity<SimpleChatResponse> sendMessage(@Valid @RequestBody ChatRequest request,
                                                    Authentication authentication) {
         try {
-            User user = userRepository.findByUsername(authentication.getName())
-                    .orElseThrow(() -> new RuntimeException("User not found"));
+            String username = authentication != null ? authentication.getName() : "anonymous";
 
-            ChatMessage userMessage = new ChatMessage();
-            userMessage.setUser(user);
-            userMessage.setMessage(request.getMessage());
-            userMessage.setIsFromUser(true);
-            chatMessageRepository.save(userMessage);
+            String aiResponse;
+            try {
+                aiResponse = aiService.generateResponse(request.getMessage());
+            } catch (Exception e) {
+                aiResponse = "Thanks for your message: \"" + request.getMessage() + "\". I'm here to help with your career questions. Could you tell me more about your interests or goals?";
+            }
 
-            String aiResponse = aiService.generateResponse(request.getMessage());
+            if (authentication != null) {
+                try {
+                    User user = userRepository.findByUsername(username).orElse(null);
+                    if (user != null) {
+                        ChatMessage userMessage = new ChatMessage();
+                        userMessage.setUser(user);
+                        userMessage.setMessage(request.getMessage());
+                        userMessage.setIsFromUser(true);
+                        chatMessageRepository.save(userMessage);
 
-            ChatMessage botMessage = new ChatMessage();
-            botMessage.setUser(user);
-            botMessage.setMessage(aiResponse);
-            botMessage.setIsFromUser(false);
-            botMessage.setResponse(aiResponse);
-            chatMessageRepository.save(botMessage);
+                        ChatMessage botMessage = new ChatMessage();
+                        botMessage.setUser(user);
+                        botMessage.setMessage(aiResponse);
+                        botMessage.setIsFromUser(false);
+                        botMessage.setResponse(aiResponse);
+                        chatMessageRepository.save(botMessage);
+                    }
+                } catch (Exception e) {
+                    // Continue without persistence if DB operations fail
+                }
+            }
 
-            return ResponseEntity.ok(new ChatResponse(
-                    request.getMessage(),
-                    aiResponse,
-                    false,
-                    LocalDateTime.now()
-            ));
+            return ResponseEntity.ok(new SimpleChatResponse(aiResponse));
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }

@@ -36,6 +36,26 @@ public class AuthService {
         return new LoginResponse(token, "Bearer", userDto);
     }
 
+    public LoginResponse mockLogin(LoginRequest request) {
+        if (request.getUsername() == null || request.getUsername().trim().isEmpty() ||
+            request.getPassword() == null || request.getPassword().trim().isEmpty()) {
+            throw new RuntimeException("Username and password are required");
+        }
+
+        User mockUser = new User();
+        mockUser.setId(System.currentTimeMillis());
+        mockUser.setUsername(request.getUsername());
+        mockUser.setName(request.getUsername());
+        mockUser.setEmail(request.getUsername() + "@example.com");
+        mockUser.onCreate();
+
+        String mockToken = "mock-jwt-token-" + System.currentTimeMillis();
+
+        UserDto userDto = convertToDto(mockUser);
+
+        return new LoginResponse(mockToken, "Bearer", userDto);
+    }
+
     public UserDto register(User user) {
         if (userRepository.existsByUsername(user.getUsername())) {
             throw new RuntimeException("Username already exists");

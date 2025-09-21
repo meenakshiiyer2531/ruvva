@@ -1,7 +1,7 @@
 package com.ruvaa.backend.controller;
 
-import com.ruvaa.backend.entity.Career;
-import com.ruvaa.backend.repository.CareerRepository;
+import com.ruvaa.backend.dto.CareerDto;
+import com.ruvaa.backend.service.CareerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,23 +14,23 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class CareerController {
 
-    private final CareerRepository careerRepository;
+    private final CareerService careerService;
 
     @GetMapping("/recommendations")
-    public ResponseEntity<List<Career>> getRecommendations() {
-        List<Career> careers = careerRepository.findAll();
+    public ResponseEntity<List<CareerDto>> getRecommendations() {
+        List<CareerDto> careers = careerService.getAllCareers();
         return ResponseEntity.ok(careers);
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<Career>> searchCareers(@RequestParam String query) {
-        List<Career> careers = careerRepository.searchCareers(query);
+    public ResponseEntity<List<CareerDto>> searchCareers(@RequestParam String query) {
+        List<CareerDto> careers = careerService.searchCareers(query);
         return ResponseEntity.ok(careers);
     }
 
     @GetMapping("/category/{category}")
-    public ResponseEntity<List<Career>> getCareersByCategory(@PathVariable String category) {
-        List<Career> careers = careerRepository.findByCategory(category);
+    public ResponseEntity<List<CareerDto>> getCareersByCategory(@PathVariable String category) {
+        List<CareerDto> careers = careerService.getCareersByCategory(category);
         return ResponseEntity.ok(careers);
     }
 }
