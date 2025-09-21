@@ -6,19 +6,19 @@ server:
 spring:
   application:
     name: careerconnect-backend
-  
+
   cache:
     type: simple
 
-# Firebase Configuration (Development)
+# Firebase Configuration (Development) - Using environment variables
 firebase:
-  service-account-key: classpath:serviceAccountKey.json
-  database-url: ${FIREBASE_DATABASE_URL:https://ruvaa-cbcaa-default-rtdb.asia-southeast1.firebasedatabase.app/}
-  project-id: ${FIREBASE_PROJECT_ID:ruvaa-cbcaa}
+  service-account-key: ${GOOGLE_APPLICATION_CREDENTIALS:./credentials/serviceAccountKey.json}
+  database-url: ${FIREBASE_DATABASE_URL}
+  project-id: ${FIREBASE_PROJECT_ID}
 
-# Google Gemini AI Configuration (Development)
+# Google Gemini AI Configuration (Development) - Using environment variables
 gemini:
-  api-key: ${GEMINI_API_KEY:AIzaSyCGo2KpKAMGU7b52skjDvAiFd6CE-v7Ohs}
+  api-key: ${GEMINI_API_KEY}
   base-url: https://generativelanguage.googleapis.com/v1beta
   model: gemini-1.5-flash
   max-tokens: 2048
@@ -27,9 +27,9 @@ gemini:
     requests-per-minute: 20
     burst-capacity: 5
 
-# Security Configuration
+# Security Configuration - Using environment variables
 jwt:
-  secret: ruvaaDevSecretKeyForJWTTokenGenerationAndValidation123456789
+  secret: ${JWT_SECRET}
   expiration: 86400000 # 24 hours
   refresh-expiration: 604800000 # 7 days
 
