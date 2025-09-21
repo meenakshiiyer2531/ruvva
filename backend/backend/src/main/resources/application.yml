@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: ruvaa-backend
+  
+
+jwt:
+  secret: ruvaaSecretKeyForJWTTokenGenerationAndValidation123456789
+  expiration: 86400000 # 24 hours
+
+logging:
+  level:
+    com.ruvaa: DEBUG
+    org.springframework.security: DEBUG
