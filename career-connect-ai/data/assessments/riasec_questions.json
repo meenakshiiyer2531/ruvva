@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q1",
+    "text": "I enjoy working with my hands and building things",
+    "type": "multiple_choice",
+    "options": [
+      {"value": 1, "text": "Strongly Disagree"},
+      {"value": 2, "text": "Disagree"},
+      {"value": 3, "text": "Neutral"},
+      {"value": 4, "text": "Agree"},
+      {"value": 5, "text": "Strongly Agree"}
+    ],
+    "riasec_weights": {
+      "realistic": 1.0,
+      "investigative": 0.0,
+      "artistic": 0.2,
+      "social": 0.0,
+      "enterprising": 0.0,
+      "conventional": 0.0
+    }
+  },
+  {
+    "id": "q2",
+    "text": "I like to analyze problems and find solutions",
+    "type": "multiple_choice",
+    "options": [
+      {"value": 1, "text": "Strongly Disagree"},
+      {"value": 2, "text": "Disagree"},
+      {"value": 3, "text": "Neutral"},
+      {"value": 4, "text": "Agree"},
+      {"value": 5, "text": "Strongly Agree"}
+    ],
+    "riasec_weights": {
+      "realistic": 0.2,
+      "investigative": 1.0,
+      "artistic": 0.0,
+      "social": 0.0,
+      "enterprising": 0.0,
+      "conventional": 0.0
+    }
+  },
+  {
+    "id": "q3",
+    "text": "I enjoy creating original works of art or design",
+    "type": "multiple_choice",
+    "options": [
+      {"value": 1, "text": "Strongly Disagree"},
+      {"value": 2, "text": "Disagree"},
+      {"value": 3, "text": "Neutral"},
+      {"value": 4, "text": "Agree"},
+      {"value": 5, "text": "Strongly Agree"}
+    ],
+    "riasec_weights": {
+      "realistic": 0.0,
+      "investigative": 0.0,
+      "artistic": 1.0,
+      "social": 0.0,
+      "enterprising": 0.0,
+      "conventional": 0.0
+    }
+  },
+  {
+    "id": "q4",
+    "text": "I like helping others and working in teams",
+    "type": "multiple_choice",
+    "options": [
+      {"value": 1, "text": "Strongly Disagree"},
+      {"value": 2, "text": "Disagree"},
+      {"value": 3, "text": "Neutral"},
+      {"value": 4, "text": "Agree"},
+      {"value": 5, "text": "Strongly Agree"}
+    ],
+    "riasec_weights": {
+      "realistic": 0.0,
+      "investigative": 0.0,
+      "artistic": 0.0,
+      "social": 1.0,
+      "enterprising": 0.2,
+      "conventional": 0.0
+    }
+  },
+  {
+    "id": "q5",
+    "text": "I enjoy leading and managing people",
+    "type": "multiple_choice",
+    "options": [
+      {"value": 1, "text": "Strongly Disagree"},
+      {"value": 2, "text": "Disagree"},
+      {"value": 3, "text": "Neutral"},
+      {"value": 4, "text": "Agree"},
+      {"value": 5, "text": "Strongly Agree"}
+    ],
+    "riasec_weights": {
+      "realistic": 0.0,
+      "investigative": 0.0,
+      "artistic": 0.0,
+      "social": 0.2,
+      "enterprising": 1.0,
+      "conventional": 0.0
+    }
+  },
+  {
+    "id": "q6",
+    "text": "I prefer organized and structured work environments",
+    "type": "multiple_choice",
+    "options": [
+      {"value": 1, "text": "Strongly Disagree"},
+      {"value": 2, "text": "Disagree"},
+      {"value": 3, "text": "Neutral"},
+      {"value": 4, "text": "Agree"},
+      {"value": 5, "text": "Strongly Agree"}
+    ],
+    "riasec_weights": {
+      "realistic": 0.0,
+      "investigative": 0.0,
+      "artistic": 0.0,
+      "social": 0.0,
+      "enterprising": 0.0,
+      "conventional": 1.0
+    }
+  },
+  {
+    "id": "q7",
+    "text": "I like working with machines and technical equipment",
+    "type": "multiple_choice",
+    "options": [
+      {"value": 1, "text": "Strongly Disagree"},
+      {"value": 2, "text": "Disagree"},
+      {"value": 3, "text": "Neutral"},
+      {"value": 4, "text": "Agree"},
+      {"value": 5, "text": "Strongly Agree"}
+    ],
+    "riasec_weights": {
+      "realistic": 1.0,
+      "investigative": 0.3,
+      "artistic": 0.0,
+      "social": 0.0,
+      "enterprising": 0.0,
+      "conventional": 0.0
+    }
+  },
+  {
+    "id": "q8",
+    "text": "I enjoy conducting research and experiments",
+    "type": "multiple_choice",
+    "options": [
+      {"value": 1, "text": "Strongly Disagree"},
+      {"value": 2, "text": "Disagree"},
+      {"value": 3, "text": "Neutral"},
+      {"value": 4, "text": "Agree"},
+      {"value": 5, "text": "Strongly Agree"}
+    ],
+    "riasec_weights": {
+      "realistic": 0.0,
+      "investigative": 1.0,
+      "artistic": 0.0,
+      "social": 0.0,
+      "enterprising": 0.0,
+      "conventional": 0.0
+    }
+  },
+  {
+    "id": "q9",
+    "text": "I like expressing myself through creative activities",
+    "type": "multiple_choice",
+    "options": [
+      {"value": 1, "text": "Strongly Disagree"},
+      {"value": 2, "text": "Disagree"},
+      {"value": 3, "text": "Neutral"},
+      {"value": 4, "text": "Agree"},
+      {"value": 5, "text": "Strongly Agree"}
+    ],
+    "riasec_weights": {
+      "realistic": 0.0,
+      "investigative": 0.0,
+      "artistic": 1.0,
+      "social": 0.0,
+      "enterprising": 0.0,
+      "conventional": 0.0
+    }
+  },
+  {
+    "id": "q10",
+    "text": "I enjoy teaching and mentoring others",
+    "type": "multiple_choice",
+    "options": [
+      {"value": 1, "text": "Strongly Disagree"},
+      {"value": 2, "text": "Disagree"},
+      {"value": 3, "text": "Neutral"},
+      {"value": 4, "text": "Agree"},
+      {"value": 5, "text": "Strongly Agree"}
+    ],
+    "riasec_weights": {
+      "realistic": 0.0,
+      "investigative": 0.0,
+      "artistic": 0.0,
+      "social": 1.0,
+      "enterprising": 0.0,
+      "conventional": 0.0
+    }
+  }
+]

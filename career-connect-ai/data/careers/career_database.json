@@ -1,0 +1,317 @@
+[
+  {
+    "id": 1,
+    "title": "Software Engineer",
+    "description": "Design, develop, and maintain software applications and systems",
+    "category": "Technology",
+    "industry": "Software Development",
+    "job_level": "mid",
+    "education_requirements": "Bachelor's degree in Computer Science or related field",
+    "experience_required": "2-5 years",
+    "required_skills": [
+      "Programming",
+      "Problem Solving",
+      "Software Development",
+      "Version Control",
+      "Testing",
+      "Communication"
+    ],
+    "preferred_skills": [
+      "Python",
+      "JavaScript",
+      "Java",
+      "Git",
+      "Agile Methodologies",
+      "Database Management"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Google Cloud Professional Developer",
+      "Microsoft Azure Developer"
+    ],
+    "salary": {
+      "min": 60000,
+      "max": 120000,
+      "median": 90000,
+      "currency": "USD"
+    },
+    "benefits": [
+      "Health Insurance",
+      "401k",
+      "Flexible Hours",
+      "Remote Work",
+      "Professional Development"
+    ],
+    "workplace_type": "hybrid",
+    "work_schedule": "full-time",
+    "travel_required": false,
+    "remote_possible": true,
+    "demand_level": "high",
+    "growth_rate": "high",
+    "competition_level": "medium",
+    "job_security": "high",
+    "riasec_requirements": {
+      "realistic": 40,
+      "investigative": 80,
+      "artistic": 30,
+      "social": 40,
+      "enterprising": 60,
+      "conventional": 50
+    },
+    "technology_impact": "high",
+    "automation_risk": "low",
+    "future_outlook": "positive"
+  },
+  {
+    "id": 2,
+    "title": "Data Scientist",
+    "description": "Analyze complex data to extract insights and build predictive models",
+    "category": "Technology",
+    "industry": "Data Science",
+    "job_level": "mid",
+    "education_requirements": "Master's degree in Data Science, Statistics, or related field",
+    "experience_required": "2-4 years",
+    "required_skills": [
+      "Statistics",
+      "Machine Learning",
+      "Python",
+      "Data Analysis",
+      "SQL",
+      "Problem Solving"
+    ],
+    "preferred_skills": [
+      "R",
+      "TensorFlow",
+      "PyTorch",
+      "Big Data",
+      "Cloud Computing",
+      "Data Visualization"
+    ],
+    "certifications": [
+      "AWS Certified Machine Learning",
+      "Google Cloud Professional Data Engineer",
+      "Microsoft Azure Data Scientist"
+    ],
+    "salary": {
+      "min": 70000,
+      "max": 130000,
+      "median": 95000,
+      "currency": "USD"
+    },
+    "benefits": [
+      "Health Insurance",
+      "401k",
+      "Flexible Hours",
+      "Remote Work",
+      "Research Opportunities"
+    ],
+    "workplace_type": "hybrid",
+    "work_schedule": "full-time",
+    "travel_required": false,
+    "remote_possible": true,
+    "demand_level": "high",
+    "growth_rate": "high",
+    "competition_level": "high",
+    "job_security": "high",
+    "riasec_requirements": {
+      "realistic": 30,
+      "investigative": 90,
+      "artistic": 20,
+      "social": 30,
+      "enterprising": 50,
+      "conventional": 60
+    },
+    "technology_impact": "high",
+    "automation_risk": "medium",
+    "future_outlook": "positive"
+  },
+  {
+    "id": 3,
+    "title": "Product Manager",
+    "description": "Lead product development and strategy, working with cross-functional teams",
+    "category": "Business",
+    "industry": "Technology",
+    "job_level": "mid",
+    "education_requirements": "Bachelor's degree in Business, Engineering, or related field",
+    "experience_required": "3-6 years",
+    "required_skills": [
+      "Leadership",
+      "Strategy",
+      "Communication",
+      "Project Management",
+      "Market Analysis",
+      "User Research"
+    ],
+    "preferred_skills": [
+      "Agile Methodologies",
+      "Data Analysis",
+      "Design Thinking",
+      "Technical Knowledge",
+      "Stakeholder Management",
+      "Product Marketing"
+    ],
+    "certifications": [
+      "Certified Scrum Product Owner",
+      "Google Analytics Certified",
+      "PMP Certification"
+    ],
+    "salary": {
+      "min": 80000,
+      "max": 140000,
+      "median": 110000,
+      "currency": "USD"
+    },
+    "benefits": [
+      "Health Insurance",
+      "401k",
+      "Flexible Hours",
+      "Stock Options",
+      "Professional Development"
+    ],
+    "workplace_type": "hybrid",
+    "work_schedule": "full-time",
+    "travel_required": true,
+    "remote_possible": true,
+    "demand_level": "high",
+    "growth_rate": "high",
+    "competition_level": "high",
+    "job_security": "high",
+    "riasec_requirements": {
+      "realistic": 20,
+      "investigative": 60,
+      "artistic": 40,
+      "social": 70,
+      "enterprising": 90,
+      "conventional": 50
+    },
+    "technology_impact": "high",
+    "automation_risk": "low",
+    "future_outlook": "positive"
+  },
+  {
+    "id": 4,
+    "title": "UX Designer",
+    "description": "Design user experiences and interfaces for digital products",
+    "category": "Design",
+    "industry": "Technology",
+    "job_level": "mid",
+    "education_requirements": "Bachelor's degree in Design, HCI, or related field",
+    "experience_required": "2-4 years",
+    "required_skills": [
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Design Thinking",
+      "Communication",
+      "Collaboration"
+    ],
+    "preferred_skills": [
+      "Figma",
+      "Sketch",
+      "Adobe Creative Suite",
+      "HTML/CSS",
+      "JavaScript",
+      "Usability Testing"
+    ],
+    "certifications": [
+      "Google UX Design Certificate",
+      "Adobe Certified Expert",
+      "Nielsen Norman Group UX Certification"
+    ],
+    "salary": {
+      "min": 65000,
+      "max": 110000,
+      "median": 85000,
+      "currency": "USD"
+    },
+    "benefits": [
+      "Health Insurance",
+      "401k",
+      "Flexible Hours",
+      "Creative Freedom",
+      "Professional Development"
+    ],
+    "workplace_type": "hybrid",
+    "work_schedule": "full-time",
+    "travel_required": false,
+    "remote_possible": true,
+    "demand_level": "high",
+    "growth_rate": "high",
+    "competition_level": "medium",
+    "job_security": "high",
+    "riasec_requirements": {
+      "realistic": 20,
+      "investigative": 50,
+      "artistic": 90,
+      "social": 70,
+      "enterprising": 40,
+      "conventional": 30
+    },
+    "technology_impact": "high",
+    "automation_risk": "low",
+    "future_outlook": "positive"
+  },
+  {
+    "id": 5,
+    "title": "Marketing Manager",
+    "description": "Develop and execute marketing strategies to promote products and services",
+    "category": "Business",
+    "industry": "Marketing",
+    "job_level": "mid",
+    "education_requirements": "Bachelor's degree in Marketing, Business, or related field",
+    "experience_required": "3-5 years",
+    "required_skills": [
+      "Marketing Strategy",
+      "Digital Marketing",
+      "Communication",
+      "Analytics",
+      "Project Management",
+      "Creative Thinking"
+    ],
+    "preferred_skills": [
+      "Google Analytics",
+      "Social Media Marketing",
+      "Content Marketing",
+      "SEO/SEM",
+      "Email Marketing",
+      "Brand Management"
+    ],
+    "certifications": [
+      "Google Analytics Certified",
+      "HubSpot Content Marketing Certification",
+      "Facebook Blueprint Certification"
+    ],
+    "salary": {
+      "min": 55000,
+      "max": 95000,
+      "median": 75000,
+      "currency": "USD"
+    },
+    "benefits": [
+      "Health Insurance",
+      "401k",
+      "Flexible Hours",
+      "Performance Bonus",
+      "Professional Development"
+    ],
+    "workplace_type": "hybrid",
+    "work_schedule": "full-time",
+    "travel_required": true,
+    "remote_possible": true,
+    "demand_level": "medium",
+    "growth_rate": "stable",
+    "competition_level": "high",
+    "job_security": "medium",
+    "riasec_requirements": {
+      "realistic": 30,
+      "investigative": 40,
+      "artistic": 60,
+      "social": 80,
+      "enterprising": 90,
+      "conventional": 50
+    },
+    "technology_impact": "high",
+    "automation_risk": "medium",
+    "future_outlook": "positive"
+  }
+]

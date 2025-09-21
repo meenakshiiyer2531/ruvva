@@ -1,0 +1,110 @@
+{
+  "realistic": {
+    "description": "Practical, hands-on, mechanical",
+    "traits": ["practical", "mechanical", "outdoor", "hands-on", "technical"],
+    "careers": [
+      "Engineer",
+      "Mechanic",
+      "Farmer",
+      "Construction Worker",
+      "Technician",
+      "Electrician",
+      "Plumber",
+      "Carpenter",
+      "Machinist",
+      "Surveyor"
+    ],
+    "work_environment": "hands-on, practical, outdoor",
+    "preferred_activities": ["building", "repairing", "operating equipment", "working with tools"]
+  },
+  "investigative": {
+    "description": "Analytical, scientific, intellectual",
+    "traits": ["analytical", "scientific", "intellectual", "curious", "research-oriented"],
+    "careers": [
+      "Scientist",
+      "Researcher",
+      "Analyst",
+      "Doctor",
+      "Programmer",
+      "Data Scientist",
+      "Mathematician",
+      "Engineer",
+      "Psychologist",
+      "Architect"
+    ],
+    "work_environment": "research, analysis, problem-solving",
+    "preferred_activities": ["researching", "analyzing data", "solving problems", "experimenting"]
+  },
+  "artistic": {
+    "description": "Creative, expressive, original",
+    "traits": ["creative", "artistic", "expressive", "original", "imaginative"],
+    "careers": [
+      "Artist",
+      "Designer",
+      "Writer",
+      "Musician",
+      "Actor",
+      "Photographer",
+      "Graphic Designer",
+      "Interior Designer",
+      "Fashion Designer",
+      "Creative Director"
+    ],
+    "work_environment": "creative, flexible, expressive",
+    "preferred_activities": ["creating", "designing", "writing", "performing", "expressing ideas"]
+  },
+  "social": {
+    "description": "Helpful, cooperative, supportive",
+    "traits": ["helpful", "cooperative", "supportive", "caring", "empathetic"],
+    "careers": [
+      "Teacher",
+      "Counselor",
+      "Social Worker",
+      "Nurse",
+      "Therapist",
+      "Human Resources",
+      "Customer Service",
+      "Healthcare Worker",
+      "Community Organizer",
+      "Life Coach"
+    ],
+    "work_environment": "helping others, collaborative, supportive",
+    "preferred_activities": ["helping others", "teaching", "counseling", "working in teams"]
+  },
+  "enterprising": {
+    "description": "Persuasive, leadership-oriented, ambitious",
+    "traits": ["persuasive", "leadership", "ambitious", "confident", "competitive"],
+    "careers": [
+      "Manager",
+      "Salesperson",
+      "Entrepreneur",
+      "Lawyer",
+      "Politician",
+      "Business Owner",
+      "Marketing Manager",
+      "Real Estate Agent",
+      "Investment Banker",
+      "Executive"
+    ],
+    "work_environment": "leadership, competitive, business-oriented",
+    "preferred_activities": ["leading", "selling", "managing", "negotiating", "competing"]
+  },
+  "conventional": {
+    "description": "Organized, detail-oriented, systematic",
+    "traits": ["organized", "detail-oriented", "systematic", "reliable", "methodical"],
+    "careers": [
+      "Accountant",
+      "Administrator",
+      "Clerk",
+      "Banker",
+      "Secretary",
+      "Data Entry Clerk",
+      "Office Manager",
+      "Financial Analyst",
+      "Auditor",
+      "Administrative Assistant"
+    ],
+    "work_environment": "structured, organized, systematic",
+    "preferred_activities": ["organizing", "managing data", "following procedures", "maintaining records"]
+  }
+}
