@@ -68,7 +68,7 @@ public class AuthService {
 
     private UserDto convertToDto(User user) {
         UserDto dto = new UserDto();
-        dto.setId(user.getId());
+        dto.setId(user.getId() != null ? user.getId().toString() : null);
         dto.setUsername(user.getUsername());
         dto.setName(user.getName());
         dto.setEmail(user.getEmail());

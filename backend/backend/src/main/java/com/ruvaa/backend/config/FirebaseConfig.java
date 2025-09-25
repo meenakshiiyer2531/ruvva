@@ -4,6 +4,7 @@ import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.firestore.Firestore;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.cloud.FirestoreClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,13 +28,13 @@ import java.io.InputStream;
 @ConditionalOnProperty(name = "firebase.enabled", havingValue = "true", matchIfMissing = false)
 public class FirebaseConfig {
 
-    @Value("${firebase.service-account-key}")
+    @Value("${firebase.service-account-key:classpath:credentials/serviceAccountKey.json}")
     private Resource serviceAccountKey;
 
-    @Value("${firebase.database-url}")
+    @Value("${firebase.database-url:https://ruvaa-cbcaa-default-rtdb.asia-southeast1.firebasedatabase.app/}")
     private String databaseUrl;
 
-    @Value("${firebase.project-id}")
+    @Value("${firebase.project-id:ruvaa-cbcaa}")
     private String projectId;
 
     private FirebaseApp firebaseApp;
@@ -44,11 +45,36 @@ public class FirebaseConfig {
     @PostConstruct
     public void initializeFirebase() {
         try {
+            // Check if Firebase configuration is available
+            if (serviceAccountKey == null || databaseUrl == null || projectId == null) {
+                log.warn("Firebase configuration not available. Running without Firebase integration.");
+                return;
+            }
+
+            // Check if the service account file exists
+            if (!serviceAccountKey.exists()) {
+                log.warn("Firebase service account file not found: {}. Running without Firebase integration.",
+                        serviceAccountKey.getDescription());
+                return;
+            }
+
+            // Check if it's a mock service account (contains "mock-project")
+            try (InputStream is = serviceAccountKey.getInputStream()) {
+                String content = new String(is.readAllBytes());
+                if (content.contains("mock-project")) {
+                    log.warn("Mock Firebase service account detected. Running without Firebase integration.");
+                    return;
+                }
+            } catch (Exception e) {
+                log.warn("Could not read service account file. Running without Firebase integration.");
+                return;
+            }
+
             if (FirebaseApp.getApps().isEmpty()) {
                 log.info("Initializing Firebase for project: {}", projectId);
-                
+
                 GoogleCredentials credentials = getCredentials();
-                
+
                 FirebaseOptions options = FirebaseOptions.builder()
                     .setCredentials(credentials)
                     .setDatabaseUrl(databaseUrl)
@@ -57,15 +83,15 @@ public class FirebaseConfig {
 
                 firebaseApp = FirebaseApp.initializeApp(options);
                 log.info("Firebase initialized successfully");
-                
+
             } else {
                 firebaseApp = FirebaseApp.getInstance();
                 log.info("Firebase already initialized, using existing instance");
             }
-            
+
         } catch (Exception e) {
             log.error("Failed to initialize Firebase", e);
-            throw new RuntimeException("Firebase initialization failed", e);
+            log.warn("Continuing without Firebase integration");
         }
     }
 
@@ -95,31 +121,43 @@ public class FirebaseConfig {
     @Bean
     public Firestore firestore() {
         if (firebaseApp == null) {
-            throw new IllegalStateException("Firebase not initialized");
+            log.warn("Firebase not initialized. Creating mock Firestore bean.");
+            // Return a null placeholder - services will handle this gracefully
+            return null;
         }
-        
+
         try {
             Firestore firestore = FirestoreClient.getFirestore(firebaseApp);
             log.info("Firestore database connection established");
             return firestore;
-            
+
         } catch (Exception e) {
             log.error("Failed to create Firestore instance", e);
-            throw new RuntimeException("Firestore initialization failed", e);
+            log.warn("Returning null Firestore bean");
+            return null;
         }
     }
 
     /**
-     * Health check method for Firebase connectivity.
+     * Provide FirebaseAuth instance.
      */
-    public boolean isFirebaseHealthy() {
+    @Bean
+    public FirebaseAuth firebaseAuth() {
+        if (firebaseApp == null) {
+            log.warn("Firebase not initialized. Creating mock FirebaseAuth bean.");
+            return null;
+        }
+
         try {
-            return firebaseApp != null && 
-                   FirebaseApp.getApps().contains(firebaseApp) &&
-                   firestore() != null;
+            FirebaseAuth auth = FirebaseAuth.getInstance(firebaseApp);
+            log.info("FirebaseAuth instance created");
+            return auth;
+
         } catch (Exception e) {
-            log.warn("Firebase health check failed", e);
-            return false;
+            log.error("Failed to create FirebaseAuth instance", e);
+            log.warn("Returning null FirebaseAuth bean");
+            return null;
         }
     }
+
 }

@@ -134,7 +134,7 @@ class SkillGapAnalyzer:
             
             return assessment
         except Exception as e:
-            logger.error(f"Error assessing skill level: {str(e)})
+            logger.error(f"Error assessing skill level: {str(e)}")
             raise
     
     def create_skill_development_plan(self, 

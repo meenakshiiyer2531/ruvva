@@ -1,29 +1,46 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import ApiService from "../services/api";
 
 export default function Chat({ profile, darkMode }) {
   const [messages, setMessages] = useState([
-    { from: "bot", text: "Hi! I'm your career assistant. Ask me anything." },
+    { from: "bot", text: "Hi! I'm your career assistant. Ask me anything about your career journey!" },
   ]);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
-  const send = () => {
-    if (!input.trim()) return;
-    const userMsg = { from: "user", text: input };
-    setMessages((m) => [...m, userMsg, { from: "bot", text: "Typing..." }]);
-    setInput("");
+  const send = async () => {
+    if (!input.trim() || loading) return;
 
-    setTimeout(() => {
+    const userMessage = input;
+    const userMsg = { from: "user", text: userMessage };
+    setMessages((m) => [...m, userMsg, { from: "bot", text: "🤔 Thinking..." }]);
+    setInput("");
+    setLoading(true);
+
+    try {
+      const response = await ApiService.sendChatMessage(userMessage, profile);
       setMessages((m) => {
         const newArr = [...m];
         newArr[newArr.length - 1] = {
           from: "bot",
-          text: `You said: "${input}". Here's a suggestion for your career journey.`,
+          text: response.response || "I'm here to help with your career questions!",
         };
         return newArr;
       });
-    }, 1000);
+    } catch (error) {
+      setMessages((m) => {
+        const newArr = [...m];
+        newArr[newArr.length - 1] = {
+          from: "bot",
+          text: "Sorry, I'm having trouble connecting right now. Let me give you a helpful response anyway! 💡",
+        };
+        return newArr;
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -123,19 +140,20 @@ export default function Chat({ profile, darkMode }) {
         />
         <button
           onClick={send}
+          disabled={loading}
           style={{
             flex: "0 0 auto", // button takes minimal space
             padding: "12px 18px",
             borderRadius: 12,
             border: "none",
-            background: userMsgBg,
+            background: loading ? "#ccc" : userMsgBg,
             color: "#fff",
             fontWeight: "bold",
-            cursor: "pointer",
+            cursor: loading ? "not-allowed" : "pointer",
             transition: "all 0.3s ease",
           }}
         >
-          Send
+          {loading ? "..." : "Send"}
         </button>
       </div>
     </div>

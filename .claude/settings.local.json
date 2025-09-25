@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(./mvnw:*)"
+      "Bash(./mvnw:*)",
+      "Bash(python:*)",
+      "Bash(dir \"C:\\Users\\User\\IdeaProjects\\ruvva\\backend\\backend\\src\\main\\resources\\credentials\")"
     ],
     "deny": [],
     "ask": []

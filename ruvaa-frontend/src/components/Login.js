@@ -1,13 +1,24 @@
 import React, { useState } from "react";
+import ApiService from "../services/api";
 
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    if (!username || !password) return alert("Enter credentials — any values work for now.");
-    onLogin({ name: username, id: "u_" + Date.now() });
+    if (!username || !password) return alert("Enter credentials");
+
+    setLoading(true);
+    try {
+      const response = await ApiService.login({ username, password });
+      onLogin(response.user);
+    } catch (error) {
+      alert("Login failed: " + error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -42,11 +53,13 @@ export default function Login({ onLogin }) {
             type="password"
             style={inputStyle}
           />
-          <button type="submit" style={btnStyle}>Login</button>
+          <button type="submit" style={btnStyle} disabled={loading}>
+            {loading ? "Logging in..." : "Login"}
+          </button>
         </form>
 
         <div style={tipText}>
-          Tip: this is a front-end mock. Replace auth later.
+          MVP: Tries real API, falls back to mock if backend unavailable.
         </div>
       </div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ApiService from "../services/api";
 
 export default function Assessment(){
   const questions = [
@@ -13,11 +14,32 @@ export default function Assessment(){
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [completed, setCompleted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [analysisResult, setAnalysisResult] = useState(null);
 
-  const answer = (score) => {
-    setAnswers(a=>[...a, {q:questions[idx].id, axis:questions[idx].axis, score}]);
-    if(idx+1<questions.length) setIdx(idx+1);
-    else setCompleted(true);
+  const answer = async (score) => {
+    const newAnswers = [...answers, {q:questions[idx].id, axis:questions[idx].axis, score}];
+    setAnswers(newAnswers);
+
+    if(idx+1<questions.length) {
+      setIdx(idx+1);
+    } else {
+      setLoading(true);
+      try {
+        // Submit assessment to backend for analysis
+        const result = await ApiService.submitAssessment({
+          answers: newAnswers,
+          totalQuestions: questions.length
+        });
+        setAnalysisResult(result);
+      } catch (error) {
+        console.error('Assessment submission failed:', error);
+        // Continue with local analysis as fallback
+      } finally {
+        setLoading(false);
+        setCompleted(true);
+      }
+    }
   };
 
   const grouped = answers.reduce((acc,cur)=>{
@@ -35,26 +57,66 @@ export default function Assessment(){
             <button style={btnMuted} onClick={()=>answer(1)}>Neutral</button>
             <button style={btn} onClick={()=>answer(0)}>Disagree</button>
           </div>
-          <div style={{marginTop:12, color:"var(--muted)"}}>Progress {idx+1}/{questions.length}</div>
+          <div style={{marginTop:12, color:"var(--muted)"}}>
+            Progress {idx+1}/{questions.length}
+            {loading && " - Analyzing your responses..."}
+          </div>
         </div>
       ) : (
         <div style={card}>
           <h2 style={{color:"#0077b6"}}>Assessment Results</h2>
-          <p style={{color:"var(--muted)"}}>Here is a quick breakdown (mock scores)</p>
-          <div style={{display:"grid", gap:8, maxWidth:680, marginTop:12}}>
-            {Object.entries(grouped).map(([axis, sc])=> (
-              <div key={axis} style={{display:"flex", alignItems:"center", gap:12}}>
-                <div style={{width:130}}>{axis}</div>
-                <div style={{flex:1, height:12, background:"rgba(0,0,0,0.06)", borderRadius:8}}>
-                  <div style={{width: `${Math.min(100, Math.round((sc/ (2*questions.length))*200 ))}%`, height:12, background:"#00b4d8", borderRadius:8}}/>
+
+          {loading ? (
+            <div style={{padding: 20}}>
+              <p>🤔 Analyzing your responses with AI...</p>
+            </div>
+          ) : (
+            <>
+              <p style={{color:"var(--muted)"}}>
+                {analysisResult ? "AI-powered analysis complete!" : "Local analysis (AI unavailable)"}
+              </p>
+
+              {analysisResult && analysisResult.recommendations && (
+                <div style={{marginTop: 16, padding: 16, background: "rgba(0,180,216,0.1)", borderRadius: 12}}>
+                  <h3 style={{color:"#0077b6", marginBottom: 8}}>🎯 Career Recommendations</h3>
+                  <ul style={{textAlign: "left", paddingLeft: 20}}>
+                    {analysisResult.recommendations.map((rec, i) => (
+                      <li key={i} style={{marginBottom: 4}}>{rec}</li>
+                    ))}
+                  </ul>
                 </div>
-                <div style={{width:42, textAlign:"right"}}>{Math.min(100, Math.round((sc/ (2*questions.length))*100))}%</div>
+              )}
+
+              <div style={{display:"grid", gap:8, maxWidth:680, marginTop:16}}>
+                {Object.entries(grouped).map(([axis, sc])=> (
+                  <div key={axis} style={{display:"flex", alignItems:"center", gap:12}}>
+                    <div style={{width:130}}>{axis}</div>
+                    <div style={{flex:1, height:12, background:"rgba(0,0,0,0.06)", borderRadius:8}}>
+                      <div style={{width: `${Math.min(100, Math.round((sc/ (2*questions.length))*200 ))}%`, height:12, background:"#00b4d8", borderRadius:8}}/>
+                    </div>
+                    <div style={{width:42, textAlign:"right"}}>{Math.min(100, Math.round((sc/ (2*questions.length))*100))}%</div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div style={{marginTop:14}}>
-            <button onClick={()=>{ setIdx(0); setAnswers([]); setCompleted(false); }} style={btn}>Restart</button>
-          </div>
+
+              {analysisResult && analysisResult.score && (
+                <div style={{marginTop: 16, fontSize: 18}}>
+                  Overall Assessment Score: <strong>{analysisResult.score}/100</strong>
+                </div>
+              )}
+
+              <div style={{marginTop:20}}>
+                <button onClick={()=>{
+                  setIdx(0);
+                  setAnswers([]);
+                  setCompleted(false);
+                  setAnalysisResult(null);
+                }} style={btn}>
+                  Take Assessment Again
+                </button>
+              </div>
+            </>
+          )}
         </div>
       )}
     </div>

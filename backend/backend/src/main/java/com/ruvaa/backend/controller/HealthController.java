@@ -1,8 +1,8 @@
 package com.ruvaa.backend.controller;
 
-import com.ruvaa.backend.config.FirebaseConfig;
 import com.ruvaa.backend.config.GeminiConfig;
 import com.ruvaa.backend.model.dto.ApiResponse;
+import com.ruvaa.backend.service.FirebaseHealthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -26,7 +26,7 @@ import java.util.Map;
 @Tag(name = "Health Check", description = "System health and status endpoints")
 public class HealthController {
 
-    private final FirebaseConfig firebaseConfig;
+    private final FirebaseHealthService firebaseHealthService;
     private final GeminiConfig geminiConfig;
 
     /**
@@ -84,7 +84,7 @@ public class HealthController {
         }
     )
     public ResponseEntity<ApiResponse<Map<String, Object>>> healthCheck() {
-        boolean firebaseHealthy = firebaseConfig.isFirebaseHealthy();
+        boolean firebaseHealthy = firebaseHealthService.isFirebaseHealthy();
         boolean geminiHealthy = geminiConfig.isGeminiConfigured();
         boolean overallHealthy = firebaseHealthy && geminiHealthy;
 
@@ -134,7 +134,7 @@ public class HealthController {
         }
     )
     public ResponseEntity<ApiResponse<Map<String, Object>>> readinessCheck() {
-        boolean ready = firebaseConfig.isFirebaseHealthy();
+        boolean ready = firebaseHealthService.isFirebaseHealthy();
 
         Map<String, Object> readinessStatus = Map.of(
             "ready", ready,

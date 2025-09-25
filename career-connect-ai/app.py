@@ -38,14 +38,15 @@ def create_app():
         app.logger.warning("Redis connection failed. Caching will be disabled.")
         app.redis_client = None
     
-    # Initialize shared Rate Limiter
-    from utils.limiter import limiter
-    limiter.init_app(
-        app,
-        key_func=get_remote_address,
-        storage_uri=app.config['RATELIMIT_STORAGE_URL'],
-        default_limits=[app.config['RATELIMIT_DEFAULT']]
-    )
+    # Initialize shared Rate Limiter (disable for MVP simplicity)
+    app.limiter = None  # Disable rate limiting for MVP
+    # try:
+    #     from utils.limiter import limiter
+    #     limiter.init_app(app)
+    #     app.limiter = limiter
+    # except Exception as e:
+    #     app.logger.warning(f"Rate limiter initialization failed: {e}. Continuing without rate limiting.")
+    #     app.limiter = None
     
     # Setup logging
     setup_logging(app)
@@ -53,6 +54,10 @@ def create_app():
     # Setup authentication (JWT)
     from api.middleware.auth_middleware import setup_auth
     setup_auth(app)
+
+    # Initialize backend integration service
+    from services.backend_integration import backend_service
+    backend_service.init_app(app)
 
     # Register error handlers
     register_error_handlers(app)

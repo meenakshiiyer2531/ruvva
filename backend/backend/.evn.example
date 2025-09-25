@@ -1,0 +1,12 @@
+# Firebase Configuration
+FIREBASE_DATABASE_URL=your-db-url
+FIREBASE_PROJECT_ID=your-project-id
+
+# Google Gemini AI
+GEMINI_API_KEY=your-gemini-api-key
+
+# JWT Security
+JWT_SECRET=your-jwt-secret
+
+# Google Application Credentials
+GOOGLE_APPLICATION_CREDENTIALS=./credentials/serviceAccountKey.json

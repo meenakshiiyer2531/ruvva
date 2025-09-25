@@ -6,7 +6,7 @@ from flask import Blueprint, request
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from utils.limiter import limiter
 from api.validators.profile_validators import validate_profile_data, validate_profile_update
-from services.profile_analyzer import ProfileAnalyzer
+from services.profile_analyzer import StudentProfileAnalyzer
 from models.student import Student
 from utils.logger import get_logger
 from utils.response_formatter import APIResponse, handle_exceptions
@@ -21,7 +21,7 @@ profile_bp = Blueprint('profile', __name__, url_prefix='/api/v1/profile')
 # Rate limiter is initialized in app.py
 
 # Initialize services
-profile_analyzer = ProfileAnalyzer()
+profile_analyzer = StudentProfileAnalyzer()
 
 @profile_bp.route('/create', methods=['POST'])
 @limiter.limit("5 per minute")

@@ -6,7 +6,13 @@ server:
 spring:
   application:
     name: ruvaa-backend
-  
+
+# Firebase Configuration
+firebase:
+  enabled: false
+  service-account-key: classpath:credentials/serviceAccountKey.json
+  database-url: https://ruvaa-cbcaa-default-rtdb.asia-southeast1.firebasedatabase.app/
+  project-id: ruvaa-cbcaa
 
 jwt:
   secret: ruvaaSecretKeyForJWTTokenGenerationAndValidation123456789
@@ -16,3 +22,10 @@ logging:
   level:
     com.ruvaa: DEBUG
     org.springframework.security: DEBUG
+    com.google.firebase: DEBUG
+
+# Python AI Service Configuration
+python:
+  ai:
+    service:
+      url: http://localhost:5000

@@ -7,6 +7,7 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 from utils.limiter import limiter
 from api.validators.chat_validators import validate_chat_message
 from services.chat_service import ChatService
+from services.backend_integration import backend_service
 from models.conversation import Conversation, Message
 from utils.logger import get_logger
 from utils.response_formatter import APIResponse, handle_exceptions
@@ -96,7 +97,14 @@ def send_message():
         
         # Process chat message
         response_data = chat_service.process_chat_message(message, session_id)
-        
+
+        # Save to backend database if available
+        try:
+            ai_response = response_data.get('response', '') if isinstance(response_data, dict) else str(response_data)
+            backend_service.save_chat_history(user_id, message, ai_response)
+        except Exception as e:
+            logger.warning(f"Failed to save chat to backend: {e}")
+
         return APIResponse.success({'response_data': response_data}, "Message processed successfully")
         
     except Exception as e:
@@ -335,9 +343,12 @@ def submit_chat_feedback():
         # feedback = ChatFeedback.from_dict(feedback_data)
         # db.session.add(feedback)
         # db.session.commit()
-        
+
         return APIResponse.success({'feedback_id': 1}, "Feedback submitted successfully", 201)
 
+    except Exception as e:
+        logger.error(f"Error submitting feedback: {str(e)}")
+        return APIResponse.error("Failed to submit feedback", {"details": str(e)}, 500)
 
 @chat_bp.route('/context/reset', methods=['POST'])
 @limiter.limit("10 per minute")

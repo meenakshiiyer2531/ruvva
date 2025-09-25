@@ -27,9 +27,10 @@ class Config:
     JWT_ALGORITHM = os.environ.get('JWT_ALGORITHM', 'HS256')
     
     # CORS Configuration
-    CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'http://localhost:3000').split(',')
-    CORS_METHODS = ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
-    CORS_HEADERS = ['Content-Type', 'Authorization']
+    CORS_ORIGINS = os.environ.get('CORS_ORIGINS',
+        'http://localhost:3000,http://127.0.0.1:3000,http://localhost:8080,http://127.0.0.1:8080').split(',')
+    CORS_METHODS = ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH']
+    CORS_HEADERS = ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin', 'Cache-Control']
     
     # Rate Limiting Configuration
     RATELIMIT_STORAGE_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379')
@@ -63,6 +64,15 @@ class Config:
     MAX_PROFILE_SIZE = int(os.environ.get('MAX_PROFILE_SIZE', 10000))  # bytes
     MAX_ASSESSMENT_QUESTIONS = int(os.environ.get('MAX_ASSESSMENT_QUESTIONS', 100))
     CACHE_TTL = int(os.environ.get('CACHE_TTL', 3600))  # seconds
+
+    # Backend Integration Configuration
+    BACKEND_API_URL = os.environ.get('BACKEND_API_URL', 'http://localhost:8080/api')
+    BACKEND_INTEGRATION_ENABLED = os.environ.get('BACKEND_INTEGRATION_ENABLED', 'True').lower() == 'true'
+
+    # Firebase Integration (for direct access if needed)
+    FIREBASE_PROJECT_ID = os.environ.get('FIREBASE_PROJECT_ID', 'ruvaa-cbcaa')
+    FIREBASE_DATABASE_URL = os.environ.get('FIREBASE_DATABASE_URL', 'https://ruvaa-cbcaa-default-rtdb.asia-southeast1.firebasedatabase.app/')
+    FIREBASE_CREDENTIALS_PATH = os.environ.get('FIREBASE_CREDENTIALS_PATH', '../backend/backend/credentials/serviceAccountKey.json')
     
     # Indian Education System Configuration
     INDIAN_GRADES = ['10th', '11th', '12th', 'Graduate', 'Post Graduate']

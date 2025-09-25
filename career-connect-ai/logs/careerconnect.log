@@ -1,0 +1,102 @@
+2025-09-22 00:35:19,661 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 20:57:55,893 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 20:57:56,248 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 20:57:56,249 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 21:02:24,138 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 21:02:24,320 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 21:02:24,320 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 21:02:25,704 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 21:02:25,747 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 21:08:59,485 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 21:08:59,646 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 21:08:59,647 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 21:09:00,468 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 21:09:00,485 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 21:40:48,811 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 21:40:49,170 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 21:40:49,171 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 21:40:51,813 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 21:40:51,849 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 21:46:25,305 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 21:46:25,461 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 21:46:25,462 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 21:46:26,185 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 21:46:26,210 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 21:56:23,900 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 21:56:24,037 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 21:56:24,037 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 21:56:24,739 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 21:56:24,758 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 21:56:24,842 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-25 21:56:58,902 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 21:56:59,047 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 21:56:59,047 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 21:56:59,794 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 21:56:59,815 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 21:56:59,828 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-25 21:57:00,579 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 21:57:49,455 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 21:57:49,614 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 21:57:49,615 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 21:57:50,171 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 21:57:50,188 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 21:57:50,203 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-25 21:57:50,380 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 21:58:50,649 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 21:58:50,758 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 21:58:50,758 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 21:58:51,343 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 21:58:51,356 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 21:58:51,367 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-25 21:58:51,585 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 21:58:51,629 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 21:58:51,629 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 21:58:51,646 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-25 21:58:51,684 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-09-25 21:58:51,684 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-25 21:58:51,719 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-25 21:58:54,283 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 21:58:54,410 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 21:58:54,411 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 21:58:55,023 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 21:58:55,037 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 21:58:55,057 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-25 21:58:55,227 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 21:58:55,233 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 21:58:55,233 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 21:58:55,262 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-25 21:58:55,279 - werkzeug - WARNING -  * Debugger is active!
+2025-09-25 21:58:55,288 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-25 22:26:20,584 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 22:26:20,747 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 22:26:20,747 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 22:26:21,496 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 22:26:21,515 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 22:26:21,534 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-25 22:26:21,845 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 22:26:21,849 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 22:26:21,849 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 22:26:21,870 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-25 22:26:21,931 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-09-25 22:26:21,932 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-25 22:26:21,967 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-25 22:26:24,747 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 22:26:24,910 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 22:26:24,911 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 22:26:25,438 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 22:26:25,459 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 22:26:25,479 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-25 22:26:25,714 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 22:26:25,718 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 22:26:25,719 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 22:26:25,767 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-25 22:26:25,789 - werkzeug - WARNING -  * Debugger is active!
+2025-09-25 22:26:25,802 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-25 22:51:16,811 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\career_routes.py', reloading
+2025-09-25 22:51:16,832 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\profile_routes.py', reloading

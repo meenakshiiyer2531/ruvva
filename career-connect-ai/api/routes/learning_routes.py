@@ -419,6 +419,9 @@ def get_learning_recommendations():
         
         return APIResponse.success({'learning_recommendations': recommendations}, "Learning recommendations retrieved successfully")
 
+    except Exception as e:
+        logger.error(f"Error getting learning recommendations: {str(e)}")
+        return APIResponse.error("Failed to get learning recommendations", {"details": str(e)}, 500)
 
 @learning_bp.route('/progress/<int:student_id>', methods=['GET'])
 @limiter.limit("30 per minute")
