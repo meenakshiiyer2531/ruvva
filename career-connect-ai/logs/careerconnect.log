@@ -100,3 +100,16 @@
 2025-09-25 22:26:25,802 - werkzeug - INFO -  * Debugger PIN: 342-151-991
 2025-09-25 22:51:16,811 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\career_routes.py', reloading
 2025-09-25 22:51:16,832 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\profile_routes.py', reloading
+2025-09-25 22:51:17,943 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-25 22:51:20,952 - app - INFO - CareerConnect AI started in development mode
+2025-09-25 22:51:21,133 - services.backend_integration - INFO - Backend integration enabled
+2025-09-25 22:51:21,133 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-25 22:51:21,907 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-25 22:51:21,927 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-25 22:51:21,947 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-25 22:51:22,175 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 22:51:22,180 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 22:51:22,181 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-25 22:51:22,201 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-25 22:51:22,222 - werkzeug - WARNING -  * Debugger is active!
+2025-09-25 22:51:22,231 - werkzeug - INFO -  * Debugger PIN: 342-151-991
