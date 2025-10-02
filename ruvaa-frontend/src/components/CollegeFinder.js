@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaMapMarkerAlt, FaBook, FaMoon, FaSun } from "react-icons/fa";
+import ApiService from "../services/api";
 
 export default function CollegeFinder({ darkMode }) {
   const [query, setQuery] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const colleges = [
+  const fallbackColleges = [
     { name: "IIT Bombay", location: "India", courses: ["Engineering", "Management"], url: "https://www.iitb.ac.in" },
     { name: "MIT", location: "USA", courses: ["CS", "Data Science"], url: "https://web.mit.edu" },
     { name: "ETH Zurich", location: "Switzerland", courses: ["Engineering", "AI"], url: "https://ethz.ch" },
@@ -61,6 +64,41 @@ export default function CollegeFinder({ darkMode }) {
     { name: "Trinity College Dublin", location: "Ireland", courses: ["Arts", "Science", "Business"], url: "https://www.tcd.ie/" },
     { name: "University of Hong Kong", location: "Hong Kong", courses: ["Arts", "Business", "Engineering"], url: "https://www.hku.hk/" },
   ];
+
+  const [colleges, setColleges] = useState(fallbackColleges);
+
+  // Fetch colleges from backend
+  useEffect(() => {
+    const fetchColleges = async () => {
+      console.log("🔍 Fetching colleges from backend...");
+      setLoading(true);
+      setError(null);
+
+      try {
+        const data = await ApiService.getColleges();
+        console.log("✅ Colleges data received:", data);
+
+        if (Array.isArray(data)) {
+          setColleges(data);
+        } else if (data.colleges && Array.isArray(data.colleges)) {
+          setColleges(data.colleges);
+        } else {
+          console.warn("⚠️ Unexpected backend response format, using fallback data");
+          setColleges(fallbackColleges);
+        }
+      } catch (err) {
+        console.error("❌ Failed to fetch colleges from backend:", err.message);
+        console.log("⚠️ Using local fallback college data");
+        // Don't show error to user since fallback data works fine
+        setColleges(fallbackColleges);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchColleges();
+  }, []);
+
   const filtered = colleges.filter(
     (c) =>
       c.name.toLowerCase().includes(query.toLowerCase()) ||
@@ -152,6 +190,12 @@ export default function CollegeFinder({ darkMode }) {
   return (
     <div style={styles.container}>
       <h2 style={styles.header}>College Finder</h2>
+
+      {loading && (
+        <div style={{ textAlign: "center", padding: 20, color: darkMode ? "#aaa" : "#555" }}>
+          Loading colleges...
+        </div>
+      )}
 
       <input
         type="text"

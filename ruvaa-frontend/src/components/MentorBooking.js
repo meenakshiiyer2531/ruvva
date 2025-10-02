@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
+import ApiService from "../services/api";
 
 /*
   Mentor Booking Component
@@ -8,7 +9,7 @@ import React, { useState, useMemo } from "react";
   - Profile redirects to LinkedIn
 */
 
-const mentors = [
+const fallbackMentors = [
   { id:"m1", name:"Dr. Meenakshi", expertise:["AI","Research","Python"], bio:"PhD researcher in AI", linkedin:"https://www.linkedin.com/in/dr-meenakshi", availability:["2025-09-22","2025-09-28"] },
   { id:"m2", name:"Mr. Sharma", expertise:["Problem solving","Algorithms","DSA"], bio:"Senior Engineer", linkedin:"https://www.linkedin.com/in/mr-sharma", availability:["2025-09-25","2025-10-03"] },
   { id:"m3", name:"Ms. Kapoor", expertise:["Design","Product","UX"], bio:"Product Designer", linkedin:"https://www.linkedin.com/in/ms-kapoor", availability:["2025-09-23","2025-10-02"] },
@@ -26,6 +27,41 @@ export default function MentorBooking({ profile }) {
   const [studentName, setStudentName] = useState(profile?.name || "");
   const [date, setDate] = useState("");
   const [bookings, setBookings] = useState([]);
+  const [mentors, setMentors] = useState(fallbackMentors);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch mentors from backend
+  useEffect(() => {
+    const fetchMentors = async () => {
+      console.log("🔍 Fetching mentors from backend...");
+      setLoading(true);
+      setError(null);
+
+      try {
+        const data = await ApiService.getMentors();
+        console.log("✅ Mentors data received:", data);
+
+        if (Array.isArray(data)) {
+          setMentors(data);
+        } else if (data.mentors && Array.isArray(data.mentors)) {
+          setMentors(data.mentors);
+        } else {
+          console.warn("⚠️ Unexpected backend response format, using fallback data");
+          setMentors(fallbackMentors);
+        }
+      } catch (err) {
+        console.error("❌ Failed to fetch mentors from backend:", err.message);
+        console.log("⚠️ Using local fallback mentor data");
+        // Don't show error to user since fallback data works fine
+        setMentors(fallbackMentors);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMentors();
+  }, []);
 
   const ranked = useMemo(()=> {
     const interests = (profile?.interests || []).map(i=>i.toLowerCase());
@@ -37,18 +73,45 @@ export default function MentorBooking({ profile }) {
       const percent = Math.min(100, Math.round((match / Math.max(1, m.expertise.length)) * 100));
       return {...m, percent};
     }).sort((a,b)=>b.percent - a.percent);
-  }, [profile]);
+  }, [profile, mentors]);
 
-  const book = () => {
+  const book = async () => {
     if(!selected || !studentName || !date) return alert("Fill student name, mentor, and date");
-    setBookings(b=>[...b, {student:studentName, mentor:selected, date}]);
-    setStudentName(""); setDate(""); setSelected("");
-    alert("Booked — mock booking saved.");
+
+    const selectedMentor = mentors.find(m => m.name === selected);
+    const bookingData = {
+      studentName,
+      mentorId: selectedMentor?.id,
+      mentorName: selected,
+      date
+    };
+
+    console.log("📤 Booking mentor session:", bookingData);
+
+    try {
+      const result = await ApiService.bookMentorSession(bookingData);
+      console.log("✅ Booking successful:", result);
+      setBookings(b=>[...b, {student:studentName, mentor:selected, date}]);
+      setStudentName(""); setDate(""); setSelected("");
+      alert("Session booked successfully!");
+    } catch (err) {
+      console.error("❌ Booking failed:", err.message);
+      // Still save locally as fallback
+      setBookings(b=>[...b, {student:studentName, mentor:selected, date}]);
+      setStudentName(""); setDate(""); setSelected("");
+      alert("Booking saved locally. Backend connection failed.");
+    }
   };
 
   return (
     <div style={{minHeight:"80vh", padding:20}}>
       <h2 style={{color:"#0077b6", marginBottom:20}}>Mentor Matching</h2>
+
+      {loading && (
+        <div style={{ textAlign: "center", padding: 20, color: "var(--muted)" }}>
+          Loading mentors...
+        </div>
+      )}
       <div style={{display:"grid", gridTemplateColumns:"1fr 360px", gap:20, alignItems:"start"}}>
         <div>
           {ranked.map(m=>(

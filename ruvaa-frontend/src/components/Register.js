@@ -1,25 +1,49 @@
 import React, { useState } from "react";
 import ApiService from "../services/api";
 
-export default function Login({ onLogin, setPage }) {
-  const [username, setUsername] = useState("");
+export default function Register({ onRegister, setPage }) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
   const submit = async (e) => {
     e.preventDefault();
-    if (!username || !password) return alert("Enter credentials");
 
-    console.log("🔐 Login attempt for user:", username);
+    console.log("📝 Registration form submitted");
+
+    if (!name || !email || !password || !confirmPassword) {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters long");
+      return;
+    }
+
     setLoading(true);
     try {
-      console.log("📤 Sending login request to backend");
-      const response = await ApiService.login({ username, password });
-      console.log("✅ Login successful:", response);
-      onLogin(response.user);
+      console.log("📤 Sending registration request to backend:", { name, email });
+      const response = await ApiService.register({ name, email, password });
+      console.log("✅ Registration successful:", response);
+
+      // Auto-login after successful registration
+      if (response.user) {
+        onRegister(response.user);
+      } else if (response.id) {
+        // Handle different response formats
+        onRegister({ id: response.id, name: response.name, email: response.email });
+      }
     } catch (error) {
-      console.error("❌ Login failed:", error);
-      alert("Login failed: " + error.message);
+      console.error("❌ Registration failed:", error);
+      alert("Registration failed: " + (error.message || "Unknown error"));
     } finally {
       setLoading(false);
     }
@@ -31,41 +55,57 @@ export default function Login({ onLogin, setPage }) {
       <div style={imageWrapper}>
         <img src="/login.jpg" alt="CareerConnect" style={imageStyle} />
         <div style={imageOverlay}>
-          <h2 style={overlayTitle}>Welcome to CareerConnect</h2>
-          <p style={overlayText}>Your journey to a brighter future starts here.</p>
+          <h2 style={overlayTitle}>Join CareerConnect</h2>
+          <p style={overlayText}>Start your personalized career journey today.</p>
         </div>
       </div>
 
       {/* Right Form */}
       <div style={formWrapper}>
-        <h1 style={formTitle}>Login</h1>
-        <p style={formSubtitle}>Sign in to begin your career journey</p>
+        <h1 style={formTitle}>Create Account</h1>
+        <p style={formSubtitle}>Sign up to discover your career path</p>
 
         <form onSubmit={submit} style={formStyle}>
           <input
-            aria-label="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Your name"
+            aria-label="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Full Name"
+            style={inputStyle}
+          />
+          <input
+            aria-label="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email Address"
             style={inputStyle}
           />
           <input
             aria-label="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
+            placeholder="Password (min 6 characters)"
+            type="password"
+            style={inputStyle}
+          />
+          <input
+            aria-label="confirm-password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Confirm Password"
             type="password"
             style={inputStyle}
           />
           <button type="submit" style={btnStyle} disabled={loading}>
-            {loading ? "Logging in..." : "Login"}
+            {loading ? "Creating Account..." : "Sign Up"}
           </button>
         </form>
 
         <div style={linkContainer}>
-          Don't have an account?{" "}
-          <span style={linkStyle} onClick={() => setPage("register")}>
-            Sign up
+          Already have an account?{" "}
+          <span style={linkStyle} onClick={() => setPage("login")}>
+            Sign in
           </span>
         </div>
       </div>
@@ -98,7 +138,7 @@ const overlayTitle = { margin: 0, fontSize: 28 };
 const overlayText = { fontSize: 16, marginTop: 10 };
 const formWrapper = { flex: 1, padding: 36, display: "flex", flexDirection: "column", justifyContent: "center", minWidth: 0, boxSizing: "border-box" };
 const formTitle = { margin: 0, color: "#0077b6" };
-const formSubtitle = { color: "#6c757d" };
+const formSubtitle = { color: "#6c757d", marginBottom: 8 };
 const formStyle = { display: "grid", gap: 12, marginTop: 12 };
 const inputStyle = { padding: "12px 14px", borderRadius: 10, border: "1px solid #d6dbe1", background: "transparent", color: "#212529", fontSize: 15 };
 const btnStyle = { padding: "12px 14px", borderRadius: 12, border: "none", background: "#00b4d8", color: "white", fontWeight: 700, cursor: "pointer", fontSize: 15 };

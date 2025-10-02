@@ -5,6 +5,7 @@ AI chat service for career counseling
 from typing import Dict, List, Any, Optional
 import json
 import logging
+import asyncio
 from utils.logger import get_logger
 from core.gemini_client import GeminiClient
 from core.conversation_manager import ConversationManager
@@ -170,13 +171,45 @@ class ChatService:
             logger.error(f"Error generating conversation summary: {str(e)}")
             raise
     
-    def _generate_ai_response(self, 
-                            message: str, 
+    def _generate_ai_response(self,
+                            message: str,
                             session_context: Dict[str, Any]) -> str:
         """Generate AI response using Gemini"""
         try:
-            response = self.gemini_client.chat_with_counselor(message, session_context)
-            return response
+            # Get conversation history from context
+            conversation_history = session_context.get('messages', [])
+            student_context = session_context.get('student_profile', {})
+
+            # Convert to format expected by Gemini
+            history_for_gemini = [
+                {'role': msg.get('sender', 'user'), 'content': msg.get('content', '')}
+                for msg in conversation_history[-10:]  # Last 10 messages for context
+            ]
+
+            # Call async Gemini client synchronously
+            # Create new event loop for thread if one doesn't exist
+            try:
+                loop = asyncio.get_event_loop()
+                if loop.is_closed():
+                    loop = asyncio.new_event_loop()
+                    asyncio.set_event_loop(loop)
+            except RuntimeError:
+                # No event loop in current thread, create one
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
+
+            gemini_response = loop.run_until_complete(
+                self.gemini_client.chat_response(message, history_for_gemini, student_context)
+            )
+
+            # Extract text from response (GeminiResponse has 'content' attribute)
+            if hasattr(gemini_response, 'content'):
+                return gemini_response.content
+            elif hasattr(gemini_response, 'response_text'):
+                return gemini_response.response_text
+            else:
+                logger.warning(f"Unexpected response type: {type(gemini_response)}")
+                return str(gemini_response)
         except Exception as e:
             logger.error(f"Error generating AI response: {str(e)}")
             return "I apologize, but I'm having trouble processing your message right now. Please try again."

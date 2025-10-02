@@ -16,8 +16,8 @@ public class CareerController {
 
     private final CareerService careerService;
 
-    @GetMapping("/recommendations")
-    public ResponseEntity<List<CareerDto>> getRecommendations() {
+    @PostMapping("/recommendations")
+    public ResponseEntity<List<CareerDto>> getRecommendations(@RequestBody(required = false) java.util.Map<String, Object> profileData) {
         List<CareerDto> careers = careerService.getAllCareers();
         return ResponseEntity.ok(careers);
     }

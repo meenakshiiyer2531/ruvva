@@ -3,6 +3,7 @@ package com.ruvaa.backend.controller;
 import com.ruvaa.backend.entity.College;
 import com.ruvaa.backend.repository.CollegeRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,9 +13,15 @@ import java.util.List;
 @RequestMapping("/colleges")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
+@ConditionalOnProperty(name = "firebase.enabled", havingValue = "true", matchIfMissing = false)
 public class CollegeController {
 
     private final CollegeRepository collegeRepository;
+
+    @GetMapping("")
+    public ResponseEntity<List<College>> getAllCollegesRoot() {
+        return getAllColleges();
+    }
 
     @GetMapping("/list")
     public ResponseEntity<List<College>> getAllColleges() {

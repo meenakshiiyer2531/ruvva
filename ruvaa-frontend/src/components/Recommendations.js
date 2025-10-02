@@ -1,9 +1,46 @@
-import React, { useState, useMemo } from "react";
-import { careers } from "./careersData";
+import React, { useState, useMemo, useEffect } from "react";
+import { careers as fallbackCareers } from "./careersData";
+import ApiService from "../services/api";
 
 export default function Recommendations({ profile, setProfile, setPage, setSelectedCareer, darkMode }) {
   const [query, setQuery] = useState("");
   const [index, setIndex] = useState(0);
+  const [careers, setCareers] = useState(fallbackCareers);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch careers from backend on mount
+  useEffect(() => {
+    const fetchCareers = async () => {
+      console.log("🔍 Fetching career recommendations from backend...");
+      setLoading(true);
+      setError(null);
+
+      try {
+        const data = await ApiService.getCareerRecommendations(profile);
+        console.log("✅ Backend careers loaded:", data);
+
+        // Backend should return an array of career objects
+        if (Array.isArray(data)) {
+          setCareers(data);
+        } else if (data.careers && Array.isArray(data.careers)) {
+          setCareers(data.careers);
+        } else {
+          console.warn("⚠️ Unexpected backend response format, using fallback data");
+          setCareers(fallbackCareers);
+        }
+      } catch (err) {
+        console.error("❌ Failed to fetch careers from backend:", err.message);
+        console.log("⚠️ Using local fallback career data");
+        // Don't show error to user since fallback data works fine
+        setCareers(fallbackCareers);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCareers();
+  }, [profile]);
 
   // Filter careers based on search query
   const filtered = useMemo(
@@ -13,7 +50,7 @@ export default function Recommendations({ profile, setProfile, setPage, setSelec
           c.title.toLowerCase().includes(query.toLowerCase()) ||
           c.desc.toLowerCase().includes(query.toLowerCase())
       ),
-    [query]
+    [query, careers]
   );
 
   // Handlers for left/right buttons
@@ -51,6 +88,12 @@ export default function Recommendations({ profile, setProfile, setPage, setSelec
     <div style={{ minHeight: "80vh", padding: 20, fontFamily: "Arial, sans-serif", background: pageBg, color: cardText }}>
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
         <h2 style={{ color: "#00b4d8", marginBottom: 12 }}>Career Recommendations</h2>
+
+        {loading && (
+          <div style={{ textAlign: "center", padding: 20, color: darkMode ? "#9aa7b5" : "#555" }}>
+            Loading career recommendations...
+          </div>
+        )}
 
         <input
           placeholder="Search careers..."

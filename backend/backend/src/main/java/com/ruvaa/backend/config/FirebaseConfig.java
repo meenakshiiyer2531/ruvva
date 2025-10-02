@@ -28,7 +28,7 @@ import java.io.InputStream;
 @ConditionalOnProperty(name = "firebase.enabled", havingValue = "true", matchIfMissing = false)
 public class FirebaseConfig {
 
-    @Value("${firebase.service-account-key:classpath:credentials/serviceAccountKey.json}")
+    @Value("${firebase.service-account-key:classpath:credentials/serviceAccount.json}")
     private Resource serviceAccountKey;
 
     @Value("${firebase.database-url:https://ruvaa-cbcaa-default-rtdb.asia-southeast1.firebasedatabase.app/}")
@@ -58,11 +58,11 @@ public class FirebaseConfig {
                 return;
             }
 
-            // Check if it's a mock service account (contains "mock-project")
+            // Check if the service account has valid credentials
             try (InputStream is = serviceAccountKey.getInputStream()) {
                 String content = new String(is.readAllBytes());
-                if (content.contains("mock-project")) {
-                    log.warn("Mock Firebase service account detected. Running without Firebase integration.");
+                if (content.contains("YOUR_PRIVATE_KEY_HERE") || content.contains("your-private-key-id")) {
+                    log.warn("Template Firebase service account detected. Please configure with real credentials. Running without Firebase integration.");
                     return;
                 }
             } catch (Exception e) {

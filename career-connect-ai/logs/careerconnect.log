@@ -113,3 +113,1290 @@
 2025-09-25 22:51:22,201 - app - INFO - Starting CareerConnect AI on port 5000
 2025-09-25 22:51:22,222 - werkzeug - WARNING -  * Debugger is active!
 2025-09-25 22:51:22,231 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:36:29,306 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\Lib\\encodings\\cp1256.py', reloading
+2025-09-26 21:36:30,721 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:36:34,461 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:36:34,974 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:36:34,974 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:36:38,516 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:36:38,554 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:36:38,584 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:36:39,302 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:36:39,312 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:36:39,313 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:36:39,346 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:36:39,373 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:36:39,387 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:36:41,749 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\Lib\\encodings\\iso8859_3.py', reloading
+2025-09-26 21:36:42,966 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:36:46,007 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:36:46,229 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:36:46,230 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:36:46,987 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:36:47,003 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:36:47,022 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:36:47,328 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:36:47,336 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:36:47,336 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:36:47,365 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:36:47,380 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:36:47,386 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:36:54,523 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_parser.py', reloading
+2025-09-26 21:36:55,135 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:36:58,105 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:36:58,307 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:36:58,307 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:36:59,105 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:36:59,124 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:36:59,147 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:36:59,419 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:36:59,426 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:36:59,426 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:36:59,444 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:36:59,457 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:36:59,463 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:37:02,493 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\site-packages\\oci\\os_management_hub\\models\\exploit_attempt_event.py', reloading
+2025-09-26 21:37:02,943 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:37:05,889 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:37:06,072 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:37:06,072 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:37:06,835 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:37:06,858 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:37:06,893 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:37:07,174 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:07,182 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:07,182 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:07,220 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:37:07,248 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:37:07,256 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:37:13,573 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\Lib\\encodings\\hp_roman8.py', reloading
+2025-09-26 21:37:13,749 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-hardwarescanv2.zip', reloading
+2025-09-26 21:37:14,954 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:37:18,022 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:37:18,229 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:37:18,229 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:37:18,968 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:37:18,989 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:37:19,004 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:37:19,261 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:19,271 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:19,271 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:19,303 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:37:19,325 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:37:19,333 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:37:24,460 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-memorycleaner.zip', reloading
+2025-09-26 21:37:25,030 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:37:28,171 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:37:28,397 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:37:28,398 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:37:29,174 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:37:29,196 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:37:29,227 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:37:29,467 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:29,473 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:29,473 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:29,493 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:37:29,507 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:37:29,512 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:37:31,181 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\Lib\\encodings\\hz.py', reloading
+2025-09-26 21:37:31,999 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:37:35,158 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:37:35,387 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:37:35,388 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:37:36,393 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:37:36,414 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:37:36,436 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:37:36,721 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:36,729 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:36,729 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:36,763 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:37:36,790 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:37:36,800 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:37:40,816 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\Lib\\encodings\\cp862.py', reloading
+2025-09-26 21:37:41,364 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:37:44,540 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:37:44,768 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:37:44,768 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:37:45,664 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:37:45,684 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:37:45,715 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:37:45,994 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:46,002 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:46,002 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:46,035 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:37:46,056 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:37:46,069 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:37:46,157 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\Lib\\encodings\\utf_8_sig.py', reloading
+2025-09-26 21:37:47,473 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:37:50,510 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:37:50,762 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:37:50,763 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:37:51,570 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:37:51,599 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:37:51,619 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:37:51,858 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:51,864 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:51,864 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:51,886 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:37:51,903 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:37:51,909 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:37:54,921 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\Lib\\encodings\\cp852.py', reloading
+2025-09-26 21:37:55,371 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:37:58,445 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:37:58,622 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:37:58,622 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:37:59,460 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:37:59,475 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:37:59,493 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:37:59,693 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:59,698 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:59,698 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:37:59,720 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:37:59,739 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:37:59,751 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 21:38:00,304 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\Lib\\xml\\parsers\\__init__.py', reloading
+2025-09-26 21:38:01,193 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 21:38:04,125 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 21:38:04,338 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 21:38:04,339 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 21:38:05,134 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 21:38:05,164 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 21:38:05,219 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 21:38:05,460 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:38:05,465 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:38:05,465 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 21:38:05,486 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 21:38:05,499 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 21:38:05,504 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-26 23:53:00,853 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\auth_middleware.py', reloading
+2025-09-26 23:53:00,864 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\__init__.py', reloading
+2025-09-26 23:53:00,866 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\assessment_routes.py', reloading
+2025-09-26 23:53:00,867 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\validators\\assessment_validators.py', reloading
+2025-09-26 23:53:00,868 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\app.py', reloading
+2025-09-26 23:53:00,868 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\cors_handler.py', reloading
+2025-09-26 23:53:00,883 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\rate_limiter.py', reloading
+2025-09-26 23:53:00,886 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\career-connect-ai\\services\\career_discovery.py', reloading
+2025-09-26 23:53:00,891 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\auth_routes.py', reloading
+2025-09-26 23:53:00,912 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\career-connect-ai\\services\\profile_analyzer.py', reloading
+2025-09-26 23:53:00,934 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\__init__.py', reloading
+2025-09-26 23:53:01,010 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\career_routes.py', reloading
+2025-09-26 23:53:01,011 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\validators\\chat_validators.py', reloading
+2025-09-26 23:53:01,135 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\chat_routes.py', reloading
+2025-09-26 23:53:01,136 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\learning_routes.py', reloading
+2025-09-26 23:53:01,150 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\validators\\profile_validators.py', reloading
+2025-09-26 23:53:01,216 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\mentor_routes.py', reloading
+2025-09-26 23:53:01,307 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\validators\\__init__.py', reloading
+2025-09-26 23:53:01,308 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_gemini_usage.py', reloading
+2025-09-26 23:53:01,312 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_cosine_matcher_usage.py', reloading
+2025-09-26 23:53:01,312 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_career_discovery_usage.py', reloading
+2025-09-26 23:53:01,313 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_profile_analyzer_usage.py', reloading
+2025-09-26 23:53:01,314 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_riasec_usage.py', reloading
+2025-09-26 23:53:01,316 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\test_career_discovery.py', reloading
+2025-09-26 23:53:02,016 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-26 23:53:05,459 - app - INFO - CareerConnect AI started in development mode
+2025-09-26 23:53:05,953 - services.backend_integration - INFO - Backend integration enabled
+2025-09-26 23:53:05,954 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-26 23:53:08,972 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-26 23:53:08,987 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-26 23:53:09,000 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-26 23:53:09,489 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 23:53:09,493 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 23:53:09,493 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-26 23:53:09,516 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-26 23:53:09,546 - werkzeug - WARNING -  * Debugger is active!
+2025-09-26 23:53:09,556 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-27 00:00:14,145 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\Java\\jdk-21\\lib\\src.zip', reloading
+2025-09-27 00:00:15,321 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-27 00:00:18,229 - app - INFO - CareerConnect AI started in development mode
+2025-09-27 00:00:18,379 - services.backend_integration - INFO - Backend integration enabled
+2025-09-27 00:00:18,379 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-27 00:00:19,330 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-27 00:00:19,346 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-27 00:00:19,358 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-27 00:00:19,548 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:00:19,553 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:00:19,553 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:00:19,569 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-27 00:00:19,583 - werkzeug - WARNING -  * Debugger is active!
+2025-09-27 00:00:19,592 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-27 00:01:00,177 - app - INFO - CareerConnect AI started in development mode
+2025-09-27 00:01:00,343 - services.backend_integration - INFO - Backend integration enabled
+2025-09-27 00:01:00,343 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-27 00:01:00,951 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-27 00:01:00,983 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-27 00:01:01,008 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-27 00:01:01,208 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:01:01,212 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:01:01,213 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:01:01,235 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-27 00:01:01,273 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-09-27 00:01:01,274 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-27 00:01:01,288 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-27 00:01:04,004 - app - INFO - CareerConnect AI started in development mode
+2025-09-27 00:01:04,155 - services.backend_integration - INFO - Backend integration enabled
+2025-09-27 00:01:04,155 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-27 00:01:04,804 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-27 00:01:04,820 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-27 00:01:04,832 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-27 00:01:05,060 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:01:05,065 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:01:05,065 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:01:05,085 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-27 00:01:05,110 - werkzeug - WARNING -  * Debugger is active!
+2025-09-27 00:01:05,119 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-27 00:07:12,625 - app - INFO - CareerConnect AI started in development mode
+2025-09-27 00:07:12,845 - services.backend_integration - INFO - Backend integration enabled
+2025-09-27 00:07:12,845 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-27 00:07:13,654 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-27 00:07:13,671 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-27 00:07:13,686 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-27 00:07:14,059 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:07:14,063 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:07:14,063 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:07:14,090 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-27 00:07:14,124 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-09-27 00:07:14,124 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-27 00:07:14,165 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-27 00:07:17,146 - app - INFO - CareerConnect AI started in development mode
+2025-09-27 00:07:17,304 - services.backend_integration - INFO - Backend integration enabled
+2025-09-27 00:07:17,304 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-27 00:07:17,970 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-27 00:07:17,986 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-27 00:07:18,004 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-27 00:07:18,222 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:07:18,225 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:07:18,225 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 00:07:18,251 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-27 00:07:18,267 - werkzeug - WARNING -  * Debugger is active!
+2025-09-27 00:07:18,276 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-27 01:01:47,152 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\app.py', reloading
+2025-09-27 01:01:47,170 - werkzeug - INFO - 127.0.0.1 - - [27/Sep/2025 01:01:47] "[33mOPTIONS /api/v1/chat HTTP/1.1[0m" 404 -
+2025-09-27 01:01:47,182 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\app.py', reloading
+2025-09-27 01:01:48,586 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-27 01:01:48,746 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-27 01:01:51,986 - app - INFO - CareerConnect AI started in development mode
+2025-09-27 01:01:51,986 - app - INFO - CareerConnect AI started in development mode
+2025-09-27 01:01:52,285 - services.backend_integration - INFO - Backend integration enabled
+2025-09-27 01:01:52,285 - services.backend_integration - INFO - Backend integration enabled
+2025-09-27 01:01:52,285 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-27 01:01:52,287 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-27 01:01:53,436 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-27 01:01:53,436 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-27 01:01:53,466 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-27 01:01:53,466 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-27 01:01:53,502 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-27 01:01:53,503 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-27 01:01:53,917 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:01:53,918 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:01:53,932 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:01:53,932 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:01:53,932 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:01:53,933 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:01:53,964 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-27 01:01:53,966 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-27 01:01:54,002 - werkzeug - WARNING -  * Debugger is active!
+2025-09-27 01:01:54,002 - werkzeug - WARNING -  * Debugger is active!
+2025-09-27 01:01:54,017 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-27 01:01:54,020 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-27 01:02:04,874 - werkzeug - INFO - 127.0.0.1 - - [27/Sep/2025 01:02:04] "[33mOPTIONS /api/v1/chat HTTP/1.1[0m" 404 -
+2025-09-27 01:08:15,374 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\config.py', reloading
+2025-09-27 01:08:15,374 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\config.py', reloading
+2025-09-27 01:08:15,378 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\career-connect-ai\\services\\career_discovery.py', reloading
+2025-09-27 01:08:15,382 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\career-connect-ai\\services\\career_discovery.py', reloading
+2025-09-27 01:08:15,384 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\auth_middleware.py', reloading
+2025-09-27 01:08:15,385 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\career-connect-ai\\services\\profile_analyzer.py', reloading
+2025-09-27 01:08:15,389 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\auth_middleware.py', reloading
+2025-09-27 01:08:15,392 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\career-connect-ai\\services\\profile_analyzer.py', reloading
+2025-09-27 01:08:15,411 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\__init__.py', reloading
+2025-09-27 01:08:15,412 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\__init__.py', reloading
+2025-09-27 01:08:15,412 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\core\\career_recommender.py', reloading
+2025-09-27 01:08:15,413 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\cors_handler.py', reloading
+2025-09-27 01:08:15,413 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\core\\career_recommender.py', reloading
+2025-09-27 01:08:15,414 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\cors_handler.py', reloading
+2025-09-27 01:08:15,417 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\rate_limiter.py', reloading
+2025-09-27 01:08:15,420 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\rate_limiter.py', reloading
+2025-09-27 01:08:15,428 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_career_discovery_usage.py', reloading
+2025-09-27 01:08:15,441 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\middleware\\__init__.py', reloading
+2025-09-27 01:08:15,446 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\assessment_routes.py', reloading
+2025-09-27 01:08:15,467 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\validators\\assessment_validators.py', reloading
+2025-09-27 01:08:15,477 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\validators\\chat_validators.py', reloading
+2025-09-27 01:08:15,477 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\validators\\chat_validators.py', reloading
+2025-09-27 01:08:15,512 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_cosine_matcher_usage.py', reloading
+2025-09-27 01:08:15,512 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_cosine_matcher_usage.py', reloading
+2025-09-27 01:08:15,516 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\auth_routes.py', reloading
+2025-09-27 01:08:15,516 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\auth_routes.py', reloading
+2025-09-27 01:08:15,518 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\core\\conversation_manager.py', reloading
+2025-09-27 01:08:15,539 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\core\\cosine_matcher.py', reloading
+2025-09-27 01:08:15,546 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_gemini_usage.py', reloading
+2025-09-27 01:08:15,552 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\validators\\profile_validators.py', reloading
+2025-09-27 01:08:15,552 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\validators\\profile_validators.py', reloading
+2025-09-27 01:08:15,556 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\career_routes.py', reloading
+2025-09-27 01:08:15,559 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\career_routes.py', reloading
+2025-09-27 01:08:15,570 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\core\\gemini_client.py', reloading
+2025-09-27 01:08:15,572 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\core\\gemini_client.py', reloading
+2025-09-27 01:08:15,589 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\validators\\__init__.py', reloading
+2025-09-27 01:08:15,595 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_profile_analyzer_usage.py', reloading
+2025-09-27 01:08:15,595 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_profile_analyzer_usage.py', reloading
+2025-09-27 01:08:15,606 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\chat_routes.py', reloading
+2025-09-27 01:08:15,619 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\example_riasec_usage.py', reloading
+2025-09-27 01:08:15,651 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\models\\assessment.py', reloading
+2025-09-27 01:08:15,663 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\run.py', reloading
+2025-09-27 01:08:15,666 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\test_app.py', reloading
+2025-09-27 01:08:15,668 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\tests\\api_smoke_test.py', reloading
+2025-09-27 01:08:15,684 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\test_career_discovery.py', reloading
+2025-09-27 01:08:15,691 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\tests\\conftest.py', reloading
+2025-09-27 01:08:15,693 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\core\\riasec_analyzer.py', reloading
+2025-09-27 01:08:15,696 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\learning_routes.py', reloading
+2025-09-27 01:08:15,699 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\test_cosine_matcher.py', reloading
+2025-09-27 01:08:15,716 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\tests\\test_api_endpoints.py', reloading
+2025-09-27 01:08:15,731 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\test_gemini_client.py', reloading
+2025-09-27 01:08:15,735 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\tests\\test_data_validation.py', reloading
+2025-09-27 01:08:15,744 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\models\\career.py', reloading
+2025-09-27 01:08:15,745 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\services\\backend_integration.py', reloading
+2025-09-27 01:08:15,751 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\test_profile_analyzer.py', reloading
+2025-09-27 01:08:15,752 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\core\\__init__.py', reloading
+2025-09-27 01:08:15,754 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\tests\\__init__.py', reloading
+2025-09-27 01:08:16,004 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-27 01:08:16,136 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-09-27 01:08:19,291 - app - INFO - CareerConnect AI started in development mode
+2025-09-27 01:08:19,430 - app - INFO - CareerConnect AI started in development mode
+2025-09-27 01:08:19,535 - services.backend_integration - INFO - Backend integration enabled
+2025-09-27 01:08:19,535 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-27 01:08:19,653 - services.backend_integration - INFO - Backend integration enabled
+2025-09-27 01:08:19,654 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-09-27 01:08:20,703 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-27 01:08:20,705 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-09-27 01:08:20,726 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-27 01:08:20,727 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-09-27 01:08:20,744 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-27 01:08:20,747 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-09-27 01:08:21,085 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:08:21,091 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:08:21,091 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:08:21,091 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:08:21,091 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-09-27 01:08:21,130 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-27 01:08:21,131 - app - INFO - Starting CareerConnect AI on port 5000
+2025-09-27 01:08:21,157 - werkzeug - WARNING -  * Debugger is active!
+2025-09-27 01:08:21,157 - werkzeug - WARNING -  * Debugger is active!
+2025-09-27 01:08:21,167 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-27 01:08:21,170 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-09-28 18:58:56,478 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-device.zip', reloading
+2025-09-28 18:58:56,506 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-hardwarescan.zip', reloading
+2025-09-28 18:58:56,521 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-learningzone.zip', reloading
+2025-09-28 18:58:56,571 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-nervecenter.zip', reloading
+2025-09-28 18:58:56,605 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-performance.zip', reloading
+2025-09-28 18:58:56,639 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-productivity.zip', reloading
+2025-09-28 18:58:56,675 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-settings.zip', reloading
+2025-09-28 18:58:56,712 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-systemupdate.zip', reloading
+2025-09-28 18:58:56,752 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-utilityhelp.zip', reloading
+2025-09-28 18:58:56,781 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-vantageoffers.zip', reloading
+2025-09-28 18:58:56,816 - werkzeug - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\E046963F.LenovoCompanion_10.2506.10.0_x64__k1h2ywk1493x8\\LenovoVantage\\offline\\vtr-ui-wifisecurity.zip', reloading
+2025-10-01 23:54:58,556 - app - INFO - CareerConnect AI started in development mode
+2025-10-01 23:54:59,089 - services.backend_integration - INFO - Backend integration enabled
+2025-10-01 23:54:59,089 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-01 23:55:02,251 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-01 23:55:02,270 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-01 23:55:02,288 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-01 23:55:02,984 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-01 23:55:02,989 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-01 23:55:02,990 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-01 23:55:03,008 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-01 23:55:03,049 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-01 23:55:03,050 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-01 23:55:03,081 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-01 23:55:05,854 - app - INFO - CareerConnect AI started in development mode
+2025-10-01 23:55:06,024 - services.backend_integration - INFO - Backend integration enabled
+2025-10-01 23:55:06,025 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-01 23:55:06,801 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-01 23:55:06,829 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-01 23:55:06,850 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-01 23:55:07,188 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-01 23:55:07,191 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-01 23:55:07,191 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-01 23:55:07,217 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-01 23:55:07,253 - werkzeug - WARNING -  * Debugger is active!
+2025-10-01 23:55:07,268 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-01 23:55:16,479 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:55:16] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:55:19,045 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:55:19] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:55:19,305 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:55:19] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:55:25,351 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:55:25] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:55:28,521 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:55:28] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:55:48,958 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:55:48] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:56:18,989 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:56:18] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:56:25,599 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:56:25] "[33mOPTIONS /api/v1/chat HTTP/1.1[0m" 404 -
+2025-10-01 23:56:32,730 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:56:32] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:56:33,790 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:56:33] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:56:34,052 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:56:34] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:56:34,192 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:56:34] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:56:48,653 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:56:48] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:57:19,216 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:57:19] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:57:48,900 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:57:48] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:58:19,223 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:58:19] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:58:48,914 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:58:48] "GET /health HTTP/1.1" 200 -
+2025-10-01 23:59:19,602 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\app.py', reloading
+2025-10-01 23:59:19,606 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\app.py.tmp.876.1759343359275', reloading
+2025-10-01 23:59:20,239 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-01 23:59:23,127 - app - INFO - CareerConnect AI started in development mode
+2025-10-01 23:59:23,347 - services.backend_integration - INFO - Backend integration enabled
+2025-10-01 23:59:23,347 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-01 23:59:24,609 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-01 23:59:24,634 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-01 23:59:24,659 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-01 23:59:24,947 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-01 23:59:24,959 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-01 23:59:24,960 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-01 23:59:24,992 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-01 23:59:25,016 - werkzeug - WARNING -  * Debugger is active!
+2025-10-01 23:59:25,024 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-01 23:59:39,284 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 23:59:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:00:38,991 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:00:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:01:39,257 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:01:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:07:31,909 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:07:32,159 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:07:32,160 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:07:33,256 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:07:33,272 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:07:33,291 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:07:33,569 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:07:33,577 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:07:33,578 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:07:33,606 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:07:33,675 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 00:07:33,676 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 00:07:33,702 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:07:36,500 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:07:36,648 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:07:36,648 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:07:37,357 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:07:37,375 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:07:37,386 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:07:37,581 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:07:37,584 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:07:37,584 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:07:37,607 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:07:37,621 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:07:37,628 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:07:38,916 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:07:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:07:48,116 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:07:48] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:07:48,366 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:07:48] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:07:48,428 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:07:48] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:07:48,677 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:07:48] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:08:18,215 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:08:18] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:08:18,478 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:08:18] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:08:47,901 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:08:47] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:08:48,309 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:08:48] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:09:17,913 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:09:17] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:09:19,210 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:09:19] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:09:47,908 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:09:47] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:09:49,219 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:09:49] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:10:20,533 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:10:20] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:10:20,798 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:10:20] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:10:48,835 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:10:48] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:10:49,093 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:10:49] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:11:39,008 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:11:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:11:39,332 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:11:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:12:39,313 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:12:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:12:39,563 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:12:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:13:38,955 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:13:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:13:39,289 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:13:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:14:38,964 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:14:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:14:39,283 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:14:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:15:38,917 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:15:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:15:39,240 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:15:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:16:32,735 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:16:32] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:16:47,986 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:16:47] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:17:09,067 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:17:09] "[33mOPTIONS /api/v1/chat HTTP/1.1[0m" 404 -
+2025-10-02 00:17:17,996 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:17:17] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:17:18,490 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:17:18] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:17:49,234 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:17:49] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:18:19,241 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:18:19] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:18:36,534 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\chat_routes.py', reloading
+2025-10-02 00:18:36,537 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\chat_routes.py.tmp.876.1759344516817', reloading
+2025-10-02 00:18:38,592 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:18:41,897 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:18:42,154 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:18:42,154 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:18:43,877 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:18:43,907 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:18:43,930 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:18:44,273 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:18:44,282 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:18:44,282 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:18:44,322 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:18:44,348 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:18:44,363 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:19:39,276 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:19:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:20:39,241 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:20:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:21:39,241 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:21:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:28:36,490 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:28:36,835 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:28:36,835 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:28:37,984 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:28:38,033 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:28:38,091 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:28:38,455 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:28:38,460 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:28:38,460 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:28:38,484 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:28:38,524 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 00:28:38,524 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 00:28:38,548 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:28:42,311 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:28:43,049 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:28:43,057 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:28:44,262 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:28:44,299 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:28:44,325 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:28:44,936 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:28:44,945 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:28:44,946 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:28:44,992 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:28:45,023 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:28:45,041 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:28:48,551 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:28:48] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:28:48,816 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:28:48] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:29:08,405 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:29:08] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 00:29:08,733 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:29:08] "[35m[1mPOST /api/v1/chat HTTP/1.1[0m" 500 -
+2025-10-02 00:29:16,261 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:29:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:29:46,920 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:29:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:30:17,227 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:30:17] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:34:36,722 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\chat_routes.py', reloading
+2025-10-02 00:34:36,723 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\chat_routes.py.tmp.876.1759345476274', reloading
+2025-10-02 00:34:37,999 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:34:40,875 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:34:41,105 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:34:41,105 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:34:42,216 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:34:42,246 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:34:42,262 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:34:42,643 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:34:42,647 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:34:42,648 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:34:42,713 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:34:42,736 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:34:42,743 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:34:45,643 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\chat_routes.py', reloading
+2025-10-02 00:34:45,644 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\chat_routes.py.tmp.876.1759345485729', reloading
+2025-10-02 00:34:46,281 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:34:49,227 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:34:49,401 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:34:49,402 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:34:50,249 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:34:50,266 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:34:50,287 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:34:50,615 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:34:50,621 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:34:50,621 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:34:50,642 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:34:50,664 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:34:50,671 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:37:01,186 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:37:01,383 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:37:01,384 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:37:02,412 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:37:02,449 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:37:02,465 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:37:02,736 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:37:02,743 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:37:02,743 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:37:02,762 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:37:02,807 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 00:37:02,808 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 00:37:02,830 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:37:05,701 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:37:05,914 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:37:05,915 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:37:06,923 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:37:06,958 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:37:06,975 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:37:07,273 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:37:07,280 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:37:07,280 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:37:07,302 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:37:07,319 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:37:07,328 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:37:08,925 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:37:08] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:37:09,170 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:37:09] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:37:10,955 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:37:10] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:37:37,325 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:37:37] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:37:39,780 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:37:39] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 00:37:40,096 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:37:40] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 00:38:07,282 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:38:07] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:38:14,428 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:38:14] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 00:38:14,441 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:38:14] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 00:38:38,237 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:38:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:39:08,298 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:39:08] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:39:38,226 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:39:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:39:40,682 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\services\\chat_service.py', reloading
+2025-10-02 00:39:40,682 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\services\\chat_service.py.tmp.876.1759345780018', reloading
+2025-10-02 00:39:41,212 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:39:44,052 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:39:44,244 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:39:44,244 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:39:45,188 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:39:45,206 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:39:45,220 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:39:45,450 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:39:45,455 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:39:45,455 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:39:45,472 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:39:45,496 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:39:45,502 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:39:50,861 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\services\\chat_service.py', reloading
+2025-10-02 00:39:50,864 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\services\\chat_service.py.tmp.876.1759345790682', reloading
+2025-10-02 00:39:52,148 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:39:54,930 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:39:55,091 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:39:55,091 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:39:55,813 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:39:55,838 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:39:55,860 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:39:56,072 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:39:56,079 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:39:56,079 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:39:56,113 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:39:56,133 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:39:56,150 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:40:08,235 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:40:08] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:40:31,579 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:40:31] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:40:31,902 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:40:31] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:41:04,806 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:41:04,969 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:41:04,969 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:41:05,686 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:41:05,706 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:41:05,719 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:41:05,937 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:41:05,942 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:41:05,943 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:41:05,967 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:41:06,006 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 00:41:06,006 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 00:41:06,036 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:41:09,317 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:41:09,489 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:41:09,489 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:41:10,279 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:41:10,304 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:41:10,328 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:41:10,563 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:41:10,569 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:41:10,569 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:41:10,590 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:41:10,603 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:41:10,610 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:41:10,668 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:41:10] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:41:10,987 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:41:10] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:41:11,247 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:41:11] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:41:33,349 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:41:33] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 00:41:33,689 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:41:33] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 00:41:38,400 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:41:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:41:41,865 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:41:41] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 00:41:41,879 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:41:41] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 00:42:10,734 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:42:10,990 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:42:10,991 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:42:11,724 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:42:11,747 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:42:11,766 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:42:11,997 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:42:12,002 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:42:12,003 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:42:12,027 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:42:12,053 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 00:42:12,054 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 00:42:12,078 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:42:14,815 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:42:14,998 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:42:14,998 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:42:15,807 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:42:15,827 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:42:15,838 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:42:16,047 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:42:16,050 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:42:16,050 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:42:16,070 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:42:16,091 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:42:16,097 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:42:36,998 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:42:36] "[33mOPTIONS /api/v1/careers/analyze HTTP/1.1[0m" 404 -
+2025-10-02 00:42:37,030 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:42:37] "[33mOPTIONS /api/v1/careers/analyze HTTP/1.1[0m" 404 -
+2025-10-02 00:42:38,099 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:42:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:43:08,376 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:43:08] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:43:19,961 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:43:19] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 00:43:20,279 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:43:20] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 00:43:38,384 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:43:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:44:08,074 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:44:08] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:44:38,381 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:44:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:45:08,070 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:45:08] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:45:38,400 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:45:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:46:08,071 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:46:08] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:46:38,397 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:46:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:47:08,917 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:47:08] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:47:39,344 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:47:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:48:39,007 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:48:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:49:43,155 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:49:43,319 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:49:43,320 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:49:44,322 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:49:44,356 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:49:44,376 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:49:44,623 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:49:44,628 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:49:44,628 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:49:44,650 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:49:44,682 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 00:49:44,682 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 00:49:44,707 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 00:49:47,508 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 00:49:47,652 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 00:49:47,653 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 00:49:48,276 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 00:49:48,291 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 00:49:48,305 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 00:49:48,478 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:49:48,481 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:49:48,481 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 00:49:48,496 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 00:49:48,509 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 00:49:48,515 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 00:49:58,076 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:49:58] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:49:58,334 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:49:58] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:50:09,018 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:50:09] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:50:09,588 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:50:09] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:50:26,397 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:50:26] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:50:32,645 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:50:32] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:50:33,031 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:50:33] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:50:55,778 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:50:55] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:51:25,901 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:51:25] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:51:56,222 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:51:56] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:52:25,906 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:52:25] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:52:31,099 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:52:31] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 00:52:31,441 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:52:31] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 00:52:55,752 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:52:55] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:53:25,915 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:53:25] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:53:46,637 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:53:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:53:55,746 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:53:55] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:54:25,443 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:54:25] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:54:41,848 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:54:41] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:54:42,592 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:54:42] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:54:56,222 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:54:56] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:55:11,534 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:55:11] "[33mOPTIONS /api/v1/careers/analyze HTTP/1.1[0m" 404 -
+2025-10-02 00:55:11,852 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:55:11] "[33mOPTIONS /api/v1/careers/analyze HTTP/1.1[0m" 404 -
+2025-10-02 00:55:25,429 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:55:25] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:55:40,765 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:55:40] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 00:55:41,091 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:55:41] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 00:55:55,431 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:55:55] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:56:25,756 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:56:25] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:56:55,436 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:56:55] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:57:26,244 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:57:26] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:57:55,966 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:57:55] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:58:39,306 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:58:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 00:59:39,277 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 00:59:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:00:39,005 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:00:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:01:39,303 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:01:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:02:39,027 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:02:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:03:39,320 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:03:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:04:39,019 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:04:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:05:39,279 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:05:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:06:38,977 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:06:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:07:39,337 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:07:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:08:39,012 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:08:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:09:39,315 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:09:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:10:03,971 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\career_routes.py', reloading
+2025-10-02 01:10:03,974 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\api\\routes\\career_routes.py.tmp.876.1759347603949', reloading
+2025-10-02 01:10:04,972 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 01:10:08,271 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 01:10:08,544 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 01:10:08,546 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 01:10:09,893 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 01:10:09,933 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 01:10:09,963 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 01:10:10,281 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:10:10,288 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:10:10,289 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:10:10,334 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 01:10:10,373 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 01:10:10,385 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 01:10:42,692 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 01:10:42,889 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 01:10:42,889 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 01:10:44,086 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 01:10:44,125 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 01:10:44,157 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 01:10:44,572 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:10:44,578 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:10:44,579 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:10:44,616 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 01:10:44,681 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 01:10:44,681 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 01:10:44,718 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 01:10:49,175 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 01:10:49,409 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 01:10:49,409 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 01:10:50,193 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 01:10:50,228 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 01:10:50,253 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 01:10:50,476 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:10:50,480 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:10:50,481 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:10:50,509 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 01:10:50,805 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 01:10:50,897 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 01:10:50,991 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:10:50] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:10:50,997 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:10:50] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:10:51,321 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:10:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:10:58,265 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:10:58] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:11:17,167 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:11:17] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:11:17,414 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:11:17] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:11:25,941 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:11:25] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:11:44,645 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:11:44] "[35m[1mOPTIONS /api/v1/careers/analyze HTTP/1.1[0m" 204 -
+2025-10-02 01:11:44,651 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:11:44] "[35m[1mOPTIONS /api/v1/careers/analyze HTTP/1.1[0m" 204 -
+2025-10-02 01:11:44,957 - services.career_discovery - INFO - Starting career discovery by profile
+2025-10-02 01:11:44,958 - services.career_discovery - ERROR - Error in career discovery by profile: 'CareerDiscoveryService' object has no attribute 'matching_weights'
+2025-10-02 01:11:44,960 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:11:44] "POST /api/v1/careers/analyze HTTP/1.1" 200 -
+2025-10-02 01:11:44,964 - services.career_discovery - INFO - Starting career discovery by profile
+2025-10-02 01:11:44,965 - services.career_discovery - ERROR - Error in career discovery by profile: 'CareerDiscoveryService' object has no attribute 'matching_weights'
+2025-10-02 01:11:44,969 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:11:44] "POST /api/v1/careers/analyze HTTP/1.1" 200 -
+2025-10-02 01:11:46,343 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:11:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:12:16,657 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:12:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:12:27,274 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:12:27] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:12:46,666 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:12:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:13:17,235 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:13:17] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:13:27,977 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:13:27] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:13:46,649 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:13:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:14:16,360 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:14:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:14:29,394 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:14:29] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:14:46,356 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:14:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:15:16,698 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:15:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:15:24,676 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:15:24] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 01:15:25,009 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:15:25] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 01:15:30,238 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:15:30] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:15:46,948 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:15:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:16:17,300 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:16:17] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:16:31,012 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:16:31] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:16:46,657 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:16:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:17:16,348 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:17:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:17:32,262 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:17:32] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:17:46,340 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:17:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:18:16,646 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:18:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:18:32,929 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:18:32] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:18:46,654 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:18:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:19:16,333 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:19:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:19:34,241 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:19:34] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:19:46,657 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:19:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:20:16,340 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:20:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:20:46,648 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:20:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:21:16,643 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:21:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:21:46,666 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:21:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:22:16,350 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:22:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:22:46,659 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:22:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:23:16,366 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:23:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:23:46,647 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:23:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:24:16,337 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:24:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:24:46,661 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:24:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:25:16,346 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:25:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:25:46,655 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:25:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:26:16,346 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:26:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:26:46,654 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:26:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:27:16,337 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:27:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:27:46,684 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:27:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:28:16,344 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:28:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:28:46,650 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:28:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:29:16,350 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:29:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:29:46,654 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:29:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:30:16,348 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:30:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:30:46,656 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:30:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:31:16,348 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:31:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:31:46,662 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:31:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:32:16,662 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:32:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:32:46,654 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:32:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:33:16,662 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:33:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:33:46,674 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:33:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:34:16,650 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:34:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:34:46,668 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:34:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:35:16,644 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:35:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:35:46,676 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:35:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:36:16,654 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:36:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:36:46,349 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:36:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:37:16,655 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:37:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:37:46,347 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:37:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:38:16,656 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:38:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:38:46,336 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:38:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:39:16,661 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:39:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:39:46,647 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:39:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:40:16,654 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:40:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:40:46,682 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:40:46] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:41:17,279 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:41:17] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:41:47,247 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:41:47] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:42:46,839 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 01:42:47,074 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 01:42:47,074 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 01:42:47,943 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 01:42:47,967 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 01:42:48,010 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 01:42:48,301 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:42:48,305 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:42:48,305 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:42:48,328 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 01:42:48,363 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 01:42:48,363 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 01:42:48,381 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 01:42:51,108 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 01:42:51,255 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 01:42:51,255 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 01:42:51,923 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 01:42:51,943 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 01:42:51,962 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 01:42:52,153 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:42:52,156 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:42:52,157 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 01:42:52,178 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 01:42:52,193 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 01:42:52,200 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 01:43:41,688 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:43:41] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:44:41,376 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:44:41] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:44:51,730 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:44:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:44:52,284 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:44:52] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:45:22,248 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:45:22] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:45:52,551 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:45:52] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:46:22,251 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:46:22] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:46:52,550 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:46:52] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:47:29,221 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:47:29] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:47:49,843 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:47:49] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:48:07,812 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:48:07] "[35m[1mOPTIONS /api/v1/careers/analyze HTTP/1.1[0m" 204 -
+2025-10-02 01:48:07,818 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:48:07] "[35m[1mOPTIONS /api/v1/careers/analyze HTTP/1.1[0m" 204 -
+2025-10-02 01:48:08,135 - services.career_discovery - INFO - Starting career discovery by profile
+2025-10-02 01:48:08,138 - services.career_discovery - INFO - Starting career discovery by profile
+2025-10-02 01:48:08,139 - services.career_discovery - ERROR - Error in career discovery by profile: 'CareerDiscoveryService' object has no attribute 'matching_weights'
+2025-10-02 01:48:08,140 - services.career_discovery - ERROR - Error in career discovery by profile: 'CareerDiscoveryService' object has no attribute 'matching_weights'
+2025-10-02 01:48:08,142 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:48:08] "POST /api/v1/careers/analyze HTTP/1.1" 200 -
+2025-10-02 01:48:08,143 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:48:08] "POST /api/v1/careers/analyze HTTP/1.1" 200 -
+2025-10-02 01:48:19,707 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:48:19] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:48:33,689 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:48:33] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 01:48:34,055 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:48:34] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 01:48:49,713 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:48:49] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:49:07,147 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:49:07] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:49:19,693 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:49:19] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:49:49,379 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:49:49] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:50:20,224 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:50:20] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:50:49,927 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:50:49] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:51:20,265 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:51:20] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:52:21,279 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:52:21] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:53:22,268 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:53:22] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:54:23,295 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:54:23] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:54:51,761 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:54:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:54:56,360 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:54:56] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:54:56,618 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:54:56] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:55:14,339 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:55:14] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:55:23,840 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:55:23] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:55:54,075 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:55:54] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:56:23,794 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:56:23] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:56:54,099 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:56:54] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:57:23,991 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:57:23] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:57:54,278 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:57:54] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:58:23,953 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:58:23] "GET /health HTTP/1.1" 200 -
+2025-10-02 01:59:25,289 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 01:59:25] "GET /health HTTP/1.1" 200 -
+2025-10-02 02:00:26,307 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 02:00:26] "GET /health HTTP/1.1" 200 -
+2025-10-02 02:03:59,474 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 02:03:59] "GET /health HTTP/1.1" 200 -
+2025-10-02 02:04:24,280 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 02:04:24] "GET /health HTTP/1.1" 200 -
+2025-10-02 02:04:53,983 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 02:04:53] "GET /health HTTP/1.1" 200 -
+2025-10-02 02:05:39,466 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 02:05:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 02:06:39,020 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 02:06:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 02:07:39,418 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 02:07:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 02:08:38,997 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 02:08:38] "GET /health HTTP/1.1" 200 -
+2025-10-02 02:09:39,350 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 02:09:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 02:10:39,026 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 02:10:39] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:24:49,443 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:24:49,824 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:24:49,824 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:24:51,490 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:24:51,535 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:24:51,561 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:24:52,043 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:24:52,164 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:24:52,165 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:24:52,202 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:24:52,253 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 13:24:52,253 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 13:24:52,290 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 13:24:55,293 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:24:55,587 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:24:55,587 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:24:56,825 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:24:56,877 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:24:56,915 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:24:57,295 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:24:57,300 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:24:57,301 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:24:57,346 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:24:57,367 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 13:24:57,379 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 13:24:57,493 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:24:57] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:24:57,807 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:24:57] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:25:21,321 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:25:21] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:25:46,468 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:25:46] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 13:25:46,820 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:25:46] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 13:25:51,417 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:25:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:26:21,434 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:26:21] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:26:51,418 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:26:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:27:04,116 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\services\\chat_service.py', reloading
+2025-10-02 13:27:04,118 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\services\\chat_service.py.tmp.876.1759391823788', reloading
+2025-10-02 13:27:05,602 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 13:27:09,033 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:27:09,316 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:27:09,316 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:27:10,561 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:27:10,593 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:27:10,632 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:27:11,018 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:27:11,028 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:27:11,029 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:27:11,085 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:27:11,129 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 13:27:11,138 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 13:27:21,434 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:27:21] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:27:51,106 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:27:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:28:19,811 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:28:19,998 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:28:19,998 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:28:21,240 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:28:21,273 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:28:21,291 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:28:21,572 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:28:21,575 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:28:21,576 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:28:21,601 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:28:21,647 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 13:28:21,648 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 13:28:21,674 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 13:28:24,965 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:28:25,386 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:28:25,393 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:28:26,612 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:28:26,644 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:28:26,666 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:28:26,974 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:28:26,979 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:28:26,980 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:28:27,022 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:28:27,056 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 13:28:27,075 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 13:28:27,189 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:28:27] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:28:50,756 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:28:50] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:28:51,410 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:28:51] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 13:28:51,729 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-10-02 13:28:51,738 - core.gemini_client - INFO - Making Gemini API request - correlation_id: 607214e2-ff3e-45c7-a2db-aa47a4d93bdf
+2025-10-02 13:29:01,407 - core.gemini_client - INFO - Gemini API response received - correlation_id: 607214e2-ff3e-45c7-a2db-aa47a4d93bdf, tokens: 2145
+2025-10-02 13:29:01,418 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:29:01] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 13:29:21,098 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:29:21] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:29:51,444 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:29:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:30:21,127 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:30:21] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:30:51,387 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:30:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:31:34,457 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:31:34] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:32:10,912 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:32:11,111 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:32:11,112 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:32:11,964 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:32:11,986 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:32:12,008 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:32:12,254 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:32:12,259 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:32:12,259 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:32:12,284 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:32:12,314 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 13:32:12,314 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 13:32:12,334 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 13:32:15,100 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:32:15,271 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:32:15,273 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:32:16,091 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:32:16,113 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:32:16,136 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:32:16,352 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:32:16,356 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:32:16,357 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:32:16,382 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:32:16,401 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 13:32:16,410 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 13:32:16,465 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:32:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:32:16,470 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:32:16] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:32:34,855 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:32:34] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:32:40,724 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:32:40] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:32:57,600 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:32:57] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 13:32:57,928 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-10-02 13:32:57,933 - core.gemini_client - INFO - Making Gemini API request - correlation_id: 97bddb78-0469-4390-9813-41f71e030342
+2025-10-02 13:33:07,023 - core.gemini_client - INFO - Gemini API response received - correlation_id: 97bddb78-0469-4390-9813-41f71e030342, tokens: 2192
+2025-10-02 13:33:07,030 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:33:07] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 13:33:10,739 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:33:10] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:33:34,429 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:33:34] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:33:41,093 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:33:41] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:34:11,024 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:34:11] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:34:34,115 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:34:34] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:34:41,391 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:34:41] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:35:11,616 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:35:11] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:35:34,702 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:35:34] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:39:12,427 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:39:12,698 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:39:12,698 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:39:15,002 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:39:15,024 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:39:15,040 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:39:15,601 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:39:15,609 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:39:15,609 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:39:15,640 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:39:15,689 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 13:39:15,689 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 13:39:15,720 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 13:39:18,457 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:39:18,596 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:39:18,596 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:39:19,267 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:39:19,292 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:39:19,308 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:39:19,522 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:39:19,526 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:39:19,526 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:39:19,544 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:39:19,564 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 13:39:19,574 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 13:39:21,954 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:39:21] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:39:22,198 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:39:22] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:39:49,400 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:39:49] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 13:39:49,715 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-10-02 13:39:49,719 - core.gemini_client - INFO - Making Gemini API request - correlation_id: 2f93d629-c1cc-4ed1-927f-e8295d6786f6
+2025-10-02 13:39:51,388 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:39:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:40:00,932 - core.gemini_client - INFO - Gemini API response received - correlation_id: 2f93d629-c1cc-4ed1-927f-e8295d6786f6, tokens: 2324
+2025-10-02 13:40:00,939 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:40:00] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 13:40:21,672 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:40:21] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:40:52,406 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:40:52] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:41:22,845 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:41:22] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:41:52,421 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:41:52] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:42:19,572 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\services\\chat_service.py', reloading
+2025-10-02 13:42:19,574 - werkzeug - INFO -  * Detected change in 'C:\\Users\\User\\IdeaProjects\\ruvva\\career-connect-ai\\services\\chat_service.py.tmp.876.1759392739708', reloading
+2025-10-02 13:42:19,949 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 13:42:22,906 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:42:23,094 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:42:23,096 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:42:24,056 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:42:24,075 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:42:24,091 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:42:24,336 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:42:24,344 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:42:24,344 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:42:24,369 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:42:24,390 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 13:42:24,402 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 13:42:24,471 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:42:24] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:42:51,687 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:42:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:43:21,375 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:43:21] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:43:51,683 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:43:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:44:21,687 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:44:21] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:44:51,680 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:44:51] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:45:22,413 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:45:22] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:45:54,445 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:45:54] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:46:02,554 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:46:02,767 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:46:02,767 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:46:03,948 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:46:03,965 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:46:03,985 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:46:04,323 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:46:04,333 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:46:04,334 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:46:04,389 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:46:04,435 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.209:5000
+2025-10-02 13:46:04,436 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 13:46:04,463 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-10-02 13:46:07,379 - app - INFO - CareerConnect AI started in development mode
+2025-10-02 13:46:07,541 - services.backend_integration - INFO - Backend integration enabled
+2025-10-02 13:46:07,541 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-10-02 13:46:08,330 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-10-02 13:46:08,352 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-10-02 13:46:08,370 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-10-02 13:46:08,570 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:46:08,582 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:46:08,583 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-10-02 13:46:08,634 - app - INFO - Starting CareerConnect AI on port 5000
+2025-10-02 13:46:08,660 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 13:46:08,669 - werkzeug - INFO -  * Debugger PIN: 342-151-991
+2025-10-02 13:46:29,600 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:46:29] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:46:29,846 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:46:29] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:46:31,644 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:46:31] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:46:50,350 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:46:50] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 13:46:50,668 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-10-02 13:46:50,676 - core.gemini_client - INFO - Making Gemini API request - correlation_id: bf40f527-fdb8-484e-b1ee-0851ae72733b
+2025-10-02 13:46:58,458 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:46:58] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:47:01,379 - core.gemini_client - INFO - Gemini API response received - correlation_id: bf40f527-fdb8-484e-b1ee-0851ae72733b, tokens: 2291
+2025-10-02 13:47:01,507 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:47:01] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 13:47:30,200 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:47:30] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:47:59,401 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:47:59] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:48:29,107 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:48:29] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:48:59,409 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:48:59] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:49:29,093 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:49:29] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:50:34,410 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:50:34] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:51:34,429 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:51:34] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:52:20,171 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:52:20] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:52:25,086 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:52:25] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:52:25,348 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:52:25] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:52:31,981 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:52:31] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:52:37,227 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:52:37] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:52:52,795 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:52:52] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:52:58,529 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:52:58] "[35m[1mOPTIONS /api/v1/chat HTTP/1.1[0m" 204 -
+2025-10-02 13:52:58,862 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-10-02 13:52:58,870 - core.gemini_client - INFO - Making Gemini API request - correlation_id: 26caf56e-89eb-4ba5-8661-e0a147c4b247
+2025-10-02 13:53:08,773 - core.gemini_client - INFO - Gemini API response received - correlation_id: 26caf56e-89eb-4ba5-8661-e0a147c4b247, tokens: 2260
+2025-10-02 13:53:08,784 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:53:08] "POST /api/v1/chat HTTP/1.1" 200 -
+2025-10-02 13:53:22,773 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:53:22] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:53:53,130 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:53:53] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:54:23,417 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:54:23] "GET /health HTTP/1.1" 200 -
+2025-10-02 13:54:53,088 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:54:53] "GET /health HTTP/1.1" 200 -

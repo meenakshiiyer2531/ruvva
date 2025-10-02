@@ -7,6 +7,7 @@ import com.ruvaa.backend.entity.Assessment;
 import com.ruvaa.backend.entity.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ import java.util.concurrent.ExecutionException;
 @Slf4j
 @Repository
 @RequiredArgsConstructor
+@ConditionalOnProperty(name = "firebase.enabled", havingValue = "true", matchIfMissing = false)
 public class AssessmentRepositoryImpl implements AssessmentRepository {
 
     private final Firestore firestore;

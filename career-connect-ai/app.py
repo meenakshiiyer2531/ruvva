@@ -23,11 +23,13 @@ def create_app():
     config_class = get_config()
     app.config.from_object(config_class)
     
-    # Initialize CORS
-    CORS(app, 
+    # Initialize CORS with credentials support
+    CORS(app,
          origins=app.config['CORS_ORIGINS'],
          methods=app.config['CORS_METHODS'],
-         headers=app.config['CORS_HEADERS'])
+         allow_headers=app.config['CORS_HEADERS'],
+         supports_credentials=True,
+         expose_headers=['Content-Type', 'Authorization'])
     
     # Initialize Redis connection
     try:

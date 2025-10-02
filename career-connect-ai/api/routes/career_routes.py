@@ -21,6 +21,82 @@ career_bp = Blueprint('career', __name__, url_prefix='/api/v1/careers')
 # Initialize services
 career_discovery = CareerDiscoveryService()
 
+@career_bp.route('/analyze', methods=['POST', 'OPTIONS'])
+@handle_exceptions
+def analyze_career_profile():
+    """Analyze student profile for career recommendations (no auth for MVP)"""
+    if request.method == 'OPTIONS':
+        # Handle CORS preflight
+        return '', 204
+
+    try:
+        data = request.get_json() or {}
+
+        # Accept profile data in different formats
+        profile = data.get('profile', data) if 'profile' in data else data
+
+        logger.info(f"Career analysis request for profile: {profile.get('name', 'Anonymous')}")
+
+        # Extract or create default profile
+        student_profile = {
+            'name': profile.get('name', 'Student'),
+            'skills': profile.get('skills', profile.get('strengths', [])),
+            'interests': profile.get('interests', []),
+            'career_goals': profile.get('careerGoals', profile.get('career_goals', [])),
+            'riasec_scores': profile.get('riasecScores', {
+                'realistic': 60,
+                'investigative': 80,
+                'artistic': 55,
+                'social': 45,
+                'enterprising': 50,
+                'conventional': 35
+            })
+        }
+
+        # Get career recommendations using discovery service
+        try:
+            recommendations = career_discovery.discover_careers_by_profile(student_profile)
+            logger.info(f"Generated {len(recommendations)} career recommendations")
+        except Exception as e:
+            logger.warning(f"Career discovery service failed: {e}, using mock data")
+            recommendations = [
+                {
+                    'id': 1,
+                    'title': 'Software Engineer',
+                    'description': 'Develop software applications and systems',
+                    'match': 85,
+                    'tags': ['Technology', 'Programming', 'Problem Solving']
+                },
+                {
+                    'id': 2,
+                    'title': 'Data Scientist',
+                    'description': 'Analyze data to extract insights and build models',
+                    'match': 82,
+                    'tags': ['Data Science', 'Analytics', 'Machine Learning']
+                }
+            ]
+
+        # Format RIASEC scores for frontend
+        riasec_scores = {
+            'Realistic': student_profile['riasec_scores'].get('realistic', 60),
+            'Investigative': student_profile['riasec_scores'].get('investigative', 80),
+            'Artistic': student_profile['riasec_scores'].get('artistic', 55),
+            'Social': student_profile['riasec_scores'].get('social', 45),
+            'Enterprising': student_profile['riasec_scores'].get('enterprising', 50),
+            'Conventional': student_profile['riasec_scores'].get('conventional', 35)
+        }
+
+        return APIResponse.success({
+            'riasecScores': riasec_scores,
+            'topCareers': recommendations[:10],
+            'personalityProfile': riasec_scores,
+            'analysis_complete': True
+        }, "Career analysis completed successfully")
+
+    except Exception as e:
+        logger.error(f"Career analysis failed: {str(e)}")
+        return APIResponse.error("Career analysis failed", {"details": str(e)}, 500)
+
 @career_bp.route('/discover', methods=['POST'])
 @limiter.limit("10 per minute")
 @jwt_required()

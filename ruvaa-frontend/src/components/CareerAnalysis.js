@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Radar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -9,12 +9,66 @@ import {
   Tooltip,
   Legend
 } from "chart.js";
-import { careers, RIASEC_INFO } from "./careersData";
+import { careers as fallbackCareers, RIASEC_INFO } from "./careersData";
+import ApiService from "../services/api";
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 export default function CareerAnalysis({ profile, setProfile, setPage, setSelectedCareer, darkMode }) {
-  const stats = { Realistic: 60, Investigative: 80, Artistic: 55, Social: 45, Enterprising: 50, Conventional: 35 };
+  const [stats, setStats] = useState({ Realistic: 60, Investigative: 80, Artistic: 55, Social: 45, Enterprising: 50, Conventional: 35 });
+  const [careers, setCareers] = useState(fallbackCareers);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch career analysis from backend
+  useEffect(() => {
+    const fetchAnalysis = async () => {
+      console.log("🔍 Fetching career analysis from backend...");
+      setLoading(true);
+      setError(null);
+
+      try {
+        const response = await ApiService.getCareerAnalysis(profile);
+        console.log("✅ Career analysis received:", response);
+
+        // Extract data from API response wrapper
+        const data = response.data || response;
+
+        // Update RIASEC stats if provided
+        if (data.riasecScores) {
+          setStats(data.riasecScores);
+        } else if (data.personalityProfile) {
+          // Parse if it's a different format
+          setStats(data.personalityProfile);
+        }
+
+        // Update careers if provided
+        if (data.topCareers && Array.isArray(data.topCareers)) {
+          // Map backend format to frontend format
+          const mappedCareers = data.topCareers.map((c, idx) => ({
+            id: c.id || `backend_${idx}`,
+            title: c.title || c.name,
+            desc: c.description || c.desc,
+            tags: c.tags || [],
+            scoreMatch: c.match ? c.match / 100 : c.scoreMatch || 0.85,
+            learningPath: c.learningPath || []
+          }));
+          setCareers(mappedCareers);
+          console.log("✅ Using backend career data:", mappedCareers.length, "careers");
+        } else {
+          console.log("⚠️ Using fallback career data - no topCareers in response");
+        }
+      } catch (err) {
+        console.error("❌ Failed to fetch career analysis:", err.message);
+        console.log("⚠️ Using local fallback data");
+        // Don't show error to user since fallback data works fine
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAnalysis();
+  }, [profile]);
   
   const radarData = {
     labels: Object.keys(stats),
@@ -61,6 +115,12 @@ export default function CareerAnalysis({ profile, setProfile, setPage, setSelect
       color: darkMode ? "#e6eef6" : "#062b3c"
     }}>
       <h2 style={{ color: "#00b4d8" }}>Your Career Insights</h2>
+
+      {loading && (
+        <div style={{ padding: 20, color: darkMode ? "#9aa7b5" : "#555" }}>
+          Loading career analysis...
+        </div>
+      )}
 
       <div style={{
         background: darkMode ? "#0b1220" : "#fff",

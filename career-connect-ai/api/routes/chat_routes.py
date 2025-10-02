@@ -24,6 +24,60 @@ chat_bp = Blueprint('chat', __name__, url_prefix='/api/v1/chat')
 # Initialize services
 chat_service = ChatService()
 
+@chat_bp.route('', methods=['POST', 'OPTIONS'])
+@handle_exceptions
+def simple_chat():
+    """Simple chat endpoint without authentication (for MVP)"""
+    if request.method == 'OPTIONS':
+        # Handle CORS preflight
+        return '', 204
+
+    try:
+        # Get message from request
+        data = request.get_json()
+        if not data:
+            return APIResponse.validation_error({'message': 'Request body is required'})
+
+        message = data.get('message', '')
+        profile = data.get('profile', {})
+
+        if not message:
+            return APIResponse.validation_error({'message': 'Message is required'})
+
+        logger.info(f"Simple chat request - Message: {message[:50]}...")
+
+        # Process chat message with simple context
+        # Use profile if provided, otherwise use defaults
+        student_profile = profile if profile else {
+            'name': 'Student',
+            'skills': [],
+            'interests': [],
+            'career_goals': []
+        }
+
+        # Create temporary session and get the session_id returned by the service
+        session_id = chat_service.create_chat_session(student_profile, {})
+
+        # Process the message using the same session_id
+        response_data = chat_service.process_chat_message(message, session_id)
+
+        # Extract response text
+        if isinstance(response_data, dict):
+            response_text = response_data.get('ai_response', response_data.get('response', response_data.get('message', 'I am here to help you with your career guidance.')))
+        else:
+            response_text = str(response_data)
+
+        logger.info(f"Simple chat response generated: {response_text[:50]}...")
+
+        return APIResponse.success({
+            'response': response_text,
+            'session_id': session_id
+        }, "Message processed successfully")
+
+    except Exception as e:
+        logger.error(f"Error in simple chat: {str(e)}")
+        return APIResponse.error("Failed to process message", {"details": str(e)}, 500)
+
 @chat_bp.route('/session', methods=['POST'])
 @limiter.limit("10 per minute")
 @jwt_required()

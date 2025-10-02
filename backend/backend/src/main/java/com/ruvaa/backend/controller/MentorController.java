@@ -9,6 +9,7 @@ import com.ruvaa.backend.repository.MentorRepository;
 import com.ruvaa.backend.repository.UserRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,7 @@ import java.util.List;
 @RequestMapping("/mentors")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
+@ConditionalOnProperty(name = "firebase.enabled", havingValue = "true", matchIfMissing = false)
 public class MentorController {
 
     private final MentorRepository mentorRepository;

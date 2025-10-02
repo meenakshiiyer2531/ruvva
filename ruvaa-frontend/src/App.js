@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Login from "./components/Login";
+import Register from "./components/Register";
 import Navbar from "./components/Navbar";
 import Onboarding from "./components/Onboarding";
 import Profile from "./components/Profile";
@@ -10,6 +11,7 @@ import CollegeFinder from "./components/CollegeFinder";
 import MentorBooking from "./components/MentorBooking";
 import CareerAnalysis from "./components/CareerAnalysis";
 import LearningPath from "./components/LearningPath";
+import ConnectionStatus from "./components/ConnectionStatus";
 import "./global.css";
 
 function App() {
@@ -25,6 +27,14 @@ function App() {
   }, [darkMode]);
 
   const handleLogin = (u) => {
+    console.log("✅ User logged in:", u);
+    setUser(u);
+    localStorage.setItem("cc_user", JSON.stringify(u));
+    setPage("onboarding");
+  };
+
+  const handleRegister = (u) => {
+    console.log("✅ User registered:", u);
     setUser(u);
     localStorage.setItem("cc_user", JSON.stringify(u));
     setPage("onboarding");
@@ -46,14 +56,17 @@ function App() {
 
   return (
     <div>
-      {page !== "login" && <Navbar setPage={setPage} onLogout={handleLogout} profile={user} />}
+      {page !== "login" && page !== "register" && <Navbar setPage={setPage} onLogout={handleLogout} profile={user} />}
+
+      <ConnectionStatus />
 
       <div className="theme-switch" onClick={() => setDarkMode(s => !s)} title="Toggle theme">
         <div className={`knob ${darkMode ? "on" : "off"}`}>{darkMode ? "🌙" : "🌞"}</div>
       </div>
 
       <div className="app-container">
-        {page === "login" && <Login onLogin={handleLogin} />}
+        {page === "login" && <Login onLogin={handleLogin} setPage={setPage} />}
+        {page === "register" && <Register onRegister={handleRegister} setPage={setPage} />}
         {page === "onboarding" && <Onboarding initial={profileData} onComplete={saveProfile} />}
         {page === "profile" && <Profile user={user} profile={profileData} setProfile={saveProfile} darkMode={darkMode} />}
         {page === "assessment" && <Assessment />}
