@@ -6,10 +6,9 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Stage 2: Create the final image with the Java 21 runtime
-# THIS IS THE CORRECTED LINE
 FROM eclipse-temurin:21-jre
 WORKDIR /app
-# IMPORTANT: Make sure this .jar file name is correct!
-COPY --from=build /app/target/careerconnect-backend-0.0.1-SNAPSHOT.jar app.jar
+# CORRECTED: Use the actual JAR filename from the build
+COPY --from=build /app/target/careerconnect-backend-2.0.0.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
