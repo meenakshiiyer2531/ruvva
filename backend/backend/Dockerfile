@@ -6,7 +6,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Stage 2: Create the final, smaller image with only the Java runtime
-FROM openjdk:17-jre-slim
+FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 # IMPORTANT: Make sure the .jar file name here matches the one in your 'target' folder!
 COPY --from=build /app/target/ruvva-0.0.1-SNAPSHOT.jar app.jar
