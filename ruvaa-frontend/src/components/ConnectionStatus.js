@@ -22,14 +22,13 @@ const ConnectionStatus = () => {
   const checkConnections = async () => {
     // Check Backend Connection
     try {
-      const backendResponse = await fetch('http://localhost:8080/api/auth/health', {
-        method: 'GET',
-        timeout: 5000
+      const backendResponse = await fetch('https://careerconnect-4bi9.onrender.com/api/auth/health', {
+        method: 'GET'
       });
       setStatus(prev => ({
         ...prev,
         backend: backendResponse.ok ? 'connected' : 'disconnected',
-        backendMock: backendResponse.ok ? (backendResponse.status === 200 ? 'mock' : 'live') : 'disconnected'
+        backendMock: backendResponse.ok ? 'live' : 'disconnected'
       }));
     } catch (error) {
       setStatus(prev => ({ ...prev, backend: 'disconnected', backendMock: 'disconnected' }));
@@ -37,9 +36,8 @@ const ConnectionStatus = () => {
 
     // Check AI Service Connection
     try {
-      const aiResponse = await fetch('http://localhost:5000/health', {
-        method: 'GET',
-        timeout: 5000
+      const aiResponse = await fetch('https://ruvva.onrender.com/health', {
+        method: 'GET'
       });
       setStatus(prev => ({ ...prev, ai: aiResponse.ok ? 'connected' : 'disconnected' }));
     } catch (error) {
@@ -51,6 +49,7 @@ const ConnectionStatus = () => {
     switch (serviceStatus) {
       case 'connected': return '#4CAF50'; // Green
       case 'mock': return '#FF9800'; // Orange for mock
+      case 'live': return '#4CAF50'; // Green for live
       case 'disconnected': return '#F44336'; // Red
       case 'checking': return '#2196F3'; // Blue
       default: return '#9E9E9E'; // Gray
@@ -61,6 +60,7 @@ const ConnectionStatus = () => {
     switch (serviceStatus) {
       case 'connected': return 'Connected';
       case 'mock': return 'Mock Mode';
+      case 'live': return 'Live';
       case 'disconnected': return 'Disconnected';
       case 'checking': return 'Checking...';
       default: return 'Unknown';
@@ -77,7 +77,6 @@ const ConnectionStatus = () => {
     localStorage.setItem('connectionStatusVisible', 'true');
   };
 
-  // If hidden, show small toggle button
   if (!isVisible) {
     return (
       <button className="status-toggle-btn" onClick={handleShow} title="Show Connection Status">
@@ -108,7 +107,7 @@ const ConnectionStatus = () => {
           ></div>
           <div className="status-info">
             <span className="service-name">Backend API</span>
-            <span className="service-url">:8080/api</span>
+            <span className="service-url">: careerconnect-4bi9.onrender.com/api</span>
             <span className="service-status">{getStatusText(status.backend)}</span>
           </div>
         </div>
@@ -135,7 +134,7 @@ const ConnectionStatus = () => {
             <span className="service-url">Mock/Live</span>
             <span className="service-status">
               {status.backendMock === 'mock' ? 'Mock Auth' :
-               status.backendMock === 'connected' ? 'Firebase Auth' :
+               status.backendMock === 'live' ? 'Live Auth' :
                getStatusText(status.backendMock)}
             </span>
           </div>
@@ -145,7 +144,7 @@ const ConnectionStatus = () => {
       <div className="status-legend">
         <div className="legend-item">
           <div className="legend-color" style={{ backgroundColor: '#4CAF50' }}></div>
-          <span>Connected</span>
+          <span>Connected / Live</span>
         </div>
         <div className="legend-item">
           <div className="legend-color" style={{ backgroundColor: '#FF9800' }}></div>
