@@ -1,7 +1,7 @@
 // API Service Layer for CareerConnect - Real Backend Integration
 // All mock data removed - requires backend connection
-
-const SPRING_BOOT_BASE_URL = 'http://localhost:8080/api';
+// Use deployed Spring Boot Backend
+const SPRING_BOOT_BASE_URL = 'https://careerconnect-4bi9.onrender.com/api';
 const PYTHON_AI_BASE_URL = 'http://localhost:5000';
 
 class ApiService {
