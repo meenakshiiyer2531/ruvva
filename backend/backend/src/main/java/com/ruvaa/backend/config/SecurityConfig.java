@@ -42,12 +42,14 @@ public class SecurityConfig {
 
         // Allow specific origins for better security
         configuration.setAllowedOriginPatterns(Arrays.asList(
-            "http://localhost:3000",           // React frontend
-            "http://127.0.0.1:3000",
-            "http://localhost:5000",           // Python AI service
-            "http://127.0.0.1:5000",
-            "https://ruvaa-*.web.app",         // Firebase hosting
-            "https://ruvaa-*.firebaseapp.com"
+                "http://localhost:3000",
+                "http://127.0.0.1:3000",
+                "http://localhost:5000",
+                "http://127.0.0.1:5000",
+                "https://careerconnect-jet.vercel.app",
+                "https://*.vercel.app",
+                "https://ruvaa-*.web.app",
+                "https://ruvaa-*.firebaseapp.com"
         ));
 
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
