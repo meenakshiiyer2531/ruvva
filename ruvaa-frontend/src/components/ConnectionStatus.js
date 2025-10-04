@@ -36,7 +36,7 @@ const ConnectionStatus = () => {
 
     // Check AI Service Connection
     try {
-      const aiResponse = await fetch('http://localhost:5000/health', {
+      const aiResponse = await fetch('https://ruvva.onrender.com/health', {
         method: 'GET'
       });
       setStatus(prev => ({ ...prev, ai: aiResponse.ok ? 'connected' : 'disconnected' }));
