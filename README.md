@@ -50,7 +50,7 @@ Make sure you have the following software installed:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/meenakshiiyer2531/ruvva.git](https://github.com/meenakshiiyer2531/ruvva.git))
+    git clone https://github.com/meenakshiiyer2531/ruvva.git
     cd ruvva
     ```
 
