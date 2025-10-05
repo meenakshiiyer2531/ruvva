@@ -22,7 +22,7 @@ const ConnectionStatus = () => {
   const checkConnections = async () => {
     // Check Backend Connection
     try {
-      const backendResponse = await fetch('https://careerconnect-4bi9.onrender.com/api/auth/health', {
+      const backendResponse = await fetch('https://ruvva-32l2.onrender.com/api/auth/health', {
         method: 'GET'
       });
       setStatus(prev => ({

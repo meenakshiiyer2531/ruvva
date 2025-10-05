@@ -2,7 +2,7 @@
 // Fully updated to work with deployed Spring Boot backend
 
 // Deployed backend URLs
-const SPRING_BOOT_BASE_URL = 'https://careerconnect-4bi9.onrender.com/api';
+const SPRING_BOOT_BASE_URL = 'https://ruvva-32l2.onrender.com/api';
 const PYTHON_AI_BASE_URL = 'https://ruvva.onrender.com'; // replace with deployed Python AI URL
 
 class ApiService {
