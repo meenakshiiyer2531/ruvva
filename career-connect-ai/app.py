@@ -25,7 +25,12 @@ def create_app():
     
     # Initialize CORS with credentials support
     CORS(app,
-         origins=app.config['CORS_ORIGINS'],
+         CORS(app,
+     origins=[
+         "https://careerconnect-jet.vercel.app",   # Your deployed frontend
+       #  "http://localhost:3000"                   # Local dev (optional)
+     ],
+     supports_credentials=True)
          methods=app.config['CORS_METHODS'],
          allow_headers=app.config['CORS_HEADERS'],
          supports_credentials=True,
