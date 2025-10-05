@@ -49,6 +49,7 @@ public class SecurityConfig {
                 "https://careerconnect-jet.vercel.app",
                 "https://*.vercel.app",
                 "https://ruvaa-*.web.app",
+                "https://ruvva.onrender.com",
                 "https://ruvaa-*.firebaseapp.com"
         ));
 
