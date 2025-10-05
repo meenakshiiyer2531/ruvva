@@ -25,15 +25,14 @@ def create_app():
     
     # Initialize CORS with credentials support
     CORS(app,
-     origins=[
-         "https://careerconnect-jet.vercel.app",   # Your deployed frontend
-       #  "http://localhost:3000"                   # Local dev (optional)
-     ],
-     supports_credentials=True)
+         origins=[
+             "https://careerconnect-jet.vercel.app",
+         ],
          methods=app.config['CORS_METHODS'],
          allow_headers=app.config['CORS_HEADERS'],
          supports_credentials=True,
-         expose_headers=['Content-Type', 'Authorization'])
+         expose_headers=['Content-Type', 'Authorization']
+         )
     
     # Initialize Redis connection
     try:
