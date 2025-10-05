@@ -10,3 +10,7 @@ python-dateutil
 pytest
 redis
 aiohttp
+gunicorn
+sqlalchemy
+flask-sqlalchemy
+google-generativeai
