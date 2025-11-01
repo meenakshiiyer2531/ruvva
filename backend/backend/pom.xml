@@ -62,7 +62,7 @@
         <dependency>
             <groupId>com.google.firebase</groupId>
             <artifactId>firebase-admin</artifactId>
-            <version>9.6.0</version>
+            <version>9.2.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -137,6 +137,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -158,6 +159,14 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<mainClass>com.ruvaa.backend.CareerConnectApplication</mainClass>
+					<jvmArguments>
+						--add-opens=java.base/java.lang=ALL-UNNAMED
+						--add-opens=java.base/java.util=ALL-UNNAMED
+						--add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+						--add-opens=java.base/java.text=ALL-UNNAMED
+						--add-opens=java.desktop/java.awt.font=ALL-UNNAMED
+						--add-opens=java.base/java.time.chrono=ALL-UNNAMED
+					</jvmArguments>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>

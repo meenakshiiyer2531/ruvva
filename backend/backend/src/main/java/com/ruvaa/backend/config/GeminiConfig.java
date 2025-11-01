@@ -37,22 +37,16 @@ public class GeminiConfig {
         private Integer burstCapacity = 10;
     }
 
-    /**
-     * Check if Gemini is properly configured
-     */
     public boolean isGeminiConfigured() {
-        return apiKey != null && !apiKey.isBlank() && 
+        return apiKey != null && !apiKey.isBlank() && !apiKey.equals("your-gemini-api-key") &&
                baseUrl != null && !baseUrl.isBlank() &&
                model != null && !model.isBlank();
     }
 
-    /**
-     * Configure WebClient for Gemini AI API calls with production settings.
-     */
     @Bean("geminiWebClient")
     public WebClient geminiWebClient() {
-        if (apiKey == null || apiKey.isBlank()) {
-            log.warn("Gemini API key not configured - AI features will be disabled");
+        if (apiKey == null || apiKey.isBlank() || apiKey.equals("your-gemini-api-key")) {
+            log.warn("Gemini API key not configured or is a placeholder - AI features will be disabled");
             return null;
         }
 

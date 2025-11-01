@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9d2da385-b782-4389-a1a7-3cb6b99829a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../backend/backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/run-dev.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/run-dev.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/src/main/resources/credentials/serviceAccount.json" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/src/main/resources/credentials/serviceAccount.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/deployment_guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/deployment_guide.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="34mIKZ08Mc3rlSjI37fopjczOfv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/ruvva/career-connect-ai"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d2da385-b782-4389-a1a7-3cb6b99829a9" name="Changes" comment="" />
+      <created>1761812260227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761812260227</updated>
+    </task>
+    <servers />
+  </component>
+</project>

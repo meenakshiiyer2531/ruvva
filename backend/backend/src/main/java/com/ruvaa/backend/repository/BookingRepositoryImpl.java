@@ -4,8 +4,7 @@ import com.google.cloud.firestore.Firestore;
 import com.google.cloud.firestore.Query;
 import com.google.cloud.firestore.QueryDocumentSnapshot;
 import com.ruvaa.backend.entity.Booking;
-import com.ruvaa.backend.entity.User;
-import com.ruvaa.backend.entity.Mentor;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -26,10 +25,10 @@ public class BookingRepositoryImpl implements BookingRepository {
     private static final String COLLECTION_NAME = "bookings";
 
     @Override
-    public List<Booking> findByUserOrderByBookingDateDesc(User user) {
+    public List<Booking> findByUserOrderByBookingDateDesc(String userId) {
         try {
             var query = firestore.collection(COLLECTION_NAME)
-                    .whereEqualTo("userId", user.getId())
+                    .whereEqualTo("userId", userId)
                     .orderBy("bookingDate", Query.Direction.DESCENDING)
                     .get()
                     .get();
@@ -37,21 +36,21 @@ public class BookingRepositoryImpl implements BookingRepository {
             List<Booking> bookings = new ArrayList<>();
             for (QueryDocumentSnapshot document : query.getDocuments()) {
                 Booking booking = document.toObject(Booking.class);
-                booking.setId(Long.parseLong(document.getId()));
+                booking.setId(document.getId());
                 bookings.add(booking);
             }
             return bookings;
         } catch (InterruptedException | ExecutionException e) {
-            log.error("Error finding bookings by user: {}", user.getId(), e);
+            log.error("Error finding bookings by user: {}", userId, e);
             return new ArrayList<>();
         }
     }
 
     @Override
-    public List<Booking> findByMentorOrderByBookingDateDesc(Mentor mentor) {
+    public List<Booking> findByMentorOrderByBookingDateDesc(String mentorId) {
         try {
             var query = firestore.collection(COLLECTION_NAME)
-                    .whereEqualTo("mentorId", mentor.getId())
+                    .whereEqualTo("mentorId", mentorId)
                     .orderBy("bookingDate", Query.Direction.DESCENDING)
                     .get()
                     .get();
@@ -59,21 +58,21 @@ public class BookingRepositoryImpl implements BookingRepository {
             List<Booking> bookings = new ArrayList<>();
             for (QueryDocumentSnapshot document : query.getDocuments()) {
                 Booking booking = document.toObject(Booking.class);
-                booking.setId(Long.parseLong(document.getId()));
+                booking.setId(document.getId());
                 bookings.add(booking);
             }
             return bookings;
         } catch (InterruptedException | ExecutionException e) {
-            log.error("Error finding bookings by mentor: {}", mentor.getId(), e);
+            log.error("Error finding bookings by mentor: {}", mentorId, e);
             return new ArrayList<>();
         }
     }
 
     @Override
-    public List<Booking> findByUserAndStatusOrderByBookingDateDesc(User user, Booking.BookingStatus status) {
+    public List<Booking> findByUserAndStatusOrderByBookingDateDesc(String userId, Booking.BookingStatus status) {
         try {
             var query = firestore.collection(COLLECTION_NAME)
-                    .whereEqualTo("userId", user.getId())
+                    .whereEqualTo("userId", userId)
                     .whereEqualTo("status", status.name())
                     .orderBy("bookingDate", Query.Direction.DESCENDING)
                     .get()
@@ -82,12 +81,12 @@ public class BookingRepositoryImpl implements BookingRepository {
             List<Booking> bookings = new ArrayList<>();
             for (QueryDocumentSnapshot document : query.getDocuments()) {
                 Booking booking = document.toObject(Booking.class);
-                booking.setId(Long.parseLong(document.getId()));
+                booking.setId(document.getId());
                 bookings.add(booking);
             }
             return bookings;
         } catch (InterruptedException | ExecutionException e) {
-            log.error("Error finding bookings by user and status: {} {}", user.getId(), status, e);
+            log.error("Error finding bookings by user and status: {} {}", userId, status, e);
             return new ArrayList<>();
         }
     }
@@ -96,7 +95,7 @@ public class BookingRepositoryImpl implements BookingRepository {
     public Booking save(Booking booking) {
         try {
             if (booking.getId() == null) {
-                booking.setId(System.currentTimeMillis());
+                booking.setId(java.util.UUID.randomUUID().toString());
             }
 
             firestore.collection(COLLECTION_NAME)
@@ -112,10 +111,10 @@ public class BookingRepositoryImpl implements BookingRepository {
     }
 
     @Override
-    public Optional<Booking> findById(Long id) {
+    public Optional<Booking> findById(String id) {
         try {
             var document = firestore.collection(COLLECTION_NAME)
-                    .document(id.toString())
+                    .document(id)
                     .get()
                     .get();
 
@@ -132,10 +131,10 @@ public class BookingRepositoryImpl implements BookingRepository {
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(String id) {
         try {
             firestore.collection(COLLECTION_NAME)
-                    .document(id.toString())
+                    .document(id)
                     .delete()
                     .get();
         } catch (InterruptedException | ExecutionException e) {

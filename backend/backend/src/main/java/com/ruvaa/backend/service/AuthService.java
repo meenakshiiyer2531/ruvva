@@ -3,8 +3,13 @@ package com.ruvaa.backend.service;
 import com.ruvaa.backend.dto.LoginRequest;
 import com.ruvaa.backend.dto.LoginResponse;
 import com.ruvaa.backend.dto.UserDto;
+
 import com.ruvaa.backend.entity.User;
+import com.ruvaa.backend.model.entity.Student;
 import com.ruvaa.backend.repository.UserRepository;
+import com.ruvaa.backend.service.StudentService;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import com.ruvaa.backend.security.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -19,36 +24,48 @@ import org.springframework.stereotype.Service;
 public class AuthService {
 
     private final UserRepository userRepository;
+    private final StudentService studentService; // Inject StudentService
     private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;
     private final AuthenticationManager authenticationManager;
 
     public LoginResponse login(LoginRequest request) {
         authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
+                new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
         );
 
-        User user = userRepository.findByUsername(request.getUsername())
-                .orElseThrow(() -> new RuntimeException("User not found"));
+        Student student = studentService.findByEmail(request.getEmail())
+                .orElseThrow(() -> new RuntimeException("Student not found"));
 
-        String token = jwtUtil.generateToken(user);
+        String token = jwtUtil.generateToken(student);
 
-        UserDto userDto = convertToDto(user);
+        UserDto userDto = UserDto.builder()
+                .id(student.getId())
+                .username(student.getEmail())
+                .name(student.getFullName())
+                .email(student.getEmail())
+                .phone(student.getPhoneNumber())
+                .age(student.getAge())
+                .location(student.getCity() + ", " + student.getState())
+                .education(student.getEducationLevel() != null ? student.getEducationLevel().getDisplayName() : null)
+                .interests(String.join(", ", student.getInterestedDomains()))
+                .createdAt(student.getCreatedAt() != null ? LocalDateTime.ofInstant(student.getCreatedAt().toDate().toInstant(), ZoneOffset.UTC) : null)
+                .build();
 
         return new LoginResponse(token, "Bearer", userDto);
     }
 
     public LoginResponse mockLogin(LoginRequest request) {
-        if (request.getUsername() == null || request.getUsername().trim().isEmpty() ||
+        if (request.getEmail() == null || request.getEmail().trim().isEmpty() ||
             request.getPassword() == null || request.getPassword().trim().isEmpty()) {
-            throw new RuntimeException("Username and password are required");
+            throw new RuntimeException("Email and password are required");
         }
 
         User mockUser = new User();
         mockUser.setId(System.currentTimeMillis());
-        mockUser.setUsername(request.getUsername());
-        mockUser.setName(request.getUsername());
-        mockUser.setEmail(request.getUsername() + "@example.com");
+        mockUser.setUsername(request.getEmail());
+        mockUser.setName(request.getEmail());
+        mockUser.setEmail(request.getEmail() + "@example.com");
         mockUser.onCreate();
 
         String mockToken = "mock-jwt-token-" + System.currentTimeMillis();

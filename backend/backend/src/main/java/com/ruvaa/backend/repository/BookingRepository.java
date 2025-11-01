@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Optional;
 
 public interface BookingRepository {
-    List<Booking> findByUserOrderByBookingDateDesc(User user);
-    List<Booking> findByMentorOrderByBookingDateDesc(Mentor mentor);
-    List<Booking> findByUserAndStatusOrderByBookingDateDesc(User user, Booking.BookingStatus status);
+    List<Booking> findByUserOrderByBookingDateDesc(String userId);
+    List<Booking> findByMentorOrderByBookingDateDesc(String mentorId);
+    List<Booking> findByUserAndStatusOrderByBookingDateDesc(String userId, Booking.BookingStatus status);
     Booking save(Booking booking);
-    Optional<Booking> findById(Long id);
-    void deleteById(Long id);
+    Optional<Booking> findById(String id);
+    void deleteById(String id);
 }

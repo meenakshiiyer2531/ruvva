@@ -86,13 +86,13 @@ public class MockAuthController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@Valid @RequestBody LoginRequest request) {
         try {
-            log.info("Mock login attempt for: {}", request.getUsername());
+            log.info("Mock login attempt for: {}", request.getEmail());
 
-            MockUser user = users.get(request.getUsername());
+            MockUser user = users.get(request.getEmail());
             if (user == null) {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of(
                     "success", false,
-                    "message", "User not found: " + request.getUsername()
+                    "message", "User not found: " + request.getEmail()
                 ));
             }
 
@@ -119,7 +119,7 @@ public class MockAuthController {
                 .user(userDto)
                 .build();
 
-            log.info("Mock login successful for: {}", request.getUsername());
+            log.info("Mock login successful for: {}", request.getEmail());
 
             return ResponseEntity.ok(response);
 

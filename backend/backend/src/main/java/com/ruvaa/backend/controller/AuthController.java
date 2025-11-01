@@ -81,10 +81,8 @@ public class AuthController {
     }
 
     private ResponseEntity<LoginResponse> loginWithFirebase(LoginRequest request) {
-        // For MVP, we'll still use mock login but create Firebase user document
         try {
-            LoginResponse response = authService.mockLogin(request);
-
+            LoginResponse response = authService.login(request);
             // Try to create/update user document in Firebase
             try {
                 firebaseUserService.createUserDocument(

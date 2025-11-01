@@ -9,7 +9,7 @@ spring:
 
 # Firebase Configuration
 firebase:
-  enabled: false
+  enabled: true
   service-account-key: classpath:credentials/serviceAccount.json
   database-url: https://ruvaa-cbcaa-default-rtdb.asia-southeast1.firebasedatabase.app/
   project-id: ruvaa-cbcaa

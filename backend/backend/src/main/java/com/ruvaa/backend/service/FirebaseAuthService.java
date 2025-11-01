@@ -152,13 +152,6 @@ public class FirebaseAuthService {
             return false;
         }
 
-        try {
-            // Try to perform a simple operation to check if Firebase is available
-            firebaseAuth.listUsers(null, 1);
-            return true;
-        } catch (Exception e) {
-            log.warn("Firebase Auth not available: {}", e.getMessage());
-            return false;
-        }
+        return true;
     }
 }
