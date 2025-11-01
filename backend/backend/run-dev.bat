@@ -1,4 +1,7 @@
 @echo off
+if exist .env (
+  for /f "delims=" %%a in ('findstr /v "^#" .env') do set "%%a"
+)
 echo Starting CareerConnect Backend in Development Mode...
 echo.
 echo Application will be available at: http://localhost:8080/api
@@ -7,4 +10,4 @@ echo H2 Console: http://localhost:8080/api/h2-console
 echo.
 echo Press Ctrl+C to stop the application
 echo.
-./mvnw spring-boot:run -Dspring.profiles.active=dev
+./mvnw clean spring-boot:run -Dspring.profiles.active=dev -Dspring.main.allow-circular-references=true

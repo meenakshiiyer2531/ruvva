@@ -1,6 +1,7 @@
 package com.ruvaa.backend.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.cloud.Timestamp;
 import com.ruvaa.backend.model.enums.EducationLevel;
 import com.ruvaa.backend.model.enums.CollegeTier;
 import com.ruvaa.backend.model.enums.WorkPreference;
@@ -12,8 +13,11 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import jakarta.validation.constraints.*;
-import java.time.LocalDateTime;
+
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -147,7 +151,7 @@ public class Student implements UserDetails {
     @Builder.Default
     private List<String> completedAssessments = List.of();
     
-    private LocalDateTime lastAssessmentDate;
+    private com.google.cloud.Timestamp lastAssessmentDate;
     
     private Integer totalAssessmentScore;
     
@@ -173,11 +177,11 @@ public class Student implements UserDetails {
     
     private boolean onboardingCompleted = false;
     
-    private LocalDateTime createdAt;
+    private com.google.cloud.Timestamp createdAt;
     
-    private LocalDateTime updatedAt;
+    private com.google.cloud.Timestamp updatedAt;
     
-    private LocalDateTime lastLoginAt;
+    private com.google.cloud.Timestamp lastLoginAt;
     
     @Builder.Default
     private boolean active = true;
@@ -255,9 +259,16 @@ public class Student implements UserDetails {
      * Check if student needs career assessment
      */
     public boolean needsCareerAssessment() {
-        return lastAssessmentDate == null || 
-               lastAssessmentDate.isBefore(LocalDateTime.now().minusMonths(6)) ||
-               riasecScores.getDominantTypes().length() < 3;
+        if (lastAssessmentDate == null) {
+            return true;
+        }
+
+        // Calculate 6 months ago
+        Instant sixMonthsAgo = Instant.now().minus(6, ChronoUnit.MONTHS);
+        Timestamp sixMonthsAgoTimestamp = Timestamp.of(Date.from(sixMonthsAgo));
+
+        return lastAssessmentDate.compareTo(sixMonthsAgoTimestamp) < 0 ||
+                riasecScores.getDominantTypes().length() < 3;
     }
 
     /**

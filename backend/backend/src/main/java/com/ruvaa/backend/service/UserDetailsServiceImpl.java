@@ -13,11 +13,11 @@ import org.springframework.stereotype.Service;
 @ConditionalOnProperty(name = "firebase.enabled", havingValue = "true", matchIfMissing = false)
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    private final UserRepository userRepository;
+    private final StudentService studentService;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByUsername(username)
+        return studentService.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
     }
 }

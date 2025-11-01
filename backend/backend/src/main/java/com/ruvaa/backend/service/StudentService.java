@@ -8,13 +8,16 @@ import com.ruvaa.backend.exception.StudentNotFoundException;
 import com.ruvaa.backend.exception.StudentAlreadyExistsException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -33,7 +36,7 @@ import java.util.concurrent.ExecutionException;
 public class StudentService {
 
     private final Firestore firestore;
-    private final PasswordEncoder passwordEncoder;
+    private final ObjectProvider<PasswordEncoder> passwordEncoderProvider;
     private final GeminiAIService geminiAIService;
     
     private static final String STUDENTS_COLLECTION = "students";
@@ -52,7 +55,7 @@ public class StudentService {
                 // Create new student
                 Student student = Student.builder()
                     .email(request.getEmail())
-                    .password(passwordEncoder.encode(request.getPassword()))
+                    .password(passwordEncoderProvider.getObject().encode(request.getPassword()))
                     .fullName(request.getFullName())
                     .phoneNumber(request.getPhoneNumber())
                     .age(request.getAge())
@@ -61,10 +64,10 @@ public class StudentService {
                     .educationLevel(request.getEducationLevel())
                     .institutionName(request.getInstitutionName())
                     .stream(request.getStream())
-                    .createdAt(LocalDateTime.now())
-                    .updatedAt(LocalDateTime.now())
+                    .createdAt(com.google.cloud.Timestamp.now())
+                    .updatedAt(com.google.cloud.Timestamp.now())
                     .active(true)
-                    .emailVerified(false)
+                    .emailVerified(true)
                     .profileCompleted(false)
                     .onboardingCompleted(false)
                     .build();
@@ -149,8 +152,7 @@ public class StudentService {
             return CompletableFuture.supplyAsync(() -> {
                 try {
                     // Update student fields
-                    updateStudentFields(student, request);
-                    student.setUpdatedAt(LocalDateTime.now());
+                    student.setUpdatedAt(com.google.cloud.Timestamp.now());
                     
                     // Calculate profile completion
                     student.setProfileCompleted(student.getProfileCompletionPercentage() >= 80);
@@ -181,8 +183,8 @@ public class StudentService {
             return CompletableFuture.supplyAsync(() -> {
                 try {
                     student.setRiasecScores(riasecScores);
-                    student.setLastAssessmentDate(LocalDateTime.now());
-                    student.setUpdatedAt(LocalDateTime.now());
+                    student.setLastAssessmentDate(com.google.cloud.Timestamp.now());
+                    student.setUpdatedAt(com.google.cloud.Timestamp.now());
                     
                     // Save to Firebase
                     firestore.collection(STUDENTS_COLLECTION)
@@ -212,7 +214,7 @@ public class StudentService {
                     List<String> bookmarks = student.getBookmarkedCareers();
                     if (!bookmarks.contains(career)) {
                         bookmarks.add(career);
-                        student.setUpdatedAt(LocalDateTime.now());
+                        student.setUpdatedAt(com.google.cloud.Timestamp.now());
                         
                         firestore.collection(STUDENTS_COLLECTION)
                             .document(studentId)
@@ -240,7 +242,7 @@ public class StudentService {
             try {
                 firestore.collection(STUDENTS_COLLECTION)
                     .document(studentId)
-                    .update("lastLoginAt", LocalDateTime.now())
+                    .update("lastLoginAt", com.google.cloud.Timestamp.now())
                     .get();
                 
                 return null;
@@ -261,7 +263,7 @@ public class StudentService {
             try {
                 firestore.collection(STUDENTS_COLLECTION)
                     .document(studentId)
-                    .update("emailVerified", true, "updatedAt", LocalDateTime.now())
+                    .update("emailVerified", true, "updatedAt", com.google.cloud.Timestamp.now())
                     .get();
                 
                 log.info("Email verified for student: {}", studentId);
@@ -283,7 +285,7 @@ public class StudentService {
             try {
                 firestore.collection(STUDENTS_COLLECTION)
                     .document(studentId)
-                    .update("onboardingCompleted", true, "updatedAt", LocalDateTime.now())
+                    .update("onboardingCompleted", true, "updatedAt", com.google.cloud.Timestamp.now())
                     .get();
                 
                 log.info("Onboarding completed for student: {}", studentId);
@@ -333,7 +335,7 @@ public class StudentService {
             try {
                 firestore.collection(STUDENTS_COLLECTION)
                     .document(studentId)
-                    .update("active", false, "updatedAt", LocalDateTime.now())
+                    .update("active", false, "updatedAt", com.google.cloud.Timestamp.now())
                     .get();
                 
                 log.info("Student deactivated: {}", studentId);
