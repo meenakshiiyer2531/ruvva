@@ -1,9 +1,11 @@
 """
 Test configuration and fixtures
+Updated according to AI Service Flow
 """
 
 import pytest
 import os
+import json
 import tempfile
 from app import create_app
 from config import TestingConfig
@@ -12,7 +14,12 @@ from config import TestingConfig
 def app():
     """Create test application"""
     app = create_app()
-    app.config.from_object(TestingConfig)
+    app.config['TESTING'] = True
+    app.config['GEMINI_API_KEY'] = 'test-api-key'
+    app.config['FLASK_ENV'] = 'testing'
+    
+    # Disable Redis for testing if not available
+    app.redis_client = None
     
     with app.app_context():
         yield app
@@ -33,6 +40,18 @@ def auth_headers():
     return {
         'Authorization': 'Bearer mock-jwt-token'
     }
+
+@pytest.fixture
+def auth_token(app):
+    """Generate authentication token for testing."""
+    with app.test_client() as client:
+        response = client.post('/api/v1/auth/dev-token',
+                              json={'student_id': 1},
+                              content_type='application/json')
+        if response.status_code == 200:
+            data = json.loads(response.data)
+            return data['data']['access_token']
+    return None
 
 @pytest.fixture
 def sample_student_profile():

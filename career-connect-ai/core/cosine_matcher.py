@@ -885,7 +885,7 @@ class CosineCareerMatcher:
         distribution = {'High': 0, 'Good': 0, 'Fair': 0, 'Low': 0}
         for match in matches:
             if match.confidence_level in distribution:
-                distribution[match.confidence_level] += 1
+            distribution[match.confidence_level] += 1
         return distribution
     
     def get_career_database(self) -> List[Dict[str, Any]]:

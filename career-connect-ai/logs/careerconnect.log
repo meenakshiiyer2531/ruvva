@@ -1413,3 +1413,382 @@
 2025-11-02 04:37:06,679 - app - INFO - CareerConnect AI started in development mode
 2025-11-02 04:37:06,680 - services.backend_integration - INFO - Backend integration enabled
 2025-11-02 04:37:06,680 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:28:29,087 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:28:29,889 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:28:29,889 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:28:36,012 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 13:28:36,490 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 13:28:36,799 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 13:28:39,341 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:28:39,511 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:28:39,513 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:28:47,372 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:28:47,377 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:28:47,379 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:28:47,379 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:29:32,843 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:29:34,992 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:29:34,994 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:29:41,264 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 13:29:41,381 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 13:29:41,445 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 13:29:43,382 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:29:43,699 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:29:43,710 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:29:53,470 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:29:53,475 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:29:53,476 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:29:53,476 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:29:58,570 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:29:58,572 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:29:58,573 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:29:58,573 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:30:03,470 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:30:03,475 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:30:03,476 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:30:03,476 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:30:08,476 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:30:08,478 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:30:08,479 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:30:08,479 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:31:31,532 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:31:32,902 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:31:32,910 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:31:38,130 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 13:31:38,218 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 13:31:38,295 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 13:31:39,328 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:31:39,350 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:31:39,350 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:31:45,656 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:31:45,659 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:31:45,662 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:31:45,662 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:31:46,240 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 13:33:36,943 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:33:38,297 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:33:38,297 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:33:45,945 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 13:33:46,050 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 13:33:46,133 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 13:33:47,216 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:33:47,244 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:33:47,244 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:33:53,040 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:33:53,045 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:33:53,046 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:33:53,046 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:33:57,872 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:33:57,876 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:33:57,876 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:33:57,877 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:02,872 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:02,878 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:02,878 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:02,879 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:07,241 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:07,242 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:07,243 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:07,243 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:11,677 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:11,679 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:11,679 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:11,680 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:16,464 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:16,470 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:16,473 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:16,473 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:21,263 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:21,269 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:21,269 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:21,270 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:21,561 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 13:34:26,428 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:26,431 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:26,434 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:26,434 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:26,712 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 13:34:31,567 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:31,572 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:31,572 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:31,573 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:36,368 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:36,372 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:36,372 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:36,373 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:41,177 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:41,181 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:41,183 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:41,183 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:45,941 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:45,942 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:45,943 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:45,944 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:50,833 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:50,836 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:50,837 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:50,837 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:55,160 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:55,165 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:55,167 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:55,168 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:59,631 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:34:59,635 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:34:59,635 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:34:59,636 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:34:59,755 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-11-02 13:34:59,790 - core.gemini_client - INFO - Making Gemini API request - correlation_id: 42528423-a4e0-40d0-bc35-dca849eadacc
+2025-11-02 13:35:01,489 - core.gemini_client - INFO - Gemini API response received - correlation_id: 42528423-a4e0-40d0-bc35-dca849eadacc, tokens: 321
+2025-11-02 13:35:05,674 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:35:05,680 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:35:05,683 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:35:05,684 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:35:05,774 - core.gemini_client - INFO - Making Gemini API request - correlation_id: 494927e3-2bf5-4166-8716-3bc1e37ae312
+2025-11-02 13:35:07,164 - core.gemini_client - INFO - Gemini API response received - correlation_id: 494927e3-2bf5-4166-8716-3bc1e37ae312, tokens: 278
+2025-11-02 13:35:12,132 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:35:12,134 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:35:12,135 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:35:12,135 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:35:16,928 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:35:16,930 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:35:16,932 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:35:16,933 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:35:21,650 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:35:21,652 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:35:21,653 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:35:21,653 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:35:26,237 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:35:26,238 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:35:26,242 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:35:26,243 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:35:31,232 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:35:31,234 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:35:31,235 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:35:31,235 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:35:36,068 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:35:36,069 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:35:36,070 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:35:36,071 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:35:36,180 - core.gemini_client - INFO - Making Gemini API request - correlation_id: 24734c4c-f2b3-49ed-9ed1-c5a400a429ec
+2025-11-02 13:35:37,553 - core.gemini_client - INFO - Gemini API response received - correlation_id: 24734c4c-f2b3-49ed-9ed1-c5a400a429ec, tokens: 278
+2025-11-02 13:35:42,357 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:35:42,361 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:35:42,362 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:35:42,362 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:35:42,449 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 13:35:47,140 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:35:47,142 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:35:47,142 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:35:47,143 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:35:47,243 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 13:35:47,243 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 13:35:47,246 - services.career_discovery - INFO - Finding similar careers for: software_engineer
+2025-11-02 13:35:47,246 - services.career_discovery - INFO - Finding similar careers for: data_scientist
+2025-11-02 13:35:47,246 - services.career_discovery - INFO - Finding similar careers for: doctor
+2025-11-02 13:44:58,500 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:45:00,148 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:45:00,149 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:45:03,548 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 13:45:03,647 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 13:45:03,731 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 13:45:04,858 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:45:04,880 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:45:04,881 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:45:10,364 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:45:10,370 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:45:10,373 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:45:10,374 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:45:10,499 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 13:45:15,287 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:45:15,292 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:45:15,292 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:45:15,293 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:55:32,465 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:55:35,096 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:55:35,096 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:55:40,005 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 13:55:40,210 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 13:55:40,314 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 13:55:41,432 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:55:41,497 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:55:41,497 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 13:55:46,672 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:55:46,679 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:55:46,680 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:55:46,680 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:55:55,092 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 13:55:55,094 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 13:55:55,095 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 13:55:55,095 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 13:55:55,197 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 14:00:08,577 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:00:09,465 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:00:09,476 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:00:13,062 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 14:00:13,226 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 14:00:13,360 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 14:00:14,314 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:00:14,336 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:00:14,338 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:00:19,272 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:00:19,275 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:00:19,276 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:00:19,276 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:00:19,576 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 14:00:24,163 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:00:24,173 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:00:24,174 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:00:24,174 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:22:27,673 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:22:28,706 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:22:28,706 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:22:32,418 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 14:22:32,514 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 14:22:32,615 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 14:22:33,704 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:22:33,722 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:22:33,723 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:22:39,288 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:22:39,293 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:22:39,296 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:22:39,298 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:22:39,471 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 14:26:27,206 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:26:28,090 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:26:28,090 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:26:31,251 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 14:26:31,342 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 14:26:31,426 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 14:26:32,608 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:26:32,625 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:26:32,626 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:26:39,232 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:26:39,235 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:26:39,236 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:26:39,238 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:26:39,854 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-11-02 14:26:39,873 - core.gemini_client - INFO - Making Gemini API request - correlation_id: 5d4e12e3-349f-44fe-8300-96d2fbe6411f
+2025-11-02 14:26:41,530 - core.gemini_client - INFO - Gemini API response received - correlation_id: 5d4e12e3-349f-44fe-8300-96d2fbe6411f, tokens: 317
+2025-11-02 14:27:16,797 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:27:17,548 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:27:17,549 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:27:20,736 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 14:27:20,792 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 14:27:20,824 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 14:27:21,448 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:27:21,466 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:27:21,466 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:27:29,142 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:27:29,147 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:27:29,148 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:27:29,148 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:30:16,273 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:30:18,605 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:30:18,606 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:30:22,367 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 14:30:22,469 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 14:30:22,542 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 14:30:23,691 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:30:23,742 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:30:23,743 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:30:29,002 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:30:29,007 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:30:29,008 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:30:29,008 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:30:29,161 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-11-02 14:30:29,171 - core.gemini_client - INFO - Making Gemini API request - correlation_id: e0d5a447-139f-4607-930e-f81e417c7b4f
+2025-11-02 14:30:30,991 - core.gemini_client - INFO - Gemini API response received - correlation_id: e0d5a447-139f-4607-930e-f81e417c7b4f, tokens: 280
+2025-11-02 14:30:35,499 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:30:35,503 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:30:35,503 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:30:35,504 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:30:35,624 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 14:30:40,103 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:30:40,105 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:30:40,106 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:30:40,106 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:30:42,324 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 14:30:42,325 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 14:30:42,326 - services.career_discovery - INFO - Finding similar careers for: software_engineer
+2025-11-02 14:30:42,326 - services.career_discovery - INFO - Finding similar careers for: data_scientist
+2025-11-02 14:30:42,326 - services.career_discovery - INFO - Finding similar careers for: doctor
+2025-11-02 14:32:00,279 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:32:01,228 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:32:01,229 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:32:03,893 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 14:32:04,014 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 14:32:04,099 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 14:32:05,562 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:32:05,581 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:32:05,581 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:32:10,706 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:32:10,796 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:32:10,808 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:32:10,809 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:32:16,388 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:32:16,390 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:32:16,393 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:32:16,393 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:32:21,905 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:32:21,907 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:32:21,908 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:32:21,910 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:32:27,132 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:32:27,138 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:32:27,141 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:32:27,141 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:32:32,540 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:32:32,544 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:32:32,544 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:32:32,545 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:32:32,795 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 14:32:37,702 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:32:37,704 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:32:37,705 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:32:37,707 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:32:37,944 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-11-02 14:32:37,960 - core.gemini_client - INFO - Making Gemini API request - correlation_id: c915468a-3e11-4d5e-bcee-10353ce70f3f
+2025-11-02 14:32:39,694 - core.gemini_client - INFO - Gemini API response received - correlation_id: c915468a-3e11-4d5e-bcee-10353ce70f3f, tokens: 315
+2025-11-02 14:32:44,402 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:32:44,406 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:32:44,407 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:32:44,408 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:32:45,059 - core.gemini_client - INFO - Making Gemini API request - correlation_id: 6586f51a-f860-45bc-b8cc-5db69132a65c
+2025-11-02 14:32:46,824 - core.gemini_client - INFO - Gemini API response received - correlation_id: 6586f51a-f860-45bc-b8cc-5db69132a65c, tokens: 276
+2025-11-02 14:32:51,388 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:32:51,391 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:32:51,391 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:32:51,392 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:32:51,693 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 14:35:22,999 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:35:23,698 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:35:23,699 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:35:27,822 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 14:35:27,930 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 14:35:28,000 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 14:35:29,971 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:35:30,000 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:35:30,000 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 14:35:35,391 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:35:35,397 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:35:35,399 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:35:35,400 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:35:35,669 - services.career_discovery - INFO - Starting career discovery by profile
+2025-11-02 14:35:40,595 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:35:40,599 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:35:40,600 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:35:40,600 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:35:41,003 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-11-02 14:35:41,020 - core.gemini_client - INFO - Making Gemini API request - correlation_id: 3bd0eaf9-fc94-4406-9bdb-17082f162582
+2025-11-02 14:35:42,927 - core.gemini_client - INFO - Gemini API response received - correlation_id: 3bd0eaf9-fc94-4406-9bdb-17082f162582, tokens: 314
+2025-11-02 14:35:48,372 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:35:48,378 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:35:48,381 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:35:48,382 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:35:48,664 - core.gemini_client - INFO - Making Gemini API request - correlation_id: fbacf857-3c40-4ab6-9819-95438815501e
+2025-11-02 14:35:50,431 - core.gemini_client - INFO - Gemini API response received - correlation_id: fbacf857-3c40-4ab6-9819-95438815501e, tokens: 289
+2025-11-02 14:35:55,075 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 14:35:55,079 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 14:35:55,081 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 14:35:55,082 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 14:35:55,314 - services.career_discovery - INFO - Starting career discovery by profile
