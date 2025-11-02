@@ -1,20 +1,52 @@
 import React, { useState, useEffect } from "react";
+import ApiService from "../services/api";
 
 /*
+  Enhanced Onboarding Component with Backend Integration
   Steps:
-  1 Basic Info
-  2 Academic interests
-  3 Extracurriculars
-  4 Skills assessment (quick)
-  5 Aspirations
-  Saves draft to localStorage; returns profile object to parent on complete
+  1. Academic & Personal Details
+  2. Interest Domains & Subjects  
+  3. Skills & Learning Preferences
+  4. Career Goals & Work Preferences
+  5. Location & Salary Expectations
+  
+  Integrates with Spring Boot backend to update student profile
 */
 
-export default function Onboarding({ initial, onComplete }) {
+export default function Onboarding({ initial, onComplete, showToast, setPage }) {
   const [step, setStep] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [user] = useState(() => JSON.parse(localStorage.getItem("cc_user")) || null);
+  
   const [data, setData] = useState(initial || {
-    name: "", studentClass: "", location: "",
-    interests: [], extracurriculars: [], skills: {}, aspirations: ""
+    // Academic Information
+    educationLevel: user?.educationLevel || "",
+    institutionName: user?.institutionName || "",
+    stream: user?.stream || "",
+    cgpa: "",
+    percentage: "",
+    graduationYear: new Date().getFullYear() + 2,
+    
+    // Interest & Skills
+    interestedDomains: [],
+    skillsAssessment: [],
+    learningStyle: [],
+    
+    // Career Goals
+    currentCareerGoal: "",
+    recommendedCareers: [],
+    workPreference: "",
+    expectedSalaryLPA: "",
+    
+    // Location & Languages
+    preferredLocations: [],
+    preferredLanguages: ["English"],
+    
+    // Legacy fields for compatibility
+    interests: [],
+    extracurriculars: [],
+    skills: {},
+    aspirations: ""
   });
 
   useEffect(() => {
@@ -24,28 +56,66 @@ export default function Onboarding({ initial, onComplete }) {
 
   useEffect(() => localStorage.setItem("cc_onboard_draft", JSON.stringify(data)), [data]);
 
-  const toggleInterest = (v) => {
+  const toggleDomain = (domain) => {
     setData(d => ({
       ...d,
-      interests: d.interests.includes(v) ? d.interests.filter(x => x !== v) : [...d.interests, v]
+      interestedDomains: d.interestedDomains.includes(domain) 
+        ? d.interestedDomains.filter(x => x !== domain) 
+        : [...d.interestedDomains, domain]
     }));
   };
 
-  const setSkill = (k, v) => setData(d => ({ ...d, skills: { ...d.skills, [k]: v } }));
+  const toggleLearningStyle = (style) => {
+    setData(d => ({
+      ...d,
+      learningStyle: d.learningStyle.includes(style)
+        ? d.learningStyle.filter(x => x !== style)
+        : [...d.learningStyle, style]
+    }));
+  };
+
+  const toggleLocation = (location) => {
+    setData(d => ({
+      ...d,
+      preferredLocations: d.preferredLocations.includes(location)
+        ? d.preferredLocations.filter(x => x !== location)
+        : [...d.preferredLocations, location]
+    }));
+  };
+
+  const addSkillAssessment = (skill, rating) => {
+    setData(d => ({
+      ...d,
+      skillsAssessment: [...d.skillsAssessment.filter(s => s.skill !== skill), { skill, rating }]
+    }));
+  };
 
   const validateStep = () => {
     switch (step) {
       case 1:
-        if (!data.name.trim() || !data.studentClass.trim()) return "Please fill in your name and class/year.";
+        if (!data.institutionName.trim() || !data.stream.trim()) {
+          return "Please fill in your institution and stream details.";
+        }
         return null;
       case 2:
-        if (data.interests.length === 0) return "Please select at least one subject you like.";
+        if (data.interestedDomains.length === 0) {
+          return "Please select at least one domain of interest.";
+        }
         return null;
       case 3:
-        if (data.extracurriculars.length === 0) return "Please mention at least one extracurricular activity.";
+        if (data.skillsAssessment.length === 0 || data.learningStyle.length === 0) {
+          return "Please complete skills assessment and select learning preferences.";
+        }
+        return null;
+      case 4:
+        if (!data.currentCareerGoal.trim() || !data.workPreference) {
+          return "Please specify your career goal and work preference.";
+        }
         return null;
       case 5:
-        if (!data.aspirations.trim()) return "Please write your career aspirations or constraints.";
+        if (data.preferredLocations.length === 0 || !data.expectedSalaryLPA) {
+          return "Please select preferred locations and expected salary.";
+        }
         return null;
       default:
         return null;
@@ -53,16 +123,57 @@ export default function Onboarding({ initial, onComplete }) {
   };
 
   const handleNext = () => {
-    const msg = validateStep();
-    if (msg) return alert(msg);
+  const msg = validateStep();
+  if (msg) { showToast && showToast(msg,'error'); return; }
     setStep(s => s + 1);
   };
 
-  const submit = () => {
-    const msg = validateStep();
-    if (msg) return alert(msg);
-    onComplete(data);
-    localStorage.removeItem("cc_onboard_draft");
+  const submit = async () => {
+  const msg = validateStep();
+  if (msg) { showToast && showToast(msg,'error'); return; }
+    
+    setLoading(true);
+    
+    try {
+      // Prepare profile data for backend update
+      const profileUpdate = {
+        interestedDomains: data.interestedDomains,
+        skillsAssessment: data.skillsAssessment,
+        preferredLocations: data.preferredLocations,
+        workPreference: data.workPreference,
+        expectedSalaryLPA: parseFloat(data.expectedSalaryLPA) || 0,
+        learningStyle: data.learningStyle,
+        currentCareerGoal: data.currentCareerGoal,
+        cgpa: parseFloat(data.cgpa) || null,
+        percentage: parseFloat(data.percentage) || null,
+        graduationYear: parseInt(data.graduationYear) || null,
+        profileCompleted: true,
+        onboardingCompleted: true
+      };
+
+      // Update profile in backend if user exists
+      let serverProfile = { ...data, ...profileUpdate };
+      if (user && user.id) {
+        console.log("📤 Updating student profile in backend...", profileUpdate);
+        const response = await ApiService.updateStudentProfile(user.id, profileUpdate);
+        console.log("✅ Profile updated successfully:", response);
+        // Attempt combined re-fetch to ensure freshness
+        try {
+          const combined = await ApiService.getStudentCombined(user.id);
+          if (combined?.data?.profile) serverProfile = { ...combined.data.profile };
+        } catch (e) { console.warn('⚠️ Combined fetch after onboarding failed', e.message); }
+      }
+      onComplete(serverProfile);
+      localStorage.removeItem("cc_onboard_draft");
+      showToast && showToast("Onboarding completed successfully! 🎉", 'success');
+      setPage && setPage('profile');
+      
+    } catch (error) {
+      console.error("❌ Onboarding completion failed:", error);
+      showToast && showToast("Failed to save profile. Please try again.", 'error');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -77,27 +188,94 @@ export default function Onboarding({ initial, onComplete }) {
         </div>
 
         {step === 1 && (
-          <div style={{ display: "grid", gap: 10 }}>
-            <input placeholder="Full name" value={data.name} onChange={e => setData(s => ({ ...s, name: e.target.value }))} style={field} />
-            <input placeholder="Class / Year" value={data.studentClass} onChange={e => setData(s => ({ ...s, studentClass: e.target.value }))} style={field} />
-            <input placeholder="Location (city)" value={data.location} onChange={e => setData(s => ({ ...s, location: e.target.value }))} style={field} />
+          <div>
+            <h3 style={{ color: "#00b4d8", marginBottom: 16 }}>Academic Information</h3>
+            <div style={{ display: "grid", gap: 12 }}>
+              <div>
+                <label style={labelStyle}>Institution Name *</label>
+                <input 
+                  placeholder="Enter your college/university name" 
+                  value={data.institutionName} 
+                  onChange={e => setData(s => ({ ...s, institutionName: e.target.value }))} 
+                  style={field} 
+                />
+              </div>
+              <div>
+                <label style={labelStyle}>Stream/Major *</label>
+                <input 
+                  placeholder="e.g. Computer Science, Mechanical Engineering" 
+                  value={data.stream} 
+                  onChange={e => setData(s => ({ ...s, stream: e.target.value }))} 
+                  style={field} 
+                />
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
+                <div>
+                  <label style={labelStyle}>CGPA (optional)</label>
+                  <input 
+                    type="number" 
+                    step="0.01" 
+                    max="10" 
+                    placeholder="0.0" 
+                    value={data.cgpa} 
+                    onChange={e => setData(s => ({ ...s, cgpa: e.target.value }))} 
+                    style={field} 
+                  />
+                </div>
+                <div>
+                  <label style={labelStyle}>Percentage (optional)</label>
+                  <input 
+                    type="number" 
+                    max="100" 
+                    placeholder="0%" 
+                    value={data.percentage} 
+                    onChange={e => setData(s => ({ ...s, percentage: e.target.value }))} 
+                    style={field} 
+                  />
+                </div>
+                <div>
+                  <label style={labelStyle}>Graduation Year</label>
+                  <input 
+                    type="number" 
+                    min="2020" 
+                    max="2030" 
+                    placeholder="2025" 
+                    value={data.graduationYear} 
+                    onChange={e => setData(s => ({ ...s, graduationYear: e.target.value }))} 
+                    style={field} 
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         )}
 
         {step === 2 && (
           <div>
-            <div style={{ marginBottom: 8 }}>Choose subjects you like (click to toggle)</div>
+            <h3 style={{ color: "#00b4d8", marginBottom: 16 }}>Interest Domains</h3>
+            <div style={{ marginBottom: 16 }}>Select domains that interest you (click to toggle)</div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              {["Mathematics","Physics","Biology","Chemistry","Computer Science","Economics","Arts","Commerce"].map((s) => (
+              {[
+                "Technology & Software",
+                "Engineering & Manufacturing", 
+                "Healthcare & Medicine",
+                "Business & Finance",
+                "Arts & Design",
+                "Science & Research",
+                "Education & Teaching",
+                "Media & Communication",
+                "Sports & Fitness",
+                "Social Work & NGO"
+              ].map((domain) => (
                 <button
-                  key={s}
-                  onClick={() => toggleInterest(s)}
+                  key={domain}
+                  onClick={() => toggleDomain(domain)}
                   style={{
                     ...chip,
-                    background: data.interests.includes(s) ? "#00b4d8" : "rgba(255,255,255,0.06)",
-                    color: data.interests.includes(s) ? "#fff" : "var(--text)"
+                    background: data.interestedDomains.includes(domain) ? "#00b4d8" : "rgba(255,255,255,0.06)",
+                    color: data.interestedDomains.includes(domain) ? "#fff" : "var(--text)"
                   }}
-                >{s}</button>
+                >{domain}</button>
               ))}
             </div>
           </div>
@@ -105,41 +283,131 @@ export default function Onboarding({ initial, onComplete }) {
 
         {step === 3 && (
           <div>
-            <div style={{ marginBottom: 8 }}>Extracurricular activities (comma separated)</div>
-            <input
-              placeholder="e.g. dance, coding club, cricket"
-              value={data.extracurriculars.join(", ")}
-              onChange={e => setData(s => ({
-                ...s,
-                extracurriculars: e.target.value.split(",").map(x => x.trim()).filter(Boolean)
-              }))}
-              style={field}
-            />
+            <h3 style={{ color: "#00b4d8", marginBottom: 16 }}>Skills & Learning Preferences</h3>
+            
+            {/* Skills Assessment */}
+            <div style={{ marginBottom: 20 }}>
+              <h4 style={{ marginBottom: 12 }}>Rate Your Skills (1-10)</h4>
+              {[
+                "Problem Solving",
+                "Communication", 
+                "Leadership",
+                "Technical Skills",
+                "Creativity",
+                "Analytical Thinking"
+              ].map(skill => {
+                const currentRating = data.skillsAssessment.find(s => s.skill === skill)?.rating || 5;
+                return (
+                  <div key={skill} style={{ marginBottom: 12 }}>
+                    <label style={{ display: "block", fontSize: 14, color: "var(--muted)", marginBottom: 4 }}>
+                      {skill}: {currentRating}/10
+                    </label>
+                    <input 
+                      type="range" 
+                      min="1" 
+                      max="10" 
+                      value={currentRating} 
+                      onChange={(e) => addSkillAssessment(skill, parseInt(e.target.value))} 
+                      style={{ width: "100%" }}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Learning Preferences */}
+            <div>
+              <h4 style={{ marginBottom: 12 }}>Learning Style Preferences</h4>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                {["Visual", "Auditory", "Kinesthetic", "Reading/Writing", "Collaborative", "Independent"].map((style) => (
+                  <button
+                    key={style}
+                    onClick={() => toggleLearningStyle(style)}
+                    style={{
+                      ...chip,
+                      background: data.learningStyle.includes(style) ? "#00b4d8" : "rgba(255,255,255,0.06)",
+                      color: data.learningStyle.includes(style) ? "#fff" : "var(--text)"
+                    }}
+                  >{style}</button>
+                ))}
+              </div>
+            </div>
           </div>
         )}
 
         {step === 4 && (
           <div>
-            <div style={{ marginBottom: 8 }}>Self-rate skills (0-100)</div>
-            {["Problem solving","Creativity","Communication","Technical"].map(k => (
-              <div key={k} style={{ marginBottom: 10 }}>
-                <label style={{ display: "block", fontSize: 13, color: "var(--muted)" }}>{k}</label>
-                <input type="range" min="0" max="100" value={data.skills[k] ?? 50} onChange={(e) => setSkill(k, Number(e.target.value))} />
-                <div style={{ fontSize: 13 }}>{data.skills[k] ?? 50}</div>
+            <h3 style={{ color: "#00b4d8", marginBottom: 16 }}>Career Goals & Work Preferences</h3>
+            
+            {/* Career Goal */}
+            <div style={{ marginBottom: 20 }}>
+              <label style={labelStyle}>What is your current career goal? *</label>
+              <textarea
+                value={data.currentCareerGoal}
+                onChange={e => setData(s => ({ ...s, currentCareerGoal: e.target.value }))}
+                style={{ ...field, minHeight: 100, width: "100%" }}
+                placeholder="Describe your career aspirations, dream job, or field you want to work in..."
+              />
+            </div>
+
+            {/* Work Preference */}
+            <div>
+              <label style={labelStyle}>Work Preference *</label>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 8 }}>
+                {["Remote", "On-site", "Hybrid", "Flexible"].map((pref) => (
+                  <button
+                    key={pref}
+                    onClick={() => setData(s => ({ ...s, workPreference: pref }))}
+                    style={{
+                      ...chip,
+                      background: data.workPreference === pref ? "#00b4d8" : "rgba(255,255,255,0.06)",
+                      color: data.workPreference === pref ? "#fff" : "var(--text)"
+                    }}
+                  >{pref}</button>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         )}
 
         {step === 5 && (
           <div>
-            <div style={{ marginBottom: 8 }}>Career aspirations / constraints</div>
-            <textarea
-              value={data.aspirations}
-              onChange={e => setData(s => ({ ...s, aspirations: e.target.value }))}
-              style={{ ...field, minHeight: 120, width: "100%" }}
-              placeholder="What do you hope to become? Any constraints (location, finances)?"
-            />
+            <h3 style={{ color: "#00b4d8", marginBottom: 16 }}>Location & Salary Expectations</h3>
+            
+            {/* Preferred Locations */}
+            <div style={{ marginBottom: 20 }}>
+              <label style={labelStyle}>Preferred Work Locations *</label>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 8 }}>
+                {["Mumbai", "Bangalore", "Delhi", "Hyderabad", "Chennai", "Pune", "Kolkata", "Ahmedabad", "International", "Anywhere"].map((location) => (
+                  <button
+                    key={location}
+                    onClick={() => toggleLocation(location)}
+                    style={{
+                      ...chip,
+                      background: data.preferredLocations.includes(location) ? "#00b4d8" : "rgba(255,255,255,0.06)",
+                      color: data.preferredLocations.includes(location) ? "#fff" : "var(--text)"
+                    }}
+                  >{location}</button>
+                ))}
+              </div>
+            </div>
+
+            {/* Expected Salary */}
+            <div>
+              <label style={labelStyle}>Expected Salary (LPA) *</label>
+              <input
+                type="number"
+                min="0"
+                step="0.5"
+                placeholder="e.g. 6.5"
+                value={data.expectedSalaryLPA}
+                onChange={e => setData(s => ({ ...s, expectedSalaryLPA: e.target.value }))}
+                style={field}
+              />
+              <div style={{ fontSize: 12, color: "var(--muted)", marginTop: 4 }}>
+                Enter your expected salary in lakhs per annum
+              </div>
+            </div>
           </div>
         )}
 
@@ -149,7 +417,19 @@ export default function Onboarding({ initial, onComplete }) {
           </div>
           <div>
             {step < 5 && <button onClick={handleNext} style={smallBtnPrimary}>Next</button>}
-            {step === 5 && <button onClick={submit} style={smallBtnPrimary}>Finish & Save</button>}
+            {step === 5 && (
+              <button 
+                onClick={submit} 
+                disabled={loading}
+                style={{
+                  ...smallBtnPrimary,
+                  opacity: loading ? 0.7 : 1,
+                  cursor: loading ? 'not-allowed' : 'pointer'
+                }}
+              >
+                {loading ? "Saving..." : "Finish & Save Profile"}
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -170,6 +450,14 @@ const chip = {
   border: "none",
   cursor: "pointer"
 };
+const labelStyle = {
+  display: "block",
+  fontSize: 14,
+  color: "var(--text)", 
+  marginBottom: 8,
+  fontWeight: "500"
+};
+
 const smallBtn = {
   padding: "8px 12px",
   borderRadius: 8,

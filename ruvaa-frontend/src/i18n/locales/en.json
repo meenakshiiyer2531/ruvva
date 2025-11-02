@@ -1,0 +1,199 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "refresh": "Refresh"
+  },
+  "navigation": {
+    "profile": "Profile",
+    "career": "Analysis",
+    "recommendations": "Careers", 
+    "learning": "Learning",
+    "assessment": "Assessment",
+    "chat": "AI Chat",
+    "colleges": "Colleges",
+    "mentor": "Mentors",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to begin your career journey",
+      "email": "Email Address",
+      "password": "Password",
+      "signin": "Sign In",
+      "signingin": "Signing in...",
+      "noAccount": "Don't have an account?",
+      "signup": "Sign up here",
+      "welcome": "Welcome to CareerConnect",
+      "tagline": "Your journey to a brighter future starts here."
+    },
+    "register": {
+      "title": "Join CareerConnect",
+      "subtitle": "Create your account to get started",
+      "name": "Full Name",
+      "email": "Email Address", 
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "signup": "Create Account",
+      "signingup": "Creating account...",
+      "hasAccount": "Already have an account?",
+      "signin": "Sign in here"
+    }
+  },
+  "onboarding": {
+    "title": "Let's Get to Know You",
+    "subtitle": "Help us personalize your career journey",
+    "personalInfo": "Personal Information",
+    "name": "Full Name",
+    "age": "Age",
+    "location": "Location",
+    "selectLocation": "Select your location",
+    "education": "Education",
+    "currentLevel": "Current Education Level",
+    "institution": "Institution/School Name",
+    "interests": "Interests & Goals",
+    "careerInterests": "Career Interests",
+    "goals": "Your Goals",
+    "complete": "Complete Profile",
+    "completing": "Setting up your profile..."
+  },
+  "profile": {
+    "title": "Your Profile",
+    "personalInfo": "Personal Information",
+    "education": "Education",
+    "interests": "Interests",
+    "goals": "Goals",
+    "editProfile": "Edit Profile",
+    "saveChanges": "Save Changes",
+    "lastUpdated": "Last updated"
+  },
+  "career": {
+    "title": "Career Analysis",
+    "subtitle": "Discover careers that match your skills and interests",
+    "startAnalysis": "Start Career Analysis",
+    "analyzing": "Analyzing your profile...",
+    "recommendations": "Career Recommendations",
+    "skillGap": "Skill Gap Analysis",
+    "learningPath": "Suggested Learning Path"
+  },
+  "assessment": {
+    "title": "Skills Assessment",
+    "subtitle": "Evaluate your current skills and discover growth areas",
+    "startAssessment": "Start Assessment",
+    "question": "Question {{number}} of {{total}}",
+    "next": "Next Question",
+    "previous": "Previous Question",
+    "submit": "Submit Assessment",
+    "results": "Assessment Results",
+    "score": "Your Score"
+  },
+  "chat": {
+    "title": "AI Career Advisor",
+    "subtitle": "Get personalized career guidance",
+    "placeholder": "Ask me about careers, skills, or education...",
+    "send": "Send",
+    "typing": "AI is thinking...",
+    "error": "Sorry, I couldn't process that. Please try again."
+  },
+  "colleges": {
+    "title": "College Finder",
+    "subtitle": "Find the perfect educational institution",
+    "searchPlaceholder": "Search colleges...",
+    "filters": {
+      "location": "Location",
+      "type": "College Type",
+      "rating": "Minimum Rating",
+      "fees": "Fee Range"
+    }
+  },
+  "learning": {
+    "title": "Learning Paths",
+    "subtitle": "Structured learning for your career goals",
+    "createPath": "Create Learning Path",
+    "myPaths": "My Learning Paths",
+    "progress": "Progress",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "notStarted": "Not Started"
+  },
+  "mentor": {
+    "title": "Find Mentors",
+    "subtitle": "Connect with industry experts",
+    "book": "Book Session",
+    "available": "Available",
+    "rating": "Rating",
+    "experience": "{{years}} years experience",
+    "specialty": "Specialties"
+  },
+  "connection": {
+    "status": "Connection Status",
+    "online": "Online",
+    "offline": "Offline",
+    "springboot": "Spring Boot",
+    "pythonai": "Python AI",
+    "refresh": "Refresh"
+  },
+  "landing": {
+    "hero": {
+      "title": "Shape Your Future with AI-Powered Career Guidance",
+      "subtitle": "Discover your dream career path with personalized recommendations, skill assessments, and expert mentorship.",
+      "getStarted": "Get Started Free",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "title": "Why Choose CareerConnect?",
+      "ai": {
+        "title": "AI-Powered Analysis",
+        "description": "Advanced algorithms analyze your skills, interests, and goals to provide personalized career recommendations."
+      },
+      "assessment": {
+        "title": "Comprehensive Assessments", 
+        "description": "Take detailed assessments to understand your strengths, weaknesses, and career compatibility."
+      },
+      "learning": {
+        "title": "Personalized Learning",
+        "description": "Get customized learning paths and resources to develop skills for your target career."
+      },
+      "mentorship": {
+        "title": "Expert Mentorship",
+        "description": "Connect with industry professionals and get guidance from experienced mentors."
+      }
+    },
+    "stats": {
+      "users": "Active Users",
+      "careers": "Career Paths",
+      "success": "Success Rate",
+      "mentors": "Expert Mentors"
+    }
+  },
+  "search": {
+    "placeholder": "Search careers, skills, colleges...",
+    "results": "Search Results",
+    "noResults": "No results found",
+    "categories": {
+      "all": "All",
+      "careers": "Careers", 
+      "skills": "Skills",
+      "colleges": "Colleges",
+      "mentors": "Mentors"
+    }
+  },
+  "language": {
+    "select": "Select Language",
+    "current": "Current Language",
+    "auto": "Auto-detect from location"
+  }
+}

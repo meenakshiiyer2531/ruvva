@@ -323,7 +323,7 @@ class TestGeminiRequest:
         assert request.prompt == "Test prompt"
         assert request.context is None
         assert request.temperature == 0.7
-        assert request.max_tokens == 1500
+        assert request.max_tokens == 300
         assert request.correlation_id is None
 
 class TestGeminiResponse:

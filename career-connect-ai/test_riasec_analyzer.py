@@ -162,7 +162,7 @@ class TestRIASECAnalyzer:
         career_matches = analyzer.map_careers_to_personality(scores)
         
         assert isinstance(career_matches, list)
-        assert len(career_matches) <= 10  # Should return top 10 matches
+        assert len(career_matches) <= 2  # Should return top 2 matches
         
         for match in career_matches:
             assert isinstance(match, CareerMatch)
@@ -413,3 +413,418 @@ class TestCareerMatch:
 
 if __name__ == "__main__":
     pytest.main([__file__])
+
+
+        trait_explanations = viz_data['trait_explanations']
+
+        assert len(trait_explanations) == 6
+
+        for dimension, explanation in trait_explanations.items():
+
+            assert 'score' in explanation
+
+            assert 'level' in explanation
+
+            assert 'description' in explanation
+
+            assert 'characteristics' in explanation
+
+            assert 'indian_context' in explanation
+
+    
+
+    def test_individual_dimension_scoring(self, analyzer, sample_responses):
+
+        """Test individual dimension scoring methods."""
+
+        # Test each dimension scoring method
+
+        realistic_score = analyzer.score_realistic_dimension(sample_responses)
+
+        investigative_score = analyzer.score_investigative_dimension(sample_responses)
+
+        artistic_score = analyzer.score_artistic_dimension(sample_responses)
+
+        social_score = analyzer.score_social_dimension(sample_responses)
+
+        enterprising_score = analyzer.score_enterprising_dimension(sample_responses)
+
+        conventional_score = analyzer.score_conventional_dimension(sample_responses)
+
+        
+
+        # Check that scores are within valid range
+
+        for score in [realistic_score, investigative_score, artistic_score, social_score, enterprising_score, conventional_score]:
+
+            assert 0 <= score <= 5
+
+        
+
+        # Check that scores match expected values based on sample responses
+
+        assert investigative_score > artistic_score  # Sample has high I, low A
+
+        assert conventional_score > artistic_score  # Sample has high C, low A
+
+    
+
+    def test_analyze_responses_complete(self, analyzer, sample_responses):
+
+        """Test complete analysis workflow."""
+
+        analysis = analyzer.analyze_responses(sample_responses)
+
+        
+
+        assert isinstance(analysis, dict)
+
+        assert 'riasec_scores' in analysis
+
+        assert 'personality_profile' in analysis
+
+        assert 'career_matches' in analysis
+
+        assert 'visualization_data' in analysis
+
+        assert 'analysis_timestamp' in analysis
+
+        assert 'assessment_summary' in analysis
+
+        
+
+        # Check that all components are properly structured
+
+        assert isinstance(analysis['riasec_scores'], dict)
+
+        assert isinstance(analysis['personality_profile'], PersonalityProfile)
+
+        assert isinstance(analysis['career_matches'], list)
+
+        assert isinstance(analysis['visualization_data'], dict)
+
+        assert isinstance(analysis['assessment_summary'], dict)
+
+    
+
+    def test_question_score_calculation(self, analyzer):
+
+        """Test question score calculation."""
+
+        # Test agreement type questions
+
+        assert analyzer._calculate_question_score(1, 'agreement') == 1.0
+
+        assert analyzer._calculate_question_score(5, 'agreement') == 5.0
+
+        assert analyzer._calculate_question_score('strongly agree', 'agreement') == 5.0
+
+        assert analyzer._calculate_question_score('disagree', 'agreement') == 2.0
+
+        
+
+        # Test preference type questions
+
+        assert analyzer._calculate_question_score(1, 'preference') == 1.0
+
+        assert analyzer._calculate_question_score(5, 'preference') == 5.0
+
+        
+
+        # Test invalid input
+
+        assert analyzer._calculate_question_score('invalid', 'agreement') == 3.0
+
+        assert analyzer._calculate_question_score(None, 'agreement') == 3.0
+
+    
+
+    def test_career_compatibility_calculation(self, analyzer):
+
+        """Test career compatibility calculation."""
+
+        scores_dict = {
+
+            'Realistic': 4.0,
+
+            'Investigative': 5.0,
+
+            'Artistic': 2.0,
+
+            'Social': 3.0,
+
+            'Enterprising': 3.5,
+
+            'Conventional': 4.5
+
+        }
+
+        
+
+        # Test with different career codes
+
+        compatibility1 = analyzer._calculate_career_compatibility(scores_dict, ['I', 'R', 'C'])
+
+        compatibility2 = analyzer._calculate_career_compatibility(scores_dict, ['A', 'S'])
+
+        
+
+        assert 0 <= compatibility1 <= 1
+
+        assert 0 <= compatibility2 <= 1
+
+        assert compatibility1 > compatibility2  # I+R+C should score higher than A+S
+
+    
+
+    def test_dimension_name_conversion(self, analyzer):
+
+        """Test RIASEC code to dimension name conversion."""
+
+        assert analyzer._get_dimension_name_from_code('R') == 'Realistic'
+
+        assert analyzer._get_dimension_name_from_code('I') == 'Investigative'
+
+        assert analyzer._get_dimension_name_from_code('A') == 'Artistic'
+
+        assert analyzer._get_dimension_name_from_code('S') == 'Social'
+
+        assert analyzer._get_dimension_name_from_code('E') == 'Enterprising'
+
+        assert analyzer._get_dimension_name_from_code('C') == 'Conventional'
+
+        assert analyzer._get_dimension_name_from_code('X') == 'Unknown'
+
+    
+
+    def test_score_level_classification(self, analyzer):
+
+        """Test score level classification."""
+
+        assert analyzer._get_score_level(4.8) == "Very High"
+
+        assert analyzer._get_score_level(4.2) == "High"
+
+        assert analyzer._get_score_level(3.7) == "Above Average"
+
+        assert analyzer._get_score_level(3.2) == "Average"
+
+        assert analyzer._get_score_level(2.7) == "Below Average"
+
+        assert analyzer._get_score_level(2.0) == "Low"
+
+    
+
+    def test_get_assessment_questions(self, analyzer):
+
+        """Test getting assessment questions."""
+
+        questions = analyzer.get_assessment_questions()
+
+        assert isinstance(questions, list)
+
+        assert len(questions) == 36
+
+        assert all('id' in q for q in questions)
+
+    
+
+    def test_get_career_database(self, analyzer):
+
+        """Test getting career database."""
+
+        careers = analyzer.get_career_database()
+
+        assert isinstance(careers, list)
+
+        assert len(careers) > 0
+
+        assert all('career' in c for c in careers)
+
+
+
+class TestRIASECScore:
+
+    """Test cases for RIASECScore dataclass."""
+
+    
+
+    def test_riasec_score_creation(self):
+
+        """Test RIASECScore creation."""
+
+        score = RIASECScore(
+
+            realistic=4.0,
+
+            investigative=5.0,
+
+            artistic=2.0,
+
+            social=3.0,
+
+            enterprising=3.5,
+
+            conventional=4.5
+
+        )
+
+        
+
+        assert score.realistic == 4.0
+
+        assert score.investigative == 5.0
+
+        assert score.artistic == 2.0
+
+        assert score.social == 3.0
+
+        assert score.enterprising == 3.5
+
+        assert score.conventional == 4.5
+
+    
+
+    def test_riasec_score_to_dict(self):
+
+        """Test RIASECScore to_dict method."""
+
+        score = RIASECScore(
+
+            realistic=4.0,
+
+            investigative=5.0,
+
+            artistic=2.0,
+
+            social=3.0,
+
+            enterprising=3.5,
+
+            conventional=4.5
+
+        )
+
+        
+
+        score_dict = score.to_dict()
+
+        assert isinstance(score_dict, dict)
+
+        assert score_dict['Realistic'] == 4.0
+
+        assert score_dict['Investigative'] == 5.0
+
+        assert score_dict['Artistic'] == 2.0
+
+        assert score_dict['Social'] == 3.0
+
+        assert score_dict['Enterprising'] == 3.5
+
+        assert score_dict['Conventional'] == 4.5
+
+    
+
+    def test_riasec_score_primary_type(self):
+
+        """Test RIASECScore get_primary_type method."""
+
+        score = RIASECScore(
+
+            realistic=4.0,
+
+            investigative=5.0,
+
+            artistic=2.0,
+
+            social=3.0,
+
+            enterprising=3.5,
+
+            conventional=4.5
+
+        )
+
+        
+
+        primary_type = score.get_primary_type()
+
+        assert primary_type == 'Investigative'  # Highest score
+
+    
+
+    def test_riasec_score_secondary_type(self):
+
+        """Test RIASECScore get_secondary_type method."""
+
+        score = RIASECScore(
+
+            realistic=4.0,
+
+            investigative=5.0,
+
+            artistic=2.0,
+
+            social=3.0,
+
+            enterprising=3.5,
+
+            conventional=4.5
+
+        )
+
+        
+
+        secondary_type = score.get_secondary_type()
+
+        assert secondary_type == 'Conventional'  # Second highest score
+
+
+
+class TestCareerMatch:
+
+    """Test cases for CareerMatch dataclass."""
+
+    
+
+    def test_career_match_creation(self):
+
+        """Test CareerMatch creation."""
+
+        match = CareerMatch(
+
+            career_name="Software Engineer",
+
+            riasec_codes=['I', 'R', 'C'],
+
+            compatibility_score=0.85,
+
+            match_percentage=85.0,
+
+            explanation="Strong investigative and realistic traits",
+
+            indian_relevance={'entrance_exams': ['JEE'], 'salary_range': '₹6-25 LPA'}
+
+        )
+
+        
+
+        assert match.career_name == "Software Engineer"
+
+        assert match.riasec_codes == ['I', 'R', 'C']
+
+        assert match.compatibility_score == 0.85
+
+        assert match.match_percentage == 85.0
+
+        assert match.explanation == "Strong investigative and realistic traits"
+
+        assert match.indian_relevance['entrance_exams'] == ['JEE']
+
+
+
+if __name__ == "__main__":
+
+    pytest.main([__file__])
+
+

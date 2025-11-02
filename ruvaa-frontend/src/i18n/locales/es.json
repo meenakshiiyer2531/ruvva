@@ -1,0 +1,199 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito", 
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clear": "Limpiar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "refresh": "Actualizar"
+  },
+  "navigation": {
+    "profile": "Perfil",
+    "career": "Análisis", 
+    "recommendations": "Carreras",
+    "learning": "Aprendizaje",
+    "assessment": "Evaluación",
+    "chat": "IA Chat",
+    "colleges": "Universidades", 
+    "mentor": "Mentores",
+    "logout": "Cerrar sesión"
+  },
+  "auth": {
+    "login": {
+      "title": "Bienvenido de vuelta",
+      "subtitle": "Inicia sesión para comenzar tu viaje profesional",
+      "email": "Dirección de correo",
+      "password": "Contraseña",
+      "signin": "Iniciar sesión",
+      "signingin": "Iniciando sesión...",
+      "noAccount": "¿No tienes una cuenta?",
+      "signup": "Regístrate aquí",
+      "welcome": "Bienvenido a CareerConnect",
+      "tagline": "Tu viaje hacia un futuro más brillante comienza aquí."
+    },
+    "register": {
+      "title": "Únete a CareerConnect",
+      "subtitle": "Crea tu cuenta para comenzar",
+      "name": "Nombre completo",
+      "email": "Dirección de correo",
+      "password": "Contraseña", 
+      "confirmPassword": "Confirmar contraseña",
+      "signup": "Crear cuenta",
+      "signingup": "Creando cuenta...",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signin": "Inicia sesión aquí"
+    }
+  },
+  "onboarding": {
+    "title": "Conozcámonos",
+    "subtitle": "Ayúdanos a personalizar tu viaje profesional",
+    "personalInfo": "Información personal",
+    "name": "Nombre completo",
+    "age": "Edad",
+    "location": "Ubicación",
+    "selectLocation": "Selecciona tu ubicación",
+    "education": "Educación", 
+    "currentLevel": "Nivel educativo actual",
+    "institution": "Nombre de institución/escuela",
+    "interests": "Intereses y objetivos",
+    "careerInterests": "Intereses profesionales",
+    "goals": "Tus objetivos", 
+    "complete": "Completar perfil",
+    "completing": "Configurando tu perfil..."
+  },
+  "profile": {
+    "title": "Tu perfil",
+    "personalInfo": "Información personal",
+    "education": "Educación",
+    "interests": "Intereses",
+    "goals": "Objetivos",
+    "editProfile": "Editar perfil",
+    "saveChanges": "Guardar cambios",
+    "lastUpdated": "Última actualización"
+  },
+  "career": {
+    "title": "Análisis de carrera",
+    "subtitle": "Descubre carreras que coincidan con tus habilidades e intereses",
+    "startAnalysis": "Iniciar análisis de carrera",
+    "analyzing": "Analizando tu perfil...",
+    "recommendations": "Recomendaciones de carrera", 
+    "skillGap": "Análisis de brechas de habilidades",
+    "learningPath": "Ruta de aprendizaje sugerida"
+  },
+  "assessment": {
+    "title": "Evaluación de habilidades",
+    "subtitle": "Evalúa tus habilidades actuales y descubre áreas de crecimiento",
+    "startAssessment": "Iniciar evaluación",
+    "question": "Pregunta {{number}} de {{total}}",
+    "next": "Siguiente pregunta",
+    "previous": "Pregunta anterior", 
+    "submit": "Enviar evaluación",
+    "results": "Resultados de la evaluación",
+    "score": "Tu puntuación"
+  },
+  "chat": {
+    "title": "Consejero profesional IA",
+    "subtitle": "Obtén orientación profesional personalizada",
+    "placeholder": "Pregúntame sobre carreras, habilidades o educación...",
+    "send": "Enviar",
+    "typing": "La IA está pensando...",
+    "error": "Lo siento, no pude procesar eso. Por favor, inténtalo de nuevo."
+  },
+  "colleges": {
+    "title": "Buscador de universidades",
+    "subtitle": "Encuentra la institución educativa perfecta",
+    "searchPlaceholder": "Buscar universidades...",
+    "filters": {
+      "location": "Ubicación",
+      "type": "Tipo de universidad",
+      "rating": "Calificación mínima", 
+      "fees": "Rango de tarifas"
+    }
+  },
+  "learning": {
+    "title": "Rutas de aprendizaje",
+    "subtitle": "Aprendizaje estructurado para tus objetivos profesionales",
+    "createPath": "Crear ruta de aprendizaje",
+    "myPaths": "Mis rutas de aprendizaje",
+    "progress": "Progreso",
+    "completed": "Completado",
+    "inProgress": "En progreso",
+    "notStarted": "No iniciado"
+  },
+  "mentor": {
+    "title": "Encontrar mentores",
+    "subtitle": "Conecta con expertos de la industria",
+    "book": "Reservar sesión",
+    "available": "Disponible",
+    "rating": "Calificación",
+    "experience": "{{years}} años de experiencia",
+    "specialty": "Especialidades"
+  },
+  "connection": {
+    "status": "Estado de conexión",
+    "online": "En línea",
+    "offline": "Desconectado", 
+    "springboot": "Spring Boot",
+    "pythonai": "Python IA",
+    "refresh": "Actualizar"
+  },
+  "landing": {
+    "hero": {
+      "title": "Forma tu futuro con orientación profesional impulsada por IA",
+      "subtitle": "Descubre tu carrera profesional soñada con recomendaciones personalizadas, evaluaciones de habilidades y mentoría experta.",
+      "getStarted": "Comenzar gratis",
+      "learnMore": "Saber más"
+    },
+    "features": {
+      "title": "¿Por qué elegir CareerConnect?",
+      "ai": {
+        "title": "Análisis impulsado por IA",
+        "description": "Algoritmos avanzados analizan tus habilidades, intereses y objetivos para proporcionar recomendaciones profesionales personalizadas."
+      },
+      "assessment": {
+        "title": "Evaluaciones integrales",
+        "description": "Realiza evaluaciones detalladas para entender tus fortalezas, debilidades y compatibilidad profesional."
+      },
+      "learning": {
+        "title": "Aprendizaje personalizado",
+        "description": "Obtén rutas de aprendizaje y recursos personalizados para desarrollar habilidades para tu carrera objetivo."
+      },
+      "mentorship": {
+        "title": "Mentoría experta",
+        "description": "Conecta con profesionales de la industria y obtén orientación de mentores experimentados."
+      }
+    },
+    "stats": {
+      "users": "Usuarios activos",
+      "careers": "Carreras profesionales", 
+      "success": "Tasa de éxito",
+      "mentors": "Mentores expertos"
+    }
+  },
+  "search": {
+    "placeholder": "Buscar carreras, habilidades, universidades...",
+    "results": "Resultados de búsqueda",
+    "noResults": "No se encontraron resultados",
+    "categories": {
+      "all": "Todos",
+      "careers": "Carreras",
+      "skills": "Habilidades",
+      "colleges": "Universidades", 
+      "mentors": "Mentores"
+    }
+  },
+  "language": {
+    "select": "Seleccionar idioma",
+    "current": "Idioma actual",
+    "auto": "Detectar automáticamente por ubicación"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "common": {
+    "loading": "لوڈ ہو رہا ہے...",
+    "error": "خرابی",
+    "success": "کامیابی",
+    "cancel": "منسوخ",
+    "save": "محفوظ کریں",
+    "edit": "ترمیم",
+    "delete": "ہٹائیں",
+    "search": "تلاش",
+    "filter": "فلٹر",
+    "clear": "صاف",
+    "back": "واپس",
+    "next": "اگلا",
+    "previous": "پچھلا",
+    "submit": "جمع کریں",
+    "refresh": "تازہ کریں"
+  },
+  "navigation": {
+    "profile": "پروفائل",
+    "career": "تجزیہ",
+    "recommendations": "کیریئر",
+    "learning": "سیکھنا",
+    "assessment": "تشخیص",
+    "chat": "AI چیٹ",
+    "colleges": "کالجز",
+    "mentor": "رہنما",
+    "logout": "لاگ آؤٹ"
+  },
+  "auth": {
+    "login": {
+      "title": "دوبارہ خوش آمدید",
+      "subtitle": "اپنا کیریئر کا سفر شروع کرنے کے لیے سائن ان کریں",
+      "email": "ای میل ایڈریس",
+      "password": "پاس ورڈ",
+      "signin": "سائن ان",
+      "signingin": "سائن ان ہو رہا ہے...",
+      "noAccount": "کوئی اکاؤنٹ نہیں؟",
+      "signup": "یہاں سائن اپ کریں",
+      "welcome": "CareerConnect میں خوش آمدید",
+      "tagline": "آپ کے روشن مستقبل کا سفر یہاں شروع ہوتا ہے۔"
+    }
+  },
+  "language": {
+    "select": "زبان منتخب کریں",
+    "current": "موجودہ زبان",
+    "auto": "مقام سے خودکار شناخت"
+  }
+}

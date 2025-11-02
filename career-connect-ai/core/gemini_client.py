@@ -34,7 +34,7 @@ class GeminiRequest:
     prompt: str
     context: Optional[Dict[str, Any]] = None
     temperature: float = 0.7
-    max_tokens: int = 1500
+    max_tokens: int = 300
     correlation_id: Optional[str] = None
 
 class GeminiClient:
@@ -90,109 +90,82 @@ class GeminiClient:
         """Initialize specialized prompt templates for career counseling."""
         return {
             'career_counseling': """
-You are an expert career counselor specializing in Indian education and career paths. 
-Provide personalized, culturally relevant career guidance for Indian students.
+You are a career counselor for Indian students. Use simple English. Keep responses short and specific.
 
-Student Context: {context}
+Student: {context}
 Question: {question}
 
-Guidelines:
-- Consider Indian education system (10th, 12th, graduation, post-graduation)
-- Factor in Indian job market trends and opportunities
-- Suggest careers aligned with Indian economic growth sectors
-- Include information about entrance exams (JEE, NEET, CAT, etc.)
-- Mention top Indian universities and colleges
-- Consider regional preferences and family expectations
-- Provide practical, actionable advice
+Respond in 3-4 sentences max:
+- Answer the question directly
+- Mention 1-2 concrete Indian examples (exams, colleges, companies)
+- Give one actionable step
 
-Response should be encouraging, detailed, and culturally sensitive.
+Be practical, clear, and concise.
 """,
             
             'riasec_analysis': """
-Analyze the following RIASEC personality assessment results for an Indian student:
+Analyze RIASEC results for an Indian student. Use simple English. Be concise.
 
-RIASEC Scores: {riasec_scores}
+Scores: {riasec_scores}
 Interests: {interests}
 Background: {background}
 
-Provide:
-1. Personality type interpretation (primary and secondary)
-2. Suitable career categories for Indian market
-3. Specific career recommendations with Indian context
-4. Required education paths (Indian system)
-5. Top colleges/universities in India
-6. Entrance exam requirements
-7. Career growth prospects in India
+Give ONLY 1-2 careers:
+1. Top career name
+2. Why it fits (one sentence)
+3. Key exam to take
+4. Best colleges (2-3 names)
 
-Format as structured JSON with detailed explanations.
+Format: JSON. Keep each answer under 50 words.
 """,
             
             'skill_gap_assessment': """
-Analyze skill gaps for an Indian student pursuing this career path:
+Identify skill gaps. Use simple English. Be concise.
 
-Current Skills: {current_skills}
+Student Skills: {current_skills}
 Target Career: {target_career}
-Current Education Level: {education_level}
+Education: {education_level}
 Location: {location}
 
-Provide:
-1. Critical skill gaps identified
-2. Priority order for skill development
-3. Learning resources available in India
-4. Online courses and certifications
-5. Practical projects and internships
-6. Timeline for skill development
-7. Cost-effective learning options
+List only:
+1. Top 3 missing skills
+2. Best learning resource (1-2 names)
+3. Timeline (one sentence)
 
-Consider Indian education system and local opportunities.
+Keep under 100 words total.
 """,
             
             'learning_path_generation': """
-Create a comprehensive learning path for an Indian student:
+Create a learning plan. Use simple English. Be specific.
 
-Career Choice: {career_choice}
-Current Skills: {current_skills}
-Education Level: {education_level}
-Learning Style: {learning_style}
-Time Available: {time_available}
+Career: {career_choice}
+Skills: {current_skills}
+Education: {education_level}
+Time: {time_available}
 Budget: {budget}
 
-Generate:
-1. Step-by-step learning roadmap
-2. Required courses and certifications
-3. Indian educational institutions
-4. Online learning platforms
-5. Practical projects and portfolios
-6. Internship opportunities
-7. Networking and mentorship
-8. Timeline and milestones
-9. Cost breakdown
-10. Success metrics
+Give ONLY:
+1. Immediate next step (what to do this month)
+2. Course/platform name (1-2 options)
+3. Timeline (one sentence)
+4. Cost (one range)
 
-Format as structured learning path with actionable steps.
+Total: under 100 words.
 """,
             
             'mentor_matching': """
-Match this Indian student with suitable mentors:
+Match student to mentors. Use simple English. Be specific.
 
-Student Profile: {student_profile}
-Career Interests: {career_interests}
+Profile: {student_profile}
+Interests: {career_interests}
 Location: {location}
-Communication Preferences: {communication_preferences}
 
-Find mentors who:
-1. Work in relevant Indian industries
-2. Have experience with Indian education system
-3. Can provide culturally relevant guidance
-4. Are available for regular mentoring
-5. Have track record of student success
+List 1-2 mentors:
+- Name/specialty (one line)
+- Best contact method
+- Why match (one sentence)
 
-Provide mentor profiles with:
-- Professional background
-- Mentoring experience
-- Availability and communication style
-- Success stories with Indian students
-- Specific areas of expertise
+Keep each mentor under 30 words.
 """
         }
     
@@ -288,21 +261,16 @@ Provide mentor profiles with:
         
         # Generate prompt
         prompt = f"""
-Analyze this Indian student's profile and provide comprehensive career guidance:
+Analyze this Indian student's profile. Use simple English. Keep it short.
 
-Profile Data: {json.dumps(sanitized_profile, indent=2)}
+Profile: {json.dumps(sanitized_profile, indent=2)}
 
-Provide detailed analysis including:
-1. Personality assessment
-2. Strengths and areas for improvement
-3. Suitable career paths for Indian market
-4. Educational recommendations
-5. Skill development suggestions
-6. Cultural and family considerations
-7. Regional opportunities
-8. Actionable next steps
+Give ONLY:
+1. Top 2 career options (name only)
+2. Why each fits (one sentence each)
+3. One action to take now
 
-Format response as structured analysis with clear sections.
+Keep under 100 words total.
 """
         
         return await self.generate_response(prompt, context, temperature=0.6)
@@ -463,8 +431,8 @@ Format response as structured analysis with clear sections.
             "generationConfig": {
                 "temperature": request.temperature,
                 "maxOutputTokens": request.max_tokens,
-                "topP": 0.8,
-                "topK": 10
+                "topP": 0.7,
+                "topK": 5
             }
         }
         

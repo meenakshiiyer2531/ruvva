@@ -190,7 +190,7 @@ class TestCosineCareerMatcher:
             
             assert 0.0 <= match.match_score <= 1.0
             assert 0.0 <= match.match_percentage <= 100.0
-            assert match.confidence_level in ['Very High', 'High', 'Moderate', 'Low']
+            assert match.confidence_level in ['High', 'Good', 'Fair', 'Low']
     
     def test_match_careers_pipeline(self, matcher, sample_profile):
         """Test complete career matching pipeline."""
@@ -276,9 +276,9 @@ class TestCosineCareerMatcher:
     
     def test_confidence_level_classification(self, matcher):
         """Test confidence level classification."""
-        assert matcher._get_confidence_level(0.9) == "Very High"
-        assert matcher._get_confidence_level(0.7) == "High"
-        assert matcher._get_confidence_level(0.5) == "Moderate"
+        assert matcher._get_confidence_level(0.9) == "High"
+        assert matcher._get_confidence_level(0.7) == "Good"
+        assert matcher._get_confidence_level(0.5) == "Fair"
         assert matcher._get_confidence_level(0.3) == "Low"
     
     def test_dynamic_weights_calculation(self, matcher, sample_profile):
@@ -476,22 +476,22 @@ class TestCareerMatch:
         match = CareerMatch(
             career_name="Software Engineer",
             match_score=0.85,
-            confidence_level="Very High",
+            confidence_level="High",
             match_percentage=85.0,
-            explanation="Excellent match",
+            explanation="Excellent (85%)",
             skill_gaps=["Learn Python"],
-            improvement_suggestions=["Take coding courses"],
+            improvement_suggestions=["Take courses"],
             indian_context={'salary_range': '₹6-25 LPA'},
             vector_similarity=0.85
         )
         
         assert match.career_name == "Software Engineer"
         assert match.match_score == 0.85
-        assert match.confidence_level == "Very High"
+        assert match.confidence_level == "High"
         assert match.match_percentage == 85.0
-        assert match.explanation == "Excellent match"
+        assert match.explanation == "Excellent (85%)"
         assert match.skill_gaps == ["Learn Python"]
-        assert match.improvement_suggestions == ["Take coding courses"]
+        assert match.improvement_suggestions == ["Take courses"]
         assert match.indian_context == {'salary_range': '₹6-25 LPA'}
         assert match.vector_similarity == 0.85
 

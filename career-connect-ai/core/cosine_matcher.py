@@ -384,15 +384,37 @@ class CosineCareerMatcher:
         Returns:
             float: Cosine similarity score (0-1)
         """
-        profile_array = profile_vector.to_array()
+        # Map profile to career-aligned dimensions for comparison
+        # Profile: academic(20) + extra(15) + tech(25) + soft(20) + riasec(6) + interests(30) + career_pref(10) + location(10) + salary(5) + work_env(8) = 149
+        # Career: education(20) + skills(25) + personality(6) + trends(10) + salary(5) + demand(8) + location(10) + growth(5) = 89
+        
+        aligned_profile = np.concatenate([
+            profile_vector.academic_subjects[:20],  # Match education
+            np.concatenate([profile_vector.technical_skills, profile_vector.soft_skills[:5]])[:25],  # Match skills
+            profile_vector.riasec_scores,  # Match personality
+            profile_vector.interests[:10],  # Match trends
+            profile_vector.salary_expectations,  # Match salary
+            np.zeros(8),  # Demand
+            profile_vector.location_preferences[:10],  # Match location
+            np.zeros(5)  # Growth
+        ])
+        
         career_array = career_vector.to_array()
         
-        # Apply dynamic weights based on student profile
-        weights = self._calculate_dynamic_weights(profile_vector)
+        # Apply weights based on base weights (not dynamic for now)
+        base_weights = np.array([
+            *[self.base_weights.get('academic_subjects', 0.15)] * 20,
+            *[self.base_weights.get('technical_skills', 0.20)] * 25,
+            *[self.base_weights.get('riasec_scores', 0.15)] * 6,
+            *[self.base_weights.get('interests', 0.10)] * 10,
+            *[self.base_weights.get('salary_expectations', 0.02)] * 5,
+            *[0.05] * 8,  # job_market_demand weight
+            *[self.base_weights.get('location_preferences', 0.03)] * 10,
+            *[0.05] * 5   # growth_prospects weight
+        ])
         
-        # Apply weights to vectors
-        weighted_profile = profile_array * weights
-        weighted_career = career_array * weights
+        weighted_profile = aligned_profile * base_weights
+        weighted_career = career_array * base_weights
         
         # Calculate cosine similarity
         dot_product = np.dot(weighted_profile, weighted_career)
@@ -748,11 +770,11 @@ class CosineCareerMatcher:
     def _get_confidence_level(self, similarity: float) -> str:
         """Get confidence level based on similarity score."""
         if similarity >= 0.8:
-            return "Very High"
-        elif similarity >= 0.6:
             return "High"
+        elif similarity >= 0.6:
+            return "Good"
         elif similarity >= 0.4:
-            return "Moderate"
+            return "Fair"
         else:
             return "Low"
     
@@ -761,23 +783,23 @@ class CosineCareerMatcher:
         percentage = similarity * 100
         
         if similarity >= 0.8:
-            return f"Excellent match ({percentage:.1f}%) - Your profile strongly aligns with {career_name} requirements."
+            return f"Excellent ({percentage:.0f}%)"
         elif similarity >= 0.6:
-            return f"Good match ({percentage:.1f}%) - Your profile aligns well with {career_name} requirements."
+            return f"Good ({percentage:.0f}%)"
         elif similarity >= 0.4:
-            return f"Moderate match ({percentage:.1f}%) - Your profile has some alignment with {career_name} requirements."
+            return f"Moderate ({percentage:.0f}%)"
         else:
-            return f"Low match ({percentage:.1f}%) - Your profile has limited alignment with {career_name} requirements."
+            return f"Low ({percentage:.0f}%)"
     
     def _identify_skill_gaps(self, career_info: Dict[str, Any]) -> List[str]:
         """Identify skill gaps for career."""
         gaps = []
         
         if 'essential_skills' in career_info:
-            for skill in career_info['essential_skills']:
-                gaps.append(f"Develop {skill} skills")
+            for skill in career_info['essential_skills'][:3]:  # Only first 3
+                gaps.append(f"Learn {skill}")
         
-        return gaps[:5]  # Return top 5 gaps
+        return gaps[:3]  # Return top 3 gaps
     
     def _generate_improvement_suggestions(self, career_info: Dict[str, Any], skill_gaps: List[str]) -> List[str]:
         """Generate improvement suggestions."""
@@ -788,14 +810,12 @@ class CosineCareerMatcher:
         
         # Add general suggestions
         suggestions.extend([
-            "Take relevant courses or certifications",
-            "Build a portfolio of projects",
-            "Gain practical experience through internships",
-            "Network with professionals in the field",
-            "Stay updated with industry trends"
+            "Take courses",
+            "Build portfolio",
+            "Get internship"
         ])
         
-        return suggestions[:5]  # Return top 5 suggestions
+        return suggestions[:3]  # Return top 3 suggestions
     
     def match_careers(self, student_profile: Dict[str, Any], top_n: int = 10) -> List[CareerMatch]:
         """
@@ -862,8 +882,9 @@ class CosineCareerMatcher:
     
     def _get_confidence_distribution(self, matches: List[CareerMatch]) -> Dict[str, int]:
         """Get distribution of confidence levels."""
-        distribution = {'Very High': 0, 'High': 0, 'Moderate': 0, 'Low': 0}
+        distribution = {'High': 0, 'Good': 0, 'Fair': 0, 'Low': 0}
         for match in matches:
+            if match.confidence_level in distribution:
             distribution[match.confidence_level] += 1
         return distribution
     

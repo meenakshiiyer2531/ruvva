@@ -1,0 +1,49 @@
+{
+  "common": {
+    "loading": "लोड होत आहे...",
+    "error": "त्रुटी",
+    "success": "यश",
+    "cancel": "रद्द करा",
+    "save": "सेव्ह करा",
+    "edit": "संपादन",
+    "delete": "हटवा",
+    "search": "शोधा",
+    "filter": "फिल्टर",
+    "clear": "साफ करा",
+    "back": "मागे",
+    "next": "पुढे",
+    "previous": "मागील",
+    "submit": "सबमिट करा",
+    "refresh": "रिफ्रेश"
+  },
+  "navigation": {
+    "profile": "प्रोफाइल",
+    "career": "विश्लेषण",
+    "recommendations": "करिअर",
+    "learning": "शिक्षण",
+    "assessment": "मूल्यांकन",
+    "chat": "AI चॅट",
+    "colleges": "महाविद्यालये",
+    "mentor": "मार्गदर्शक",
+    "logout": "लॉगआउट"
+  },
+  "auth": {
+    "login": {
+      "title": "परत स्वागत",
+      "subtitle": "तुमचा करिअर प्रवास सुरू करण्यासाठी साइन इन करा",
+      "email": "ईमेल पत्ता",
+      "password": "पासवर्ड",
+      "signin": "साइन इन",
+      "signingin": "साइन इन होत आहे...",
+      "noAccount": "खाते नाही?",
+      "signup": "येथे साइन अप करा",
+      "welcome": "CareerConnect मध्ये आपले स्वागत",
+      "tagline": "तुमच्या उज्ज्वल भविष्याचा प्रवास येथे सुरू होतो।"
+    }
+  },
+  "language": {
+    "select": "भाषा निवडा",
+    "current": "सध्याची भाषा",
+    "auto": "स्थानावरून स्वयंचलित ओळख"
+  }
+}

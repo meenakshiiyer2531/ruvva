@@ -1,0 +1,49 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "clear": "Löschen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Vorherige",
+    "submit": "Absenden",
+    "refresh": "Aktualisieren"
+  },
+  "navigation": {
+    "profile": "Profil",
+    "career": "Analyse", 
+    "recommendations": "Karrieren",
+    "learning": "Lernen",
+    "assessment": "Bewertung",
+    "chat": "KI Chat",
+    "colleges": "Hochschulen",
+    "mentor": "Mentoren",
+    "logout": "Abmelden"
+  },
+  "auth": {
+    "login": {
+      "title": "Willkommen zurück",
+      "subtitle": "Melden Sie sich an, um Ihre Karriere zu beginnen",
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "signin": "Anmelden",
+      "signingin": "Anmeldung...",
+      "noAccount": "Haben Sie kein Konto?",
+      "signup": "Hier registrieren",
+      "welcome": "Willkommen bei CareerConnect",
+      "tagline": "Ihre Reise zu einer helleren Zukunft beginnt hier."
+    }
+  },
+  "language": {
+    "select": "Sprache wählen",
+    "current": "Aktuelle Sprache", 
+    "auto": "Automatische Erkennung nach Standort"
+  }
+}
