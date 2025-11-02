@@ -1,0 +1,49 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تحرير",
+    "delete": "حذف",
+    "search": "بحث",
+    "filter": "تصفية",
+    "clear": "مسح",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "refresh": "تحديث"
+  },
+  "navigation": {
+    "profile": "الملف الشخصي",
+    "career": "التحليل",
+    "recommendations": "المهن",
+    "learning": "التعلم",
+    "assessment": "التقييم",
+    "chat": "الذكي الاصطناعي",
+    "colleges": "الكليات",
+    "mentor": "المرشدون",
+    "logout": "تسجيل الخروج"
+  },
+  "auth": {
+    "login": {
+      "title": "مرحباً بعودتك",
+      "subtitle": "سجل الدخول لبدء رحلتك المهنية",
+      "email": "عنوان البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "signin": "تسجيل الدخول",
+      "signingin": "جاري تسجيل الدخول...",
+      "noAccount": "ليس لديك حساب؟",
+      "signup": "سجل هنا",
+      "welcome": "مرحباً بك في CareerConnect",
+      "tagline": "رحلتك نحو مستقبل أكثر إشراقاً تبدأ من هنا."
+    }
+  },
+  "language": {
+    "select": "اختيار اللغة",
+    "current": "اللغة الحالية",
+    "auto": "الكشف التلقائي حسب الموقع"
+  }
+}

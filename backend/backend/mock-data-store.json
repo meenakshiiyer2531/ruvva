@@ -1,0 +1,161 @@
+{
+  "authUsers" : {
+    "vm@gmail.com" : {
+      "createdAt" : "2025-11-02T05:45:30.232277",
+      "password" : "12345678",
+      "name" : "V Meenakshi Iyer",
+      "id" : "1762042530232",
+      "email" : "vm@gmail.com"
+    },
+    "vmi@gmail.com" : {
+      "createdAt" : "2025-11-02T05:52:57.780469",
+      "password" : "12345678",
+      "name" : "V Meenakshi Iyer",
+      "id" : "1762042977780",
+      "email" : "vmi@gmail.com"
+    }
+  },
+  "mentors" : {
+    "mentor-1" : {
+      "name" : "Dr. Ananya Gupta",
+      "bio" : "Licensed counseling psychologist with 12+ years helping students clarify academic & career direction.",
+      "linkedin" : "https://www.linkedin.com/in/ananya-gupta",
+      "availability" : [ "2025-11-03", "2025-11-05", "2025-11-07" ],
+      "expertise" : [ "Career Counseling", "Educational Psychology", "Motivation" ]
+    },
+    "mentor-3" : {
+      "name" : "Ms. Kavya Rao",
+      "bio" : "Senior product designer at a SaaS scale-up, coaching on user research and portfolio building.",
+      "linkedin" : "https://www.linkedin.com/in/kavya-rao",
+      "availability" : [ "2025-11-03", "2025-11-05", "2025-11-09" ],
+      "expertise" : [ "UX Design", "Product Strategy", "Innovation" ]
+    },
+    "mentor-2" : {
+      "name" : "Prof. Rohan Mehta",
+      "bio" : "University professor & applied ML researcher focusing on ethical AI and student mentorship.",
+      "linkedin" : "https://www.linkedin.com/in/rohan-mehta",
+      "availability" : [ "2025-11-04", "2025-11-06", "2025-11-08" ],
+      "expertise" : [ "Artificial Intelligence", "Machine Learning", "Data Science" ]
+    },
+    "mentor-5" : {
+      "name" : "Dr. Neha Joshi",
+      "bio" : "Robotics researcher leading university-industry collaborations; passionate about hands-on STEM mentoring.",
+      "linkedin" : "https://www.linkedin.com/in/neha-joshi",
+      "availability" : [ "2025-11-03", "2025-11-06", "2025-11-08" ],
+      "expertise" : [ "Robotics", "Automation", "STEM Outreach" ]
+    },
+    "mentor-4" : {
+      "name" : "Mr. Arvind Singh",
+      "bio" : "Security analyst focused on threat modeling & secure architecture reviews; mentor for security career transitions.",
+      "linkedin" : "https://www.linkedin.com/in/arvind-singh",
+      "availability" : [ "2025-11-04", "2025-11-07", "2025-11-10" ],
+      "expertise" : [ "Cybersecurity", "Cloud Security", "Python" ]
+    }
+  },
+  "profiles" : {
+    "1762042977780" : {
+      "agreeToTerms" : true,
+      "city" : "Bhopal",
+      "workPreference" : "Hybrid",
+      "learningStyle" : [ "Auditory", "Visual" ],
+      "profileCompleted" : true,
+      "skillsAssessment" : [ {
+        "skill" : "Creativity",
+        "rating" : 10
+      }, {
+        "skill" : "Analytical Thinking",
+        "rating" : 10
+      } ],
+      "interestedDomains" : [ "Social Work & NGO", "Arts & Design", "Sports & Fitness" ],
+      "phoneNumber" : "8839270191",
+      "educationLevel" : "BACHELOR_COMMERCE",
+      "stream" : "cgfgfgh",
+      "currentCareerGoal" : "Singer",
+      "institutionName" : "fgcfgh",
+      "percentage" : null,
+      "name" : "V Meenakshi Iyer",
+      "graduationYear" : 2027,
+      "state" : "Madhya Pradesh",
+      "preferredLocations" : [ "Anywhere" ],
+      "expectedSalaryLPA" : 20,
+      "cgpa" : 9,
+      "onboardingCompleted" : true,
+      "age" : 23,
+      "email" : "vmi@gmail.com",
+      "agreeToPrivacyPolicy" : true
+    },
+    "1762042530232" : {
+      "agreeToTerms" : true,
+      "city" : "Bhopal",
+      "workPreference" : "Flexible",
+      "learningStyle" : [ "Independent" ],
+      "profileCompleted" : true,
+      "skillsAssessment" : [ {
+        "skill" : "Problem Solving",
+        "rating" : 10
+      }, {
+        "skill" : "Analytical Thinking",
+        "rating" : 10
+      }, {
+        "skill" : "Creativity",
+        "rating" : 10
+      } ],
+      "interestedDomains" : [ "Social Work & NGO", "Sports & Fitness", "Arts & Design" ],
+      "phoneNumber" : "8839270191",
+      "educationLevel" : "MASTER_COMMERCE",
+      "stream" : "dewn bdwehhbdje",
+      "currentCareerGoal" : "Painter",
+      "institutionName" : "dweghvghdwe",
+      "percentage" : null,
+      "graduationYear" : 2027,
+      "state" : "Madhya Pradesh",
+      "preferredLocations" : [ "Anywhere" ],
+      "expectedSalaryLPA" : 20,
+      "cgpa" : 9,
+      "onboardingCompleted" : true,
+      "age" : 23,
+      "agreeToPrivacyPolicy" : true
+    }
+  },
+  "students" : {
+    "vm@gmail.com" : {
+      "createdAt" : "2025-11-02T05:45:30.232277",
+      "gradeLevel" : null,
+      "name" : "V Meenakshi Iyer",
+      "id" : "1762042530232",
+      "email" : "vm@gmail.com"
+    },
+    "vmi@gmail.com" : {
+      "createdAt" : "2025-11-02T05:52:57.780469",
+      "gradeLevel" : null,
+      "name" : "V Meenakshi Iyer",
+      "id" : "1762042977780",
+      "email" : "vmi@gmail.com"
+    }
+  },
+  "bookings" : [ {
+    "studentId" : "1762042977780",
+    "date" : "2025-11-05",
+    "createdAt" : "2025-11-02T01:10:58.255592Z",
+    "meetingLink" : "https://meet.google.com/266b5984",
+    "id" : "booking-1762045858255",
+    "mentorId" : "mentor-1",
+    "status" : "BOOKED"
+  }, {
+    "studentId" : "1762042977780",
+    "date" : "2025-11-03",
+    "createdAt" : "2025-11-02T01:11:10.140318Z",
+    "meetingLink" : "https://meet.google.com/a72a0e10",
+    "id" : "booking-1762045870140",
+    "mentorId" : "mentor-3",
+    "status" : "BOOKED"
+  }, {
+    "studentId" : "1762042977780",
+    "date" : "2025-11-08",
+    "createdAt" : "2025-11-02T01:11:40.330544Z",
+    "meetingLink" : "https://meet.google.com/ca069007",
+    "id" : "booking-1762045900330",
+    "mentorId" : "mentor-2",
+    "status" : "BOOKED"
+  } ]
+}

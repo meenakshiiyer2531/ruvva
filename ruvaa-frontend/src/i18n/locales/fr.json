@@ -1,0 +1,61 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Sauvegarder",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "clear": "Effacer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "refresh": "Actualiser"
+  },
+  "navigation": {
+    "profile": "Profil",
+    "career": "Analyse",
+    "recommendations": "Carrières",
+    "learning": "Apprentissage",
+    "assessment": "Évaluation",
+    "chat": "IA Chat",
+    "colleges": "Universités",
+    "mentor": "Mentors",
+    "logout": "Déconnexion"
+  },
+  "auth": {
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous pour commencer votre parcours professionnel",
+      "email": "Adresse e-mail",
+      "password": "Mot de passe",
+      "signin": "Se connecter",
+      "signingin": "Connexion...",
+      "noAccount": "Vous n'avez pas de compte?",
+      "signup": "Inscrivez-vous ici",
+      "welcome": "Bienvenue sur CareerConnect",
+      "tagline": "Votre voyage vers un avenir plus brillant commence ici."
+    },
+    "register": {
+      "title": "Rejoignez CareerConnect",
+      "subtitle": "Créez votre compte pour commencer",
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "signup": "Créer un compte",
+      "signingup": "Création du compte...",
+      "hasAccount": "Vous avez déjà un compte?",
+      "signin": "Connectez-vous ici"
+    }
+  },
+  "language": {
+    "select": "Sélectionner la langue",
+    "current": "Langue actuelle",
+    "auto": "Détection automatique par localisation"
+  }
+}

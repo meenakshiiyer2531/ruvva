@@ -1400,3 +1400,16 @@
 2025-10-02 13:53:53,130 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:53:53] "GET /health HTTP/1.1" 200 -
 2025-10-02 13:54:23,417 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:54:23] "GET /health HTTP/1.1" 200 -
 2025-10-02 13:54:53,088 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 13:54:53] "GET /health HTTP/1.1" 200 -
+2025-11-02 04:36:58,266 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 04:36:59,891 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 04:36:59,891 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api
+2025-11-02 04:37:03,341 - services.profile_analyzer - INFO - StudentProfileAnalyzer initialized successfully
+2025-11-02 04:37:03,359 - core.riasec_analyzer - INFO - RIASECAnalyzer initialized successfully
+2025-11-02 04:37:03,375 - services.career_discovery - INFO - CareerDiscoveryService initialized
+2025-11-02 04:37:06,639 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 04:37:06,652 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 04:37:06,652 - core.gemini_client - INFO - GeminiClient initialized successfully
+2025-11-02 04:37:06,673 - app - WARNING - Redis connection failed. Caching will be disabled.
+2025-11-02 04:37:06,679 - app - INFO - CareerConnect AI started in development mode
+2025-11-02 04:37:06,680 - services.backend_integration - INFO - Backend integration enabled
+2025-11-02 04:37:06,680 - services.backend_integration - INFO - Backend URL: http://localhost:8080/api

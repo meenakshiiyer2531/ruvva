@@ -14,9 +14,12 @@ spring:
 
 # Firebase Configuration (Development) - Using environment variables
 firebase:
+  # Disable Firebase in dev to allow backend to start without real credentials; mock controllers will activate.
+  enabled: false
   service-account-key: ${GOOGLE_APPLICATION_CREDENTIALS:./credentials/serviceAccountKey.json}
-  database-url: ${FIREBASE_DATABASE_URL}
-  project-id: ${FIREBASE_PROJECT_ID}
+  # Provide safe fallback values so app boots without exporting env vars; override via env vars for real integration.
+  database-url: ${FIREBASE_DATABASE_URL:https://example-dev.firebaseio.com}
+  project-id: ${FIREBASE_PROJECT_ID:example-dev-project}
 
 # Google Gemini AI Configuration (Development) - Using environment variables
 gemini:
@@ -31,7 +34,9 @@ gemini:
 
 # Security Configuration - Using environment variables
 jwt:
-  secret: ${JWT_SECRET}
+  # Fallback dev secret included to prevent startup failure if JWT_SECRET env var not exported.
+  # Override via environment variable JWT_SECRET for security. Must be >=32 chars for HS256.
+  secret: ${JWT_SECRET:changeMeDevSecretKeyAtLeast32CharsLong_123456}
   expiration: 86400000 # 24 hours
   refresh-expiration: 604800000 # 7 days
 

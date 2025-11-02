@@ -22,46 +22,43 @@ const fallbackMentors = [
   { id:"m10", name:"Ms. Rao", expertise:["AI","Data Science","Machine Learning"], bio:"Data Scientist", linkedin:"https://www.linkedin.com/in/ms-rao", availability:["2025-09-22","2025-09-28"] },
 ];
 
-export default function MentorBooking({ profile }) {
+export default function MentorBooking({ profile, studentId }) {
   const [selected, setSelected] = useState("");
   const [studentName, setStudentName] = useState(profile?.name || "");
   const [date, setDate] = useState("");
   const [bookings, setBookings] = useState([]);
+  // notifications removed
   const [mentors, setMentors] = useState(fallbackMentors);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [bookingBusy, setBookingBusy] = useState(false);
 
-  // Fetch mentors from backend
+  // Initial load: mentors + existing bookings
   useEffect(() => {
-    const fetchMentors = async () => {
-      console.log("🔍 Fetching mentors from backend...");
+    let cancelled = false;
+    const load = async () => {
       setLoading(true);
-      setError(null);
-
       try {
-        const data = await ApiService.getMentors();
-        console.log("✅ Mentors data received:", data);
-
-        if (Array.isArray(data)) {
-          setMentors(data);
-        } else if (data.mentors && Array.isArray(data.mentors)) {
-          setMentors(data.mentors);
-        } else {
-          console.warn("⚠️ Unexpected backend response format, using fallback data");
-          setMentors(fallbackMentors);
+        const mentorsResp = await ApiService.getMentors();
+        const mentorsArray = Array.isArray(mentorsResp?.data) ? mentorsResp.data : Array.isArray(mentorsResp) ? mentorsResp : mentorsResp?.mentors || fallbackMentors;
+        if (!cancelled) setMentors(mentorsArray);
+        if (studentId) {
+          try {
+            const bookingsResp = await ApiService.listStudentBookings(studentId);
+            const bookingsArray = Array.isArray(bookingsResp?.data) ? bookingsResp.data : Array.isArray(bookingsResp) ? bookingsResp : [];
+            if (!cancelled) setBookings(bookingsArray);
+          } catch (e) { console.warn("⚠️ Unable to load student bookings:", e.message); }
+          // notifications removed
         }
       } catch (err) {
-        console.error("❌ Failed to fetch mentors from backend:", err.message);
-        console.log("⚠️ Using local fallback mentor data");
-        // Don't show error to user since fallback data works fine
-        setMentors(fallbackMentors);
+        console.error("❌ Mentor initial load failed:", err.message);
+        if (!cancelled) setMentors(fallbackMentors);
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     };
-
-    fetchMentors();
-  }, []);
+    load();
+    return () => { cancelled = true; };
+  }, [studentId]);
 
   const ranked = useMemo(()=> {
     const interests = (profile?.interests || []).map(i=>i.toLowerCase());
@@ -76,30 +73,43 @@ export default function MentorBooking({ profile }) {
   }, [profile, mentors]);
 
   const book = async () => {
-    if(!selected || !studentName || !date) return alert("Fill student name, mentor, and date");
-
+    if(!selected || !studentName || !date) {
+      window.dispatchEvent(new CustomEvent('toast', { detail: { type:'error', message:'Fill student name, mentor, and date' } }));
+      return;
+    }
     const selectedMentor = mentors.find(m => m.name === selected);
-    const bookingData = {
-      studentName,
-      mentorId: selectedMentor?.id,
-      mentorName: selected,
-      date
-    };
-
-    console.log("📤 Booking mentor session:", bookingData);
-
+    if (!selectedMentor) {
+      window.dispatchEvent(new CustomEvent('toast', { detail: { type:'error', message:'Mentor not found in list' } }));
+      return;
+    }
+    setBookingBusy(true);
+    const bookingPayload = { date, studentId: studentId || null, studentEmail: profile?.email || null };
     try {
-      const result = await ApiService.bookMentorSession(bookingData);
-      console.log("✅ Booking successful:", result);
-      setBookings(b=>[...b, {student:studentName, mentor:selected, date}]);
-      setStudentName(""); setDate(""); setSelected("");
-      alert("Session booked successfully!");
+      const result = await ApiService.createMentorBooking(selectedMentor.id, bookingPayload);
+      const added = result?.data || result;
+      setBookings(b => [...b, added]);
+  window.dispatchEvent(new CustomEvent('toast', { detail: { type:'success', message:`Booked ${selectedMentor.name} on ${date}` } }));
+  // Auto navigate to booking detail page, include booking object for local fallback
+  window.dispatchEvent(new CustomEvent('navigate', { detail: { page:'bookingDetail', bookingId: added.id, booking: added }}));
+      setDate(""); setSelected("");
     } catch (err) {
       console.error("❌ Booking failed:", err.message);
-      // Still save locally as fallback
-      setBookings(b=>[...b, {student:studentName, mentor:selected, date}]);
-      setStudentName(""); setDate(""); setSelected("");
-      alert("Booking saved locally. Backend connection failed.");
+  window.dispatchEvent(new CustomEvent('toast', { detail: { type:'error', message: err.message.includes('Slot already') ? 'Slot already booked' : 'Booking failed; cached locally.' } }));
+      // local optimistic fallback
+  const localBooking = { id: 'local-'+Date.now(), mentorId: selectedMentor.id, mentorName: selectedMentor.name, date, status:'PENDING', createdAt: new Date().toISOString() };
+  setBookings(b => [...b, localBooking]);
+  // Navigate immediately to show detail with fallback booking data
+  window.dispatchEvent(new CustomEvent('navigate', { detail: { page:'bookingDetail', bookingId: localBooking.id, booking: localBooking }}));
+    } finally {
+      setBookingBusy(false);
+    }
+  };
+
+  // dispatch navigate event
+  const onBookingClick = (booking) => {
+    // Use window to align with global listener in App.js
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('navigate', { detail: { page: 'bookingDetail', bookingId: booking.id, booking } }));
     }
   };
 
@@ -143,18 +153,46 @@ export default function MentorBooking({ profile }) {
         <div style={{background:"var(--card)", padding:16, borderRadius:12, boxShadow:"0 2px 10px rgba(0,0,0,0.08)"}}>
           <h4 style={{marginBottom:12}}>Book Session</h4>
           <input placeholder="Student name" value={studentName} onChange={e=>setStudentName(e.target.value)} style={field}/>
-          <input type="date" value={date} onChange={e=>setDate(e.target.value)} style={field}/>
+          {selected && (
+            <div style={{marginBottom:10}}>
+              <label style={{fontSize:12, color:'var(--muted)'}}>Available Dates for {selected}</label>
+              <div style={{display:'flex', flexWrap:'wrap', gap:6, marginTop:6}}>
+                {(mentors.find(m=>m.name===selected)?.availability || []).map(d => {
+                  const taken = bookings.some(b => b.mentorName === selected && b.date === d && b.status !== 'CANCELLED');
+                  return (
+                    <button key={d} disabled={taken} onClick={()=>setDate(d)} style={{padding:'6px 10px', borderRadius:6, border:'1px solid #00b4d8', background: date===d ? '#0077b6' : taken ? '#eee' : '#fff', color: date===d ? '#fff' : taken ? '#777' : '#0077b6', cursor: taken ? 'not-allowed':'pointer', fontSize:12}}>
+                      {d}{taken ? ' ⛔':''}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+          {!selected && <input type="date" value={date} onChange={e=>setDate(e.target.value)} style={field}/>}
           <div style={{marginBottom:12}}>Selected Mentor: <b>{selected || "—"}</b></div>
-          <button onClick={book} style={{...btn, width:"100%"}}>Book</button>
+          <button onClick={book} disabled={bookingBusy} style={{...btn, width:"100%", opacity: bookingBusy?0.7:1}}>{bookingBusy? 'Booking...' : 'Book'}</button>
 
           <div style={{marginTop:16}}>
             <h5 style={{margin:"8px 0"}}>Your bookings</h5>
-            {bookings.length ? bookings.map((b,i)=>(
-              <div key={i} style={{background:"rgba(0,0,0,0.03)", padding:10, borderRadius:8, marginBottom:8}}>
-                <div><b>{b.mentor}</b> — {b.date}</div>
-                <div style={{fontSize:13, color:"var(--muted)"}}>Student: {b.student}</div>
-              </div>
-            )) : <div style={{color:"var(--muted)"}}>No bookings</div>}
+            {bookings.length ? bookings.map((b)=> {
+              // Force fixed Google Meet link override
+              const fixedLink = 'https://meet.google.com/eje-rdfq-ksk';
+              if (!b.meetingLink) b.meetingLink = fixedLink; // non-persistent UI override
+              const hasLink = true;
+              return (
+                <button onClick={()=>onBookingClick(b)} key={b.id || b.date+ b.mentorId} style={{textAlign:'left', width:'100%', background:"rgba(0,0,0,0.03)", padding:10, borderRadius:8, marginBottom:8, border:'1px solid #d6dbe1', cursor:'pointer'}}>
+                  <div style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+                    <div><b>{b.mentorName || b.mentor}</b> — {b.date}</div>
+                    {hasLink && (
+                      <span style={{ fontSize:11, background:'#0077b6', color:'#fff', padding:'2px 6px', borderRadius:6 }}>
+                        Meet Link
+                      </span>
+                    )}
+                  </div>
+                  <div style={{fontSize:12, color:"var(--muted)"}}>Status: {b.status || 'PENDING'}</div>
+                </button>
+              );
+            }) : <div style={{color:"var(--muted)"}}>No bookings</div>}
           </div>
         </div>
       </div>
@@ -163,4 +201,4 @@ export default function MentorBooking({ profile }) {
 }
 
 const field = { padding:10, borderRadius:8, border:"1px solid #d6dbe1", width:"100%", marginBottom:10 };
-const btn = { padding:10, borderRadius:8, border:"none", background:"#00b4d8", color:"#fff", cursor:"pointer" };
+const btn = { padding:10, borderRadius:8, border:"none", background:"#00b4d8", color:"#fff", cursor:"pointer", fontWeight:600 };
