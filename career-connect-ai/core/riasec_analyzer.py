@@ -784,7 +784,7 @@ class RIASECAnalyzer:
         # Sort by compatibility score (highest first)
         career_matches.sort(key=lambda x: x.compatibility_score, reverse=True)
         
-        return career_matches[:10]  # Return top 10 matches
+        return career_matches[:2]  # Return top 2 matches
     
     def generate_visualization_data(self, riasec_scores: RIASECScore, career_matches: List[CareerMatch]) -> Dict[str, Any]:
         """
@@ -843,9 +843,9 @@ class RIASECAnalyzer:
         strengths = []
         for dimension, score in sorted_scores[:3]:  # Top 3 dimensions
             if score >= 4.0:  # High score threshold
-                strengths.extend(self.dimensions[dimension]['characteristics'])
+                strengths.extend(self.dimensions[dimension]['characteristics'][:2])  # Only first 2 characteristics
         
-        return list(set(strengths))  # Remove duplicates
+        return list(set(strengths))[:5]  # Remove duplicates and limit to 5
     
     def _generate_work_environment_preferences(self, riasec_scores: RIASECScore) -> List[str]:
         """Generate work environment preferences based on RIASEC scores."""
@@ -853,41 +853,41 @@ class RIASECAnalyzer:
         scores_dict = riasec_scores.to_dict()
         
         if scores_dict['Realistic'] >= 4.0:
-            preferences.extend(['Outdoor work', 'Hands-on activities', 'Physical work'])
+            preferences.extend(['Outdoor', 'Hands-on'])
         
         if scores_dict['Investigative'] >= 4.0:
-            preferences.extend(['Research environment', 'Independent work', 'Analytical tasks'])
+            preferences.extend(['Research', 'Independent'])
         
         if scores_dict['Artistic'] >= 4.0:
-            preferences.extend(['Creative freedom', 'Flexible schedule', 'Innovative projects'])
+            preferences.extend(['Creative', 'Flexible'])
         
         if scores_dict['Social'] >= 4.0:
-            preferences.extend(['Team collaboration', 'People interaction', 'Helping others'])
+            preferences.extend(['Team', 'People interaction'])
         
         if scores_dict['Enterprising'] >= 4.0:
-            preferences.extend(['Leadership roles', 'Competitive environment', 'Decision making'])
+            preferences.extend(['Leadership', 'Competitive'])
         
         if scores_dict['Conventional'] >= 4.0:
-            preferences.extend(['Structured environment', 'Clear procedures', 'Organized tasks'])
+            preferences.extend(['Structured', 'Organized'])
         
-        return list(set(preferences))
+        return list(set(preferences))[:4]
     
     def _analyze_communication_style(self, riasec_scores: RIASECScore) -> str:
         """Analyze communication style based on RIASEC scores."""
         scores_dict = riasec_scores.to_dict()
         
         if scores_dict['Social'] >= 4.0:
-            return "Collaborative and empathetic communicator"
+            return "Collaborative"
         elif scores_dict['Enterprising'] >= 4.0:
-            return "Persuasive and confident communicator"
+            return "Persuasive"
         elif scores_dict['Investigative'] >= 4.0:
-            return "Analytical and precise communicator"
+            return "Analytical"
         elif scores_dict['Artistic'] >= 4.0:
-            return "Creative and expressive communicator"
+            return "Creative"
         elif scores_dict['Conventional'] >= 4.0:
-            return "Structured and formal communicator"
+            return "Structured"
         else:
-            return "Balanced and adaptable communicator"
+            return "Balanced"
     
     def _generate_learning_preferences(self, riasec_scores: RIASECScore) -> List[str]:
         """Generate learning preferences based on RIASEC scores."""
@@ -895,24 +895,24 @@ class RIASECAnalyzer:
         scores_dict = riasec_scores.to_dict()
         
         if scores_dict['Realistic'] >= 4.0:
-            preferences.extend(['Hands-on learning', 'Practical applications', 'Experiential learning'])
+            preferences.extend(['Hands-on', 'Practical'])
         
         if scores_dict['Investigative'] >= 4.0:
-            preferences.extend(['Research-based learning', 'Independent study', 'Analytical approach'])
+            preferences.extend(['Research-based', 'Independent'])
         
         if scores_dict['Artistic'] >= 4.0:
-            preferences.extend(['Creative projects', 'Visual learning', 'Self-expression'])
+            preferences.extend(['Creative', 'Visual'])
         
         if scores_dict['Social'] >= 4.0:
-            preferences.extend(['Group learning', 'Discussion-based', 'Peer interaction'])
+            preferences.extend(['Group', 'Discussion-based'])
         
         if scores_dict['Enterprising'] >= 4.0:
-            preferences.extend(['Case studies', 'Leadership roles', 'Real-world applications'])
+            preferences.extend(['Case studies', 'Real-world'])
         
         if scores_dict['Conventional'] >= 4.0:
-            preferences.extend(['Structured curriculum', 'Step-by-step learning', 'Traditional methods'])
+            preferences.extend(['Structured', 'Step-by-step'])
         
-        return list(set(preferences))
+        return list(set(preferences))[:4]
     
     def _identify_career_clusters(self, riasec_scores: RIASECScore) -> List[str]:
         """Identify career clusters based on RIASEC scores."""
@@ -944,7 +944,7 @@ class RIASECAnalyzer:
         primary_desc = self.dimensions[primary_type]['description']
         secondary_desc = self.dimensions[secondary_type]['description']
         
-        return f"You are primarily {primary_type.lower()} ({primary_desc}) with strong {secondary_type.lower()} tendencies ({secondary_desc}). This combination suggests you are well-suited for careers that combine these two personality dimensions."
+        return f"{primary_type}: {primary_desc}. {secondary_type}: {secondary_desc}."
     
     def _generate_indian_context_insights(self, riasec_scores: RIASECScore, primary_type: str, secondary_type: str) -> Dict[str, Any]:
         """Generate Indian context insights for personality types."""
@@ -992,16 +992,14 @@ class RIASECAnalyzer:
             if dimension_name in scores_dict:
                 score = scores_dict[dimension_name]
                 if score >= 4.0:
-                    explanations.append(f"Strong {dimension_name.lower()} traits ({score:.1f}/5.0)")
+                    explanations.append(f"{dimension_name} ({score:.1f}/5)")
                 elif score >= 3.0:
-                    explanations.append(f"Moderate {dimension_name.lower()} traits ({score:.1f}/5.0)")
-                else:
-                    explanations.append(f"Weak {dimension_name.lower()} traits ({score:.1f}/5.0)")
+                    explanations.append(f"{dimension_name} ({score:.1f}/5)")
         
         if explanations:
-            return f"This career matches your personality because: {', '.join(explanations)}"
+            return f"Matches your {', '.join(explanations[:2])}"
         else:
-            return f"This career may not be the best fit for your current personality profile."
+            return "Good fit based on your profile."
     
     def _get_dimension_name_from_code(self, code: str) -> str:
         """Convert RIASEC code to full dimension name."""
@@ -1032,7 +1030,7 @@ class RIASECAnalyzer:
                 'score': score,
                 'level': self._get_score_level(score),
                 'description': self.dimensions[dimension]['description'],
-                'characteristics': self.dimensions[dimension]['characteristics'],
+                'characteristics': self.dimensions[dimension]['characteristics'][:2],  # Only first 2
                 'indian_context': self.dimensions[dimension]['indian_context']
             }
         
@@ -1058,62 +1056,62 @@ class RIASECAnalyzer:
         exams = []
         
         if primary_type in ['Realistic', 'Investigative']:
-            exams.extend(['JEE Main', 'JEE Advanced', 'GATE'])
+            exams.extend(['JEE Main', 'JEE Advanced'])
         
         if primary_type == 'Investigative':
-            exams.extend(['NEET', 'AIIMS', 'JIPMER'])
+            exams.extend(['NEET', 'AIIMS'])
         
         if primary_type in ['Enterprising', 'Conventional']:
-            exams.extend(['CAT', 'XAT', 'GMAT'])
+            exams.extend(['CAT', 'XAT'])
         
         if primary_type == 'Artistic':
-            exams.extend(['NID', 'CEED', 'UCEED'])
+            exams.extend(['NID', 'CEED'])
         
         if primary_type == 'Social':
-            exams.extend(['CTET', 'TET', 'NET'])
+            exams.extend(['CTET', 'TET'])
         
-        return list(set(exams))
+        return list(set(exams))[:3]
     
     def _get_regional_opportunities(self, primary_type: str, secondary_type: str) -> List[str]:
         """Get regional opportunities based on personality types."""
         opportunities = []
         
         if primary_type in ['Realistic', 'Investigative']:
-            opportunities.extend(['Bangalore', 'Hyderabad', 'Pune', 'Chennai'])
+            opportunities.extend(['Bangalore', 'Hyderabad', 'Pune'])
         
         if primary_type == 'Enterprising':
-            opportunities.extend(['Mumbai', 'Delhi', 'Gurgaon', 'Bangalore'])
+            opportunities.extend(['Mumbai', 'Delhi', 'Gurgaon'])
         
         if primary_type == 'Artistic':
-            opportunities.extend(['Mumbai', 'Delhi', 'Bangalore', 'Chennai'])
+            opportunities.extend(['Mumbai', 'Delhi', 'Bangalore'])
         
         if primary_type == 'Social':
-            opportunities.extend(['Delhi', 'Mumbai', 'Bangalore', 'Kolkata'])
+            opportunities.extend(['Delhi', 'Mumbai', 'Bangalore'])
         
-        return list(set(opportunities))
+        return list(set(opportunities))[:3]
     
     def _analyze_family_expectations(self, primary_type: str, secondary_type: str) -> Dict[str, str]:
         """Analyze family expectations based on personality types."""
         analysis = {
             'alignment': 'Moderate',
-            'explanation': 'Your personality type aligns moderately with traditional Indian family expectations.',
+            'explanation': 'Moderate alignment.',
             'recommendations': []
         }
         
         if primary_type in ['Realistic', 'Investigative']:
             analysis['alignment'] = 'High'
-            analysis['explanation'] = 'Your personality type aligns well with traditional Indian family expectations for stable, respected careers.'
-            analysis['recommendations'] = ['Engineering', 'Medicine', 'Government jobs']
+            analysis['explanation'] = 'Good alignment.'
+            analysis['recommendations'] = ['Engineering', 'Medicine']
         
         elif primary_type == 'Enterprising':
             analysis['alignment'] = 'High'
-            analysis['explanation'] = 'Your personality type aligns well with Indian family expectations for leadership and success.'
-            analysis['recommendations'] = ['Business', 'Management', 'Government services']
+            analysis['explanation'] = 'Good alignment.'
+            analysis['recommendations'] = ['Business', 'Management']
         
         elif primary_type == 'Artistic':
             analysis['alignment'] = 'Low'
-            analysis['explanation'] = 'Your personality type may require more explanation to align with traditional family expectations.'
-            analysis['recommendations'] = ['Design', 'Architecture', 'Media']
+            analysis['explanation'] = 'May need explanation.'
+            analysis['recommendations'] = ['Design', 'Architecture']
         
         return analysis
     

@@ -162,7 +162,7 @@ class TestRIASECAnalyzer:
         career_matches = analyzer.map_careers_to_personality(scores)
         
         assert isinstance(career_matches, list)
-        assert len(career_matches) <= 10  # Should return top 10 matches
+        assert len(career_matches) <= 2  # Should return top 2 matches
         
         for match in career_matches:
             assert isinstance(match, CareerMatch)

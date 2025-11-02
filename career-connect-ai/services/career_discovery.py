@@ -43,6 +43,11 @@ class CareerDiscoveryService:
     def __init__(self):
         """Initialize service."""
         self.career_database = self._load_career_database()
+        self.career_categories = self._initialize_career_categories()
+        self.skill_mappings = self._initialize_skill_mappings()
+        self.industry_mappings = self._initialize_industry_mappings()
+        self.matching_weights = self._initialize_matching_weights()
+        self.trending_careers = self._initialize_trending_careers()
         logger.info("CareerDiscoveryService initialized")
     
     def discover_careers_by_profile(self, student_profile: Dict[str, Any]) -> CareerDiscoveryResult:
@@ -167,6 +172,22 @@ class CareerDiscoveryService:
         except Exception as e:
             logger.error(f"Error getting trending careers: {e}")
             return []
+    
+    def get_career_database(self) -> Dict[str, CareerInfo]:
+        """Get career database."""
+        return self.career_database
+    
+    def get_career_categories(self) -> Dict[str, List[str]]:
+        """Get career categories."""
+        return self.career_categories
+    
+    def get_skill_mappings(self) -> Dict[str, List[str]]:
+        """Get skill mappings."""
+        return self.skill_mappings
+    
+    def get_industry_mappings(self) -> Dict[str, List[str]]:
+        """Get industry mappings."""
+        return self.industry_mappings
     
     def analyze_career_growth(self, career_id: str) -> Dict[str, Any]:
         """Analyze career growth."""
